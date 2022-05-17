@@ -11,5 +11,5 @@ Isentropic<br><br>
 Adiabatic<br><br>
 
 <img margin-left="60px" width="150" alt="image" src="https://user-images.githubusercontent.com/68218266/168738443-e65b7b29-3c0f-4d40-8fff-a3b4031c63ee.png"> 
-Reversible Heat Transfer<br><br>
+Reversible Heat Transfer (Frictionless)<br><br>
 
