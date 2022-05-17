@@ -4,7 +4,7 @@ The one-dimensional pressure-ratios for isentropic flow, adiabatic flow, and flo
 
 The relations are given by, 
 
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/68218266/168738098-3c7fca72-2210-4caa-b01f-1906ff925398.png">  (Isentropic)
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/68218266/168738098-3c7fca72-2210-4caa-b01f-1906ff925398.png"><p margin-right="100px">(Isentropic)<\p>
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/68218266/168738338-4664ad87-ca64-4d67-a1d1-169f0711f418.png">  (Adiabatic)
 
