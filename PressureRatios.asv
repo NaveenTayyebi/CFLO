@@ -1,0 +1,16 @@
+syms x
+g = 1.4; 
+f1(x) = (2/(g+1)*(1+(g-1)/2*x^2))^(-g/(g-1));
+f2(x) = 1/x*(2/(g+1)*(1+(g-1)/2*x^2))^(-1/2);
+f3(x) = (1+g)/(1+g*x^2);
+figure(1)
+fplot(f1,[0 5]);
+hold on 
+fplot(f2,[0 5]);
+hold on 
+fplot(f3,[0 5]);
+xlabel('Mach Number');
+ylabel('P/P^{*}');
+title('Pressure Ratios');
+legend('Isentropic','')
+
