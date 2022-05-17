@@ -8,6 +8,6 @@ Isentropic<img width="400" alt="image" src="https://user-images.githubuserconten
 
 Adiabatic<img width="400" alt="image" src="https://user-images.githubusercontent.com/68218266/168738338-4664ad87-ca64-4d67-a1d1-169f0711f418.png"> 
 
-Reversible Heat Transfer<img margin-left="30px" width="150" alt="image" src="https://user-images.githubusercontent.com/68218266/168738443-e65b7b29-3c0f-4d40-8fff-a3b4031c63ee.png"> 
+Reversible Heat Transfer<img margin-left="60px" width="150" alt="image" src="https://user-images.githubusercontent.com/68218266/168738443-e65b7b29-3c0f-4d40-8fff-a3b4031c63ee.png"> 
 
 
