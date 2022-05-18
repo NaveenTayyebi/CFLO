@@ -1,4 +1,3 @@
-The one-dimensional pressure-ratios for isentropic flow, adiabatic flow, and flows with reversible heat transfer are show below, 
 <br><br>
 <p align="center"><img src="./Images/SonicPressureRatios.png" alt="drawing" width="600"/></p>
 
