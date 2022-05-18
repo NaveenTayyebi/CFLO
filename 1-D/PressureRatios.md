@@ -1,4 +1,3 @@
-<br><br>
 <p align="center"><img src="./Images/SonicPressureRatios.png" alt="drawing" width="600"/></p>
 
 The relations are given by, 
