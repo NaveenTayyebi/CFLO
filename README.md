@@ -4,8 +4,8 @@ Compressible-Flow is a package created for students to visualize one, two, and t
 
 ## Version 0.1
 This version contains
-* One-dimensional Isentropic, Adiabatic, and Frictionless-Reversible-Heat Transfer Flow property plots
-* Quasi-one-dimensional Area-Mach Number Relations 
+* One-dimensional Isentropic, Adiabatic, and Frictionless-Reversible-Heat Transfer flow property plots
+* Quasi-one-dimensional Area-Mach Number relations 
 
 
 
