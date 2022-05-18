@@ -11,8 +11,11 @@ All equations are referenced from "Modern Compressible Flow" by Anderson.
   </tr>
   <tr>
     <td>Internal Energy</td>
-    <td><img width="90" alt="image" src="https://user-images.githubusercontent.com/68218266/168949847-f01022e8-39f5-40c2-aaee-96f2ebf2d8ed.png">
-</td>
+    <td><img width="90" alt="image" src="https://user-images.githubusercontent.com/68218266/168949847-f01022e8-39f5-40c2-aaee-96f2ebf2d8ed.png"></td>
+  </tr>
+  <tr>
+    <td>Enthalpy</td>
+    <td><img width="90" alt="image" src="https://user-images.githubusercontent.com/68218266/168950045-03e1b7e8-67d4-489c-98a2-c3931068cd3f.png"></td>
   </tr>
  </table> 
 
