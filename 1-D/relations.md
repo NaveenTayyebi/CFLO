@@ -35,7 +35,7 @@ All equations are referenced from "Modern Compressible Flow" by Anderson.
   </tr>
   <tr>
     <td>Gibbs Relation</td> 
-    <td><img width="135" alt="image" src="https://user-images.githubusercontent.com/68218266/168951082-74b0e98e-30b9-4003-8e80-1e7af239eb09.png"></td>
+    <td><img width="155" alt="image" src="https://user-images.githubusercontent.com/68218266/168951082-74b0e98e-30b9-4003-8e80-1e7af239eb09.png"></td>
   </tr>
   <tr>
     <td>Change in Entropy for a Calorically Ideal Gas</td> 
