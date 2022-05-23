@@ -5,6 +5,8 @@ f1_2 = (1 + (g-1)/2*x^2)^(1/2)/(g*x^2-(g-1)/2)^(1/2);
 f2 = (1 + (2*g)/(g+1)*(x^2-1))*((2 + (g-1)*x^2)/((g+1)*x^2));
 f3 = ((g+1)*x^2)/(2 + (g-1)*x^2); 
 f4 = 1 + (2*g)/(g+1)*(x^2-1); 
+f5 = ((g + 1)*x^2/(2 + (g-1)*x^2))^(g/(g-1))...
+    *((g + 1)/(2*g*x^2 - (g-1)))^(1/(g-1));
 figure(1)
 fplot(f1_1,[0 1],'linewidth',1,'color','red');
 hold on 
@@ -28,7 +30,10 @@ fplot(f4,[1 10],'linewidth',1,'color','#D95319');
 xlabel('Upstream Mach Number ( M_{1} )');
 ylabel('p_{2} / p_{1}');
 title('Pressure Ratio'); 
-
-
+figure(5)
+fplot(f5,[1 10],'linewidth',1,'color','#77AC30');
+xlabel('Upstream Mach Number ( M_{1} )');
+ylabel('p_{o_{2}} / p_{o_{1}}');
+title('Total Pressure Ratio');
  
  
