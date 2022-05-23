@@ -15,19 +15,19 @@ All equations are referenced from "Modern Compressible Flow" by Anderson.
   </tr>
   <tr>
     <td>Enthalpy</td>
-    <td><img width="90" alt="image" src="https://user-images.githubusercontent.com/68218266/168950045-03e1b7e8-67d4-489c-98a2-c3931068cd3f.png"></td>
+    <td><img width="110" alt="image" src="https://user-images.githubusercontent.com/68218266/168950045-03e1b7e8-67d4-489c-98a2-c3931068cd3f.png"></td>
   </tr>
   <tr>
     <td>Specific Heat Ratio</td>
-    <td><img width="90" alt="image" src="https://user-images.githubusercontent.com/68218266/168950357-645641de-da16-436b-bb86-92e5d6d49f01.png"></td>
+    <td><img width="110" alt="image" src="https://user-images.githubusercontent.com/68218266/168950357-645641de-da16-436b-bb86-92e5d6d49f01.png"></td>
   </tr>
   <tr>
     <td>Specific Heat at Constant Volume</td>
-    <td><img width="90" alt="image" src="https://user-images.githubusercontent.com/68218266/168950418-c04caefb-1bde-46ca-bc1f-16adeeee376c.png"></td>
+    <td><img width="110" alt="image" src="https://user-images.githubusercontent.com/68218266/168950418-c04caefb-1bde-46ca-bc1f-16adeeee376c.png"></td>
   </tr>
   <tr>
     <td>Specific Heat at Constant Pressure</td>
-    <td><img width="90" alt="image" src="https://user-images.githubusercontent.com/68218266/168950467-fbbee7d6-9ca5-4093-99d9-3daf40595e16.png"></td>
+    <td><img width="110" alt="image" src="https://user-images.githubusercontent.com/68218266/168950467-fbbee7d6-9ca5-4093-99d9-3daf40595e16.png"></td>
   </tr>
   <tr>
     <td>Change in Entropy</td> 
