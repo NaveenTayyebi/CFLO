@@ -14,7 +14,7 @@ The relations are given by,<br>
 <br>Pressure Ratio<br><br>
 <img width="270" alt="image" src="https://user-images.githubusercontent.com/68218266/169890220-b20db0e8-17ff-4da1-ba50-4c76ab41cc4d.png">
 <br>Total Pressure Ratio<br><br>
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/68218266/169908839-4d012ac7-da0d-4592-9b8a-fa6ae2205667.png">
+<img width="550" alt="image" src="https://user-images.githubusercontent.com/68218266/169908839-4d012ac7-da0d-4592-9b8a-fa6ae2205667.png">
 
 
 
