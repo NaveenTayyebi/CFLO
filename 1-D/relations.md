@@ -41,4 +41,8 @@ All equations are referenced from "Modern Compressible Flow" by Anderson.
     <td>Change in Entropy for a Calorically Ideal Gas</td> 
     <td><img width="220" alt="image" src="https://user-images.githubusercontent.com/68218266/169739656-4471198e-2ae2-4cf3-8269-f5ae6d7d5d92.png"></td>
   </tr>
+  <tr>
+    <td>Isentropic Relations</td> 
+    <td><img width="100" alt="image" src="https://user-images.githubusercontent.com/68218266/169740239-5afcf1a0-ea0f-4f36-94e2-7f30bb8dc5df.png"></td>
+  </tr>
  </table> 
