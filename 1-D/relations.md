@@ -46,3 +46,11 @@ All equations are referenced from "Modern Compressible Flow" by Anderson.
     <td><img width="230" alt="image" src="https://user-images.githubusercontent.com/68218266/169740239-5afcf1a0-ea0f-4f36-94e2-7f30bb8dc5df.png"></td>
   </tr>
  </table> 
+ 
+ ## Conservation Laws
+ 
+ ### Isentropic Flow
+
+
+ 
+ 
