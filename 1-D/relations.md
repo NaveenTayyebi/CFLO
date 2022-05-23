@@ -49,9 +49,9 @@ All equations are referenced from "Modern Compressible Flow" by Anderson.
  
  ## Conservation Laws
  
- ### Isentropic Flow
- 
  <img width="300" alt="image" src="https://user-images.githubusercontent.com/68218266/169740922-c2946974-d450-4549-969b-51403773542a.png">
+ <img width="500" alt="image" src="https://user-images.githubusercontent.com/68218266/169741276-7b853bc8-73a1-4934-b5b8-b18c29a8da89.png">
+
 
 
 
