@@ -11,6 +11,6 @@
 <br>Density Ratio<br><br>
 <img width="219" alt="image" src="https://user-images.githubusercontent.com/68218266/169889987-4eb8ec06-47f3-4b69-a7b2-586fbbef89bd.png">
 <br>Pressure Ratio<br><br>
-<img width="250" alt="image" src="https://user-images.githubusercontent.com/68218266/169890220-b20db0e8-17ff-4da1-ba50-4c76ab41cc4d.png">
+<img width="270" alt="image" src="https://user-images.githubusercontent.com/68218266/169890220-b20db0e8-17ff-4da1-ba50-4c76ab41cc4d.png">
 
 
