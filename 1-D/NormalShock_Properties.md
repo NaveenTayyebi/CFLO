@@ -6,8 +6,8 @@
   </p>
 <br>Mach Number across a Normal Shock<br>
 <img width="224" alt="image" src="https://user-images.githubusercontent.com/68218266/169889045-55671cdb-4efc-4ca4-b256-800d0cb6fa8e.png">
-<br>Temperature Ratio<br>
-<img width="496" alt="image" src="https://user-images.githubusercontent.com/68218266/169889715-8fec119c-85ea-4232-b9d2-9d825fe763b5.png">
-<br>Density Ratio<br>
+<br>Temperature Ratio<br><br>
+<img width="470" alt="image" src="https://user-images.githubusercontent.com/68218266/169889715-8fec119c-85ea-4232-b9d2-9d825fe763b5.png">
+<br>Density Ratio<br><br>
 
 <br>Pressure Ratio<br>
