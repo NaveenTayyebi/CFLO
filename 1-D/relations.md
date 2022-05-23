@@ -30,6 +30,10 @@ All equations are referenced from "Modern Compressible Flow" by Anderson.
     <td><img width="90" alt="image" src="https://user-images.githubusercontent.com/68218266/168950467-fbbee7d6-9ca5-4093-99d9-3daf40595e16.png"></td>
   </tr>
   <tr>
+    <td>Change in Entropy</td> 
+    <td><img width="135" alt="image" src="https://user-images.githubusercontent.com/68218266/169739431-824fa30b-a035-4683-b0d1-a4fd9c19795a.png"></td>
+  </tr>
+  <tr>
     <td>Gibbs Relation</td> 
     <td><img width="135" alt="image" src="https://user-images.githubusercontent.com/68218266/168951082-74b0e98e-30b9-4003-8e80-1e7af239eb09.png"></td>
   </tr>
