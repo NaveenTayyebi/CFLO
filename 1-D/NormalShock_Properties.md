@@ -2,7 +2,8 @@
 <span align="left"><img src="./Images/NormalShock_MachNumber.png" alt="drawing" width="400"/></span>
 <span align="right"><img src="./Images/NormalShock_TemperatureRatio.png" alt="drawing" width="400"/></span><br>
 <span align="left"><img src="./Images/NormalShock_DensityRatio.png" alt="drawing" width="400"/></span>
-<span align="right"><img src="./Images/NormalShock_PressureRatio.png" alt="drawing" width="400"/></span>
+<span align="right"><img src="./Images/NormalShock_PressureRatio.png" alt="drawing" width="400"/></span><br>
+<span align="center"><img src="./Images/NormalShock_TotalPressureRatio.png" alt="drawing" width="400"/></span>
   </p>
 The relations are given by,<br>
 <br>Mach Number across a Normal Shock<br><br>
@@ -14,7 +15,8 @@ The relations are given by,<br>
 <br>Pressure Ratio<br><br>
 <img width="270" alt="image" src="https://user-images.githubusercontent.com/68218266/169890220-b20db0e8-17ff-4da1-ba50-4c76ab41cc4d.png">
 <br>Total Pressure Ratio<br><br>
-<img width="790" alt="image" src="https://user-images.githubusercontent.com/68218266/169895537-33587857-85b3-4408-b590-56353d25cf4d.png">
+<img width="560" alt="image" src="https://user-images.githubusercontent.com/68218266/169908839-4d012ac7-da0d-4592-9b8a-fa6ae2205667.png">
+
 
 
 
