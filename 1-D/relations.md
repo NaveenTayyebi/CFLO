@@ -49,8 +49,8 @@ All equations are referenced from "Modern Compressible Flow" by Anderson.
  
  ## Conservation Laws
  
- <img width="300" alt="image" src="https://user-images.githubusercontent.com/68218266/169740922-c2946974-d450-4549-969b-51403773542a.png">
- <img width="650" alt="image" src="https://user-images.githubusercontent.com/68218266/169741505-290ad700-707e-4706-a73f-9a03193f0a14.png">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/68218266/169741679-460e4e5d-306f-4804-9491-dc7d2aa02077.png">
+ <img width="625" alt="image" src="https://user-images.githubusercontent.com/68218266/169741505-290ad700-707e-4706-a73f-9a03193f0a14.png">
 
 
 
