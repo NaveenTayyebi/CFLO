@@ -19,11 +19,11 @@ All equations are referenced from "Modern Compressible Flow" by Anderson.
   </tr>
   <tr>
     <td>Specific Heat Ratio</td>
-    <td><img width="110" alt="image" src="https://user-images.githubusercontent.com/68218266/168950357-645641de-da16-436b-bb86-92e5d6d49f01.png"></td>
+    <td><img width="105" alt="image" src="https://user-images.githubusercontent.com/68218266/168950357-645641de-da16-436b-bb86-92e5d6d49f01.png"></td>
   </tr>
   <tr>
     <td>Specific Heat at Constant Volume</td>
-    <td><img width="110" alt="image" src="https://user-images.githubusercontent.com/68218266/168950418-c04caefb-1bde-46ca-bc1f-16adeeee376c.png"></td>
+    <td><img width="105" alt="image" src="https://user-images.githubusercontent.com/68218266/168950418-c04caefb-1bde-46ca-bc1f-16adeeee376c.png"></td>
   </tr>
   <tr>
     <td>Specific Heat at Constant Pressure</td>
