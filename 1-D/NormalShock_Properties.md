@@ -10,4 +10,7 @@
 <img width="470" alt="image" src="https://user-images.githubusercontent.com/68218266/169889715-8fec119c-85ea-4232-b9d2-9d825fe763b5.png">
 <br>Density Ratio<br><br>
 <img width="219" alt="image" src="https://user-images.githubusercontent.com/68218266/169889987-4eb8ec06-47f3-4b69-a7b2-586fbbef89bd.png">
-<br>Pressure Ratio<br>
+<br>Pressure Ratio<br><br>
+<img width="250" alt="image" src="https://user-images.githubusercontent.com/68218266/169890220-b20db0e8-17ff-4da1-ba50-4c76ab41cc4d.png">
+
+
