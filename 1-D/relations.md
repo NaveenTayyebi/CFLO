@@ -15,7 +15,7 @@ All equations are referenced from "Modern Compressible Flow" by Anderson.
   </tr>
   <tr>
     <td>Enthalpy</td>
-    <td><img width="110" alt="image" src="https://user-images.githubusercontent.com/68218266/168950045-03e1b7e8-67d4-489c-98a2-c3931068cd3f.png"></td>
+    <td><img width="90" alt="image" src="https://user-images.githubusercontent.com/68218266/168950045-03e1b7e8-67d4-489c-98a2-c3931068cd3f.png"></td>
   </tr>
   <tr>
     <td>Specific Heat Ratio</td>
