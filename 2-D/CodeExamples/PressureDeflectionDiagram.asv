@@ -1,0 +1,18 @@
+g = 1.4; 
+for M1 = 2:
+M1 = 2; 
+B = asin(1/M1):0.01:(pi/2); 
+L = length(B); 
+p2p1 = 1*ones(1,L) + (2*g)/(g+1)*(M1^2*(sin(B)).^2-1);
+theta = atan(2*cot(B).*((M1^2*(sin(B)).^2 - 1*ones(1,L))...
+        ./(M1^2*(g*ones(1,L)+cos(2*B))+2*ones(1,L))));
+plot(theta*(180/pi),p2p1,'linewidth',1,'color','blue');
+hold on 
+plot(-theta*(180/pi),p2p1,'linewidth',1,'color','blue');
+hold on 
+
+
+xlim([-45 45]);
+xlabel('\theta','FontSize',15); 
+ylabel('p_{2}/p_{1}'); 
+
