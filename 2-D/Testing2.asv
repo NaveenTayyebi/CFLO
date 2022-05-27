@@ -1,0 +1,42 @@
+syms M T B 
+g = 1.4; 
+colorVec = {'#A2142F','#D95319','#D95319','#0072BD'}; 
+
+%figure(1)
+%for k = 2:5
+%    f1 = @(T,B) tan(T) - 2*cot(B)*((k^2*(sin(B))^2 - 1)/...
+%        (k^2*(g + cos(2*B))+2));
+%    fimplicit(f1, [0 pi/4 0 pi/2],'linewidth',1,'color',colorVec{:,k-1}); 
+%    hold on 
+%end 
+%legend('M = 2', 'M = 3','M = 4','M = 5');
+%title('Oblique Shock Angles');
+%xlabel('{\bf \theta}','FontSize',15);
+%ylabel('{\bf \beta}','FontSize',15);
+figure(2)
+sinB2 = @(M) ((g-3)*M^2+(g+1)*M^4+(16*g*M^4+...
+    ((g-3)*M^2+(g+1)*M^4)^(2))^(1/2))/(4*g*M^4); 
+H = fplot(sinB2,'linewidth',1,'color','red');
+
+betaVec = asin((H.YData).^(1/2));
+SL = betaVec -asin(((1+(g-1)/2*(H.XData).^2.*(H.YData))...
+    ./(g*(H.XData).^2.*(H.YData)-(g-1)/2)).^(1/2)); 
+
+
+
+
+xlim([1 5]);
+ylim([0 1.5])
+title('Sonic Line');
+xlabel('Upstream Mach Number ( M_{1} )');
+%xlabel('{\bf \theta}','FontSize',15);
+ylabel('{\bf \beta}','FontSize',15);
+% Label with degrees instead of radians
+%xticklabels({round(rad2deg(0.1)), round(rad2deg(0.2)),round(rad2deg(0.3))...
+%    ,round(rad2deg(0.4)),round(rad2deg(0.5)),round(rad2deg(0.6)),...
+%    round(rad2deg(0.7)),round(rad2deg(0.8))}); 
+%yticklabels({round(rad2deg(0)), round(rad2deg(0.5)),round(rad2deg(1))...
+%   ,round(rad2deg(1.5))}); 
+
+
+
