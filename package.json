@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NaveenTayyebi/Compressible-Flow.git"
+    "url": "git+https://github.com/NaveenTayyebi/Compressible-Flow"
   },
   "author": "Naveen Tayyebi",
   "license": "ISC",
