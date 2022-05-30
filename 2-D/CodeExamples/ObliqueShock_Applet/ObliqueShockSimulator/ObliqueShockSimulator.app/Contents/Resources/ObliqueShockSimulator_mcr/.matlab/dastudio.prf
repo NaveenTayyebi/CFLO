@@ -1,0 +1,71 @@
+#
+#DAStudio Preference File
+#
+
+
+[DAStudio DDG]
+DDGFontSize=10
+
+[GLUEEditorPreferences]
+FirstTimeScrollNotification=0
+FirstTimeSimulinkPortMoveTool=1
+SuggestActionsSearchNotification=0
+SuggestQuickInsertNotification=0
+
+[General]
+MatlabRelease=2021b
+
+[LibraryBrowser2]
+LBGeometry4Window=600 53 600 550
+LBListWidth=341
+LBRecentName0=simulink/Quick Insert/Math Operations/Multiply
+LBRecentName1=simulink/Quick Insert/Math Operations/Sin
+LBRecentName10=simulink/Math Operations/Gain
+LBRecentName11=simulink/Math Operations/Sum of Elements
+LBRecentName12=simulink/Continuous/Derivative
+LBRecentName13=simulink/Ports & Subsystems/If
+LBRecentName14=simulink/Signal Routing/Merge
+LBRecentName15=dspsrcs4/Random Source
+LBRecentName16=simrfV2sources1/Noise
+LBRecentName17=visiontextngfix/Insert Text
+LBRecentName18=fl_lib/Mechanical/Mechanisms/Gear Box
+LBRecentName19=simulink/Math Operations/MinMax
+LBRecentName2=simulink/Quick Insert/Math Operations/Cos
+LBRecentName20=simulink/User-Defined Functions/MATLAB Function
+LBRecentName21=simulink/Math Operations/Abs
+LBRecentName22=simulink/Ports & Subsystems/Switch Case Action Subsystem
+LBRecentName23=simulink/Ports & Subsystems/If Action Subsystem
+LBRecentName24=simulink/Ports & Subsystems/Subsystem
+LBRecentName3=neural/Net Input Functions/netsum
+LBRecentName4=simulink/Sources/Constant
+LBRecentName5=simulink/Sinks/Scope
+LBRecentName6=simulink/Math Operations/Sum
+LBRecentName7=simulink/Continuous/Integrator
+LBRecentName8=simulink/Sources/Signal Generator
+LBRecentName9=simulink/Continuous/Transfer Fcn
+LBScaleFactor=1
+LBSearch_MatchCase=0
+LBSearch_MatchWholeWord=0
+LBSearch_UseRegExp=0
+LBSortStyle=0
+LBTreePopupHeight=500
+LBTreePopupWidth=250
+LBTreeWidth=243
+LBUseCache=1
+
+[SLToolstrip]
+TSDisplay=0
+
+[Simulink Preferences]
+MEGeometry=270 150 750 450
+MEScope_Scope=Current
+MEScope_ShowLinkedSubSystems=0
+MEScope_ShowMaskedSubSystems=0
+MESplitterPositions=429 0 347 395 0 395 
+METreeClassNames=Simulink.EditorPrefs,Simulink.GeneralPrefs,Simulink.ModelFilePrefs,Simulink.Preferences,
+METreeClassRecord_Simulink.EditorPrefs::PropertyList=Name,
+METreeClassRecord_Simulink.GeneralPrefs::PropertyList=Name,
+METreeClassRecord_Simulink.ModelFilePrefs::PropertyList=Name,
+METreeClassRecord_Simulink.Preferences::ObjectTypes=Simulink.EditorPrefs,Simulink.GeneralPrefs,Simulink.ModelFilePrefs,
+METreeClassRecord_Simulink.Preferences::PropertyList=Name,
+
