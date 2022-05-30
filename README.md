@@ -2,7 +2,7 @@
 
 Compressible-Flow is a package created for students to visualize one, two, and three-dimensional compressible flow phenomena.
 
-## Install Latest Release (v0.2) 
+## Install Latest Release (v1.0) 
 ```Bash 
 npm install compflow
 ```
