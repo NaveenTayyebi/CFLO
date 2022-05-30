@@ -6,7 +6,7 @@ Compressible-Flow is a package created for students to visualize one, two, and t
 ```Bash 
 npm install compflow
 ```
-## Version 0.2
+## Version 1.0
 This version contains
 * One-dimensional Isentropic, Adiabatic, and Frictionless-Reversible-Heat Transfer flow property plots
 * Oblique-Shock Pressure Deflection and Flow Deflection plots 
