@@ -1,8 +1,7 @@
-
-  {
+{
   "name": "compflow",
   "version": "1.0.0",
-  "description": "",
+  "description": "Compressible-Flow is a package created for students to visualize one, two, and three-dimensional compressible flow phenomena.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/NaveenTayyebi/Compressible-Flow/issues"
   },
-  "homepage": "https://github.com/NaveenTayyebi/Compressible-Flow#readme"
+  "homepage": "https://github.com/NaveenTayyebi/Compressible-Flow#readme",
+  "keywords": [
+    "Compressible"
+  ]
 }
