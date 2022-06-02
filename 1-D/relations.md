@@ -1,8 +1,8 @@
-# 1-D Compressible Flow Relations 
+# Fundamental Relations 
 
 All equations are referenced from "Modern Compressible Flow" by Anderson (4th Ed, ISBN 978-1-260-57082-3). 
 
-## Fundamental Relations
+## Thermodynamics
 
 <table>
   <tr>
