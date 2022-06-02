@@ -1,6 +1,6 @@
 # 1-D Compressible Flow Relations 
 
-All equations are referenced from "Modern Compressible Flow" by Anderson. 
+All equations are referenced from "Modern Compressible Flow" by Anderson (4th Ed, ISBN 978-1-260-57082-3). 
 
 ## Fundamental Relations
 
@@ -34,6 +34,16 @@ All equations are referenced from "Modern Compressible Flow" by Anderson.
     <td>Van der Waals Gas Relation</td>
     <td>Equation</td>
     <td>1.16</td>
+  </tr>
+  <tr>
+    <td>Property of Real and Chemicially Reacting Gases</td>
+    <td>Equation</td>
+    <td>1.17</td>
+  </tr>
+  <tr>
+    <td>Property of Thermally Perfect Gases</td>
+    <td>Equation</td>
+    <td>1.18</td>
   </tr>
   <tr>
     <td>Internal Energy</td>
