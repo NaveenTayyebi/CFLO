@@ -102,12 +102,12 @@ All equations are referenced from "Modern Compressible Flow" by Anderson (4th Ed
   </tr>
   <tr>
     <td>Mass</td>
-    <td><img width="300" alt="image" src="https://user-images.githubusercontent.com/68218266/169741679-460e4e5d-306f-4804-9491-dc7d2aa02077.png"></td>
+    <td><img width="270" alt="image" src="https://user-images.githubusercontent.com/68218266/169741679-460e4e5d-306f-4804-9491-dc7d2aa02077.png"></td>
     <td>2.2</td>
   </tr>
   <tr>
     <td>Momentum</td>
-    <td><img width="600" alt="image" src="https://user-images.githubusercontent.com/68218266/169741505-290ad700-707e-4706-a73f-9a03193f0a14.png"></td>
+    <td><img width="570" alt="image" src="https://user-images.githubusercontent.com/68218266/169741505-290ad700-707e-4706-a73f-9a03193f0a14.png"></td>
     <td>2.11</td>
   </tr>
   <tr>
