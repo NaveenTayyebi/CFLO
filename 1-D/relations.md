@@ -94,12 +94,29 @@ All equations are referenced from "Modern Compressible Flow" by Anderson (4th Ed
  
  ## Conservation Laws
  
- Mass<br><br>
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/68218266/169741679-460e4e5d-306f-4804-9491-dc7d2aa02077.png">
-<br><br>Momentum<br><br>
- <img width="600" alt="image" src="https://user-images.githubusercontent.com/68218266/169741505-290ad700-707e-4706-a73f-9a03193f0a14.png">
- <br><br>Energy<br><br>
- <img width="1074" alt="image" src="https://user-images.githubusercontent.com/68218266/169742424-4af1a72c-90c0-4a9c-a897-47fdf0d06b83.png">
+ <table>
+  <tr>
+    <td>Name</td>
+    <td>Equation</td>
+    <td>#</td>
+  </tr>
+  <tr>
+    <td>Mass</td>
+    <td><img width="300" alt="image" src="https://user-images.githubusercontent.com/68218266/169741679-460e4e5d-306f-4804-9491-dc7d2aa02077.png"></td>
+    <td>2.2</td>
+  </tr>
+  <tr>
+    <td>Momentum</td>
+    <td><img width="600" alt="image" src="https://user-images.githubusercontent.com/68218266/169741505-290ad700-707e-4706-a73f-9a03193f0a14.png"></td>
+    <td>2.11</td>
+  </tr>
+  <tr>
+    <td>Energy</td>
+    <td><img width="1074" alt="image" src="https://user-images.githubusercontent.com/68218266/169742424-4af1a72c-90c0-4a9c-a897-47fdf0d06b83.png"></td>
+    <td>2.20</td>
+  </tr>
+ </table>
+ 
 
 
 
