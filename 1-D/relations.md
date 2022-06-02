@@ -12,7 +12,7 @@ All equations are referenced from "Modern Compressible Flow" by Anderson (4th Ed
   </tr>
   <tr>
     <td>Compressibility</td>
-    <td>Equation</td>
+    <td><img width="105" alt="image" src="https://user-images.githubusercontent.com/68218266/171556153-7ecb3884-9ebd-4d65-8c74-19ec5f2b26fd.png"></td>
     <td>1.2</td>
   </tr>
   <tr>
