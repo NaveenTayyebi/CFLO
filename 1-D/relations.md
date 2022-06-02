@@ -16,6 +16,11 @@ All equations are referenced from "Modern Compressible Flow" by Anderson (4th Ed
     <td>1.2</td>
   </tr>
   <tr>
+    <td>Bulk Modulus</td>
+    <td><img width="105" alt="image" src="https://user-images.githubusercontent.com/68218266/171559458-198482dd-bbaa-4c4c-b910-331aca5f9b4f.png"></td> 
+    <td></td> 
+  </tr>
+  <tr>
     <td>Isothermal Compressibility</td>
     <td><img width="140" alt="image" src="https://user-images.githubusercontent.com/68218266/171556302-1030ab7b-957d-46e2-b166-b1a9a4cf8213.png"></td>
     <td>1.3</td>
@@ -68,22 +73,22 @@ All equations are referenced from "Modern Compressible Flow" by Anderson (4th Ed
   <tr>
     <td>Change in Entropy</td> 
     <td><img width="155" alt="image" src="https://user-images.githubusercontent.com/68218266/169739431-824fa30b-a035-4683-b0d1-a4fd9c19795a.png"></td>
-     <td></td>
+     <td>1.26</td>
   </tr>
   <tr>
     <td>Gibbs Relation</td> 
     <td><img width="155" alt="image" src="https://user-images.githubusercontent.com/68218266/168951082-74b0e98e-30b9-4003-8e80-1e7af239eb09.png"></td>
-     <td>1.26</td>
+     <td>1.30</td>
   </tr>
   <tr>
     <td>Change in Entropy for a Calorically Ideal Gas</td> 
     <td><img width="220" alt="image" src="https://user-images.githubusercontent.com/68218266/169739656-4471198e-2ae2-4cf3-8269-f5ae6d7d5d92.png"></td>
-     <td></td>
+     <td>1.36</td>
   </tr>
   <tr>
     <td>Isentropic Relations</td> 
     <td><img width="230" alt="image" src="https://user-images.githubusercontent.com/68218266/169740239-5afcf1a0-ea0f-4f36-94e2-7f30bb8dc5df.png"></td>
-     <td></td>
+     <td>1.43</td>
   </tr>
  </table> 
  
