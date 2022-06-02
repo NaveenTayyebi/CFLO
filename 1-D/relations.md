@@ -16,19 +16,34 @@ All equations are referenced from "Modern Compressible Flow" by Anderson.
     <td>1.2</td>
   </tr>
   <tr>
+    <td>Isothermal Compressibility</td>
+    <td>Equation</td>
+    <td>1.3</td>
+  </tr>
+  <tr>
+    <td>Isentropic Compressibility</td>
+    <td>Equation</td>
+    <td>1.4</td>
+  </tr>
+  <tr>
     <td>Ideal Gas Relation</td>
     <td><img width="105" alt="image" src="https://user-images.githubusercontent.com/68218266/168895744-90e0f05e-be9a-42d4-9f73-d514d7bf400a.png"></td>
-    <td>(1.8)</td>
+    <td>1.8</td>
+  </tr>
+  <tr>
+    <td>Van der Waals Gas Relation</td>
+    <td>Equation</td>
+    <td>1.16</td>
   </tr>
   <tr>
     <td>Internal Energy</td>
     <td><img width="90" alt="image" src="https://user-images.githubusercontent.com/68218266/168949847-f01022e8-39f5-40c2-aaee-96f2ebf2d8ed.png"></td>
-     <td>(1.19)</td>
+     <td>1.19</td>
   </tr>
   <tr>
     <td>Enthalpy</td>
     <td><img width="90" alt="image" src="https://user-images.githubusercontent.com/68218266/168950045-03e1b7e8-67d4-489c-98a2-c3931068cd3f.png"></td>
-     <td>(1.19)</td>
+     <td>1.19</td>
   </tr>
   <tr>
     <td>Specific Heat Ratio</td>
