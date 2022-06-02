@@ -27,22 +27,22 @@ All equations are referenced from "Modern Compressible Flow" by Anderson (4th Ed
   </tr>
   <tr>
     <td>Ideal Gas Relation</td>
-    <td><img width="105" alt="image" src="https://user-images.githubusercontent.com/68218266/168895744-90e0f05e-be9a-42d4-9f73-d514d7bf400a.png"></td>
+    <td><img width="130" alt="image" src="https://user-images.githubusercontent.com/68218266/171556736-b8d4e14a-72bf-4523-ab85-f623bdf8b7fe.png"></td>
     <td>1.8</td>
   </tr>
   <tr>
     <td>Van der Waals Gas Relation</td>
-    <td>Equation</td>
+    <td><img width="255" alt="image" src="https://user-images.githubusercontent.com/68218266/171556847-a035b36e-d16f-4590-ac1c-e50d888eb889.png"></td>
     <td>1.16</td>
   </tr>
   <tr>
     <td>Property of Real and Chemicially Reacting Gases</td>
-    <td>Equation</td>
+    <td><img width="170" alt="image" src="https://user-images.githubusercontent.com/68218266/171556932-5a1f6b59-544f-4c9f-8cc7-a36a7e3ebd6c.png"></td>
     <td>1.17</td>
   </tr>
   <tr>
     <td>Property of Thermally Perfect Gases</td>
-    <td>Equation</td>
+    <td><img width="163" alt="image" src="https://user-images.githubusercontent.com/68218266/171556971-f47aa599-b6ef-4bbe-a42d-18893f9242f4.png"></td>
     <td>1.18</td>
   </tr>
   <tr>
