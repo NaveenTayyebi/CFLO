@@ -17,12 +17,12 @@ All equations are referenced from "Modern Compressible Flow" by Anderson (4th Ed
   </tr>
   <tr>
     <td>Isothermal Compressibility</td>
-    <td><img width="105" alt="image" src="https://user-images.githubusercontent.com/68218266/171556302-1030ab7b-957d-46e2-b166-b1a9a4cf8213.png"></td>
+    <td><img width="155" alt="image" src="https://user-images.githubusercontent.com/68218266/171556302-1030ab7b-957d-46e2-b166-b1a9a4cf8213.png"></td>
     <td>1.3</td>
   </tr>
   <tr>
     <td>Isentropic Compressibility</td>
-    <td><img width="105" alt="image" src="https://user-images.githubusercontent.com/68218266/171556355-650d24f4-a62b-46c4-ac30-652f10870ecb.png"></td>
+    <td><img width="155" alt="image" src="https://user-images.githubusercontent.com/68218266/171556355-650d24f4-a62b-46c4-ac30-652f10870ecb.png"></td>
     <td>1.4</td>
   </tr>
   <tr>
