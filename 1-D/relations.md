@@ -17,42 +17,37 @@ All equations are referenced from "Modern Compressible Flow" by Anderson (4th Ed
   </tr>
   <tr>
     <td>Isothermal Compressibility</td>
-    <td><img width="155" alt="image" src="https://user-images.githubusercontent.com/68218266/171556302-1030ab7b-957d-46e2-b166-b1a9a4cf8213.png"></td>
+    <td><img width="140" alt="image" src="https://user-images.githubusercontent.com/68218266/171556302-1030ab7b-957d-46e2-b166-b1a9a4cf8213.png"></td>
     <td>1.3</td>
   </tr>
   <tr>
     <td>Isentropic Compressibility</td>
-    <td><img width="155" alt="image" src="https://user-images.githubusercontent.com/68218266/171556355-650d24f4-a62b-46c4-ac30-652f10870ecb.png"></td>
+    <td><img width="140" alt="image" src="https://user-images.githubusercontent.com/68218266/171556355-650d24f4-a62b-46c4-ac30-652f10870ecb.png"></td>
     <td>1.4</td>
   </tr>
   <tr>
     <td>Ideal Gas Relation</td>
-    <td><img width="130" alt="image" src="https://user-images.githubusercontent.com/68218266/171556736-b8d4e14a-72bf-4523-ab85-f623bdf8b7fe.png"></td>
+    <td><img width="90" alt="image" src="https://user-images.githubusercontent.com/68218266/171556736-b8d4e14a-72bf-4523-ab85-f623bdf8b7fe.png"></td>
     <td>1.8</td>
   </tr>
   <tr>
     <td>Van der Waals Gas Relation</td>
-    <td><img width="255" alt="image" src="https://user-images.githubusercontent.com/68218266/171556847-a035b36e-d16f-4590-ac1c-e50d888eb889.png"></td>
+    <td><img width="225" alt="image" src="https://user-images.githubusercontent.com/68218266/171556847-a035b36e-d16f-4590-ac1c-e50d888eb889.png"></td>
     <td>1.16</td>
   </tr>
   <tr>
     <td>Property of Real and Chemicially Reacting Gases</td>
-    <td><img width="170" alt="image" src="https://user-images.githubusercontent.com/68218266/171556932-5a1f6b59-544f-4c9f-8cc7-a36a7e3ebd6c.png"></td>
+    <td><img width="110" alt="image" src="https://user-images.githubusercontent.com/68218266/171556932-5a1f6b59-544f-4c9f-8cc7-a36a7e3ebd6c.png"></td>
     <td>1.17</td>
   </tr>
   <tr>
     <td>Property of Thermally Perfect Gases</td>
-    <td><img width="163" alt="image" src="https://user-images.githubusercontent.com/68218266/171556971-f47aa599-b6ef-4bbe-a42d-18893f9242f4.png"></td>
+    <td><img width="110" alt="image" src="https://user-images.githubusercontent.com/68218266/171556971-f47aa599-b6ef-4bbe-a42d-18893f9242f4.png"></td>
     <td>1.18</td>
   </tr>
   <tr>
-    <td>Internal Energy</td>
-    <td><img width="90" alt="image" src="https://user-images.githubusercontent.com/68218266/168949847-f01022e8-39f5-40c2-aaee-96f2ebf2d8ed.png"></td>
-     <td>1.19</td>
-  </tr>
-  <tr>
-    <td>Enthalpy</td>
-    <td><img width="90" alt="image" src="https://user-images.githubusercontent.com/68218266/168950045-03e1b7e8-67d4-489c-98a2-c3931068cd3f.png"></td>
+    <td>Internal Energy & Enthalpy</td>
+    <td><img width="85" alt="image" src="https://user-images.githubusercontent.com/68218266/171557643-9ca686be-ba3e-4068-b867-d9493f8b7ece.png"></td>
      <td>1.19</td>
   </tr>
   <tr>
