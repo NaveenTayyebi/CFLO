@@ -1,4 +1,4 @@
-# 1-D Compressible Flow Relations 
+# Compressible Flow Relations 
 
 All equations are referenced from "Modern Compressible Flow" by Anderson (4th Ed, ISBN 978-1-260-57082-3). 
 
