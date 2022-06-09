@@ -5,6 +5,6 @@ The relations are given by,
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/68218266/172936686-55a2d656-d51f-49d3-a473-8be561f962de.png">
 Isentropic<br><br> 
 
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/68218266/172937187-677a662d-9e57-405a-a4ad-b1c8b96c3e0c.png">
+<img width="280" alt="image" src="https://user-images.githubusercontent.com/68218266/172937187-677a662d-9e57-405a-a4ad-b1c8b96c3e0c.png">
 Heat Addition<br><br>
 
