@@ -6,8 +6,8 @@ g = 1.4;
 % Functions f1_1 and f1_2 make up the piecewise solution to the Mach 
 % number downstream of any point in a steady 1-D flow. When the upstream 
 % Mach number is less than one, the downstream Mach number is the same--
-% solution f_1 applies. However, when the upstream Mach number exceeds 
-% one, a shock forms and solution f_2 applies. 
+% solution f1_1 applies. However, when the upstream Mach number exceeds 
+% one, a shock forms and solution f1_2 applies. 
 f1_1 = x; 
 f1_2 = (1 + (g-1)/2*x^2)^(1/2)/(g*x^2-(g-1)/2)^(1/2); 
 figure(1)
