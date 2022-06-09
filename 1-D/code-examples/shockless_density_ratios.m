@@ -1,3 +1,7 @@
+%% Sonic Density Ratios
+% Functions f1, f2, and f3, correspond the the isentropic, adiabatic, and
+% reversible heat transfer solutions respectively. The constant g is the
+% specific heat ratio.
 syms x
 g = 1.4; 
 f1 = (2/(g+1)*(1+(g-1)/2*x^2))^(-1/(g-1));
