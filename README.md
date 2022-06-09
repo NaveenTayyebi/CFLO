@@ -1,6 +1,6 @@
 # Compressible-Flow
 
-Compressible-Flow is a package created for students to visualize one, two, and three-dimensional compressible flow phenomena.
+Compressible-Flow is a package created for students to visualize one and two-dimensional compressible flow phenomena.
 
 ## Install Latest Release (v1.0) 
 ```Bash 
