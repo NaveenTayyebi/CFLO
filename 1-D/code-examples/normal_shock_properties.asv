@@ -7,15 +7,29 @@
 % The constant g is the speicifc heat ratio. 
 function normal_shock_properties(specHeatRatio,machRange,varargin)
     syms x 
-    g = specHeatRatio; 
     figNumber = 1; 
     firstIter = 1;
+
+    switch nargin
+        case 0
+            g = 1.4; 
+            machRange = [1 10]; 
+            property = ['p'];
+        case 1
+            g = specHeatRatio; 
+            machRange = [1 10]; 
+            property = ['p'];
+        case 2 
+            g = 
+            property = ['p'];
+    end 
+    
     for num = firstIter:length(varargin)
         switch varargin{num}
             case 'p'
                 figure(figNumber)
                 f4 = 1 + (2*g)/(g+1)*(x^2-1); 
-                fplot(f4,[1 10],'linewidth',1,'color','#D95319');
+                fplot(f4,machRange,'linewidth',1,'color','#D95319');
                 xlabel('Upstream Mach Number ( M_{1} )');
                 ylabel('p_{2} / p_{1}');
                 title('Pressure Ratio'); 
@@ -23,7 +37,7 @@ function normal_shock_properties(specHeatRatio,machRange,varargin)
                 figure(figNumber)
                 f2 = (1 + (2*g)/(g+1)*(x^2-1))*...
                     ((2 + (g-1)*x^2)/((g+1)*x^2));
-                fplot(f2,machRange ,'linewidth',1,'color','red');
+                fplot(f2,machRange,'linewidth',1,'color','red');
                 xlabel('Upstream Mach Number ( M_{1} )');
                 ylabel('T_{2} / T_{1}'); 
                 title('Temperature Ratio');
