@@ -1,19 +1,23 @@
 %% Normal Shock Mach Number & Fluid Property Ratios
-% Functions f1_1 and f1_2 make up the piecewise solution to the Mach 
-% number downstream of any point in a steady 1-D flow. 
-% Functions f2, f3, f4, and f5 correspond to the Static Temperature,
-% Static Density, Static Pressure, and Total Pressure Ratio across a 
-% a normal shock. 
-% The constant g is the speicifc heat ratio. 
+% % Functions f1_1 and f1_2 make up the piecewise solution to the Mach 
+        % number downstream of any point in a steady 1-D flow. When the upstream 
+        % Mach number is less than one, the downstream Mach number is the same--
+        % solution f1_1 applies. However, when the upstream Mach number exceeds 
+        % one, a shock forms and solution f1_2 applies. 
+        % Functions f2, f3, f4, and f5 correspond to the Static Temperature,
+        % Static Density, Static Pressure, and Total Pressure Ratio across a 
+        % a normal shock. 
+        %The constant g is the speicifc heat ratio. 
 function normal_shock_properties(specHeatRatio,varargin)
     syms x 
     g = specHeatRatio; 
     figNumber = 1; 
-    firstIter = 1; 
-    if (isa(varargin{1},'double')) 
-        firstIter = 2;
-    end 
-    for num = firstIter:length(varargin)
+    
+    if (isa(varargin{1},'double')) { 
+        
+    }
+
+    for num = 1:length(varargin)
         switch varargin{num}
             case 'p'
                 figure(figNumber)
