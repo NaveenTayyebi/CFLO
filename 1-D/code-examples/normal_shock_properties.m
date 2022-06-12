@@ -5,20 +5,21 @@
 % Static Density, Static Pressure, and Total Pressure Ratio across a 
 % a normal shock. 
 % The constant g is the speicifc heat ratio. 
-function normal_shock_properties(specHeatRatio,varargin)
+function normal_shock_properties(specHeatRatio,machRange,varargin)
     syms x 
     g = specHeatRatio; 
     figNumber = 1; 
-    firstIter = 1; 
-    if (isa(varargin{1},'double')) 
-        firstIter = 2;
-    end 
+    firstIter = 1;
+    
+    
+
+
     for num = firstIter:length(varargin)
         switch varargin{num}
             case 'p'
                 figure(figNumber)
                 f4 = 1 + (2*g)/(g+1)*(x^2-1); 
-                fplot(f4,[1 10],'linewidth',1,'color','#D95319');
+                fplot(f4,machRange,'linewidth',1,'color','#D95319');
                 xlabel('Upstream Mach Number ( M_{1} )');
                 ylabel('p_{2} / p_{1}');
                 title('Pressure Ratio'); 
@@ -26,14 +27,14 @@ function normal_shock_properties(specHeatRatio,varargin)
                 figure(figNumber)
                 f2 = (1 + (2*g)/(g+1)*(x^2-1))*...
                     ((2 + (g-1)*x^2)/((g+1)*x^2));
-                fplot(f2,[1 10],'linewidth',1,'color','red');
+                fplot(f2,machRange,'linewidth',1,'color','red');
                 xlabel('Upstream Mach Number ( M_{1} )');
                 ylabel('T_{2} / T_{1}'); 
                 title('Temperature Ratio');
             case 'd' 
                 figure(figNumber)
                 f3 = ((g+1)*x^2)/(2 + (g-1)*x^2); 
-                fplot(f3,[1 10],'linewidth',1,'color','blue');
+                fplot(f3,machRange,'linewidth',1,'color','blue');
                 xlabel('Upstream Mach Number ( M_{1} )');
                 ylabel('\rho_{2} / \rho_{1}'); 
                 title('Density Ratio');
@@ -43,7 +44,7 @@ function normal_shock_properties(specHeatRatio,varargin)
                 f1_2 = (1 + (g-1)/2*x^2)^(1/2)/(g*x^2-(g-1)/2)^(1/2); 
                 fplot(f1_1,[0 1],'linewidth',1,'color','red');
                 hold on 
-                fplot(f1_2,[1 10],'linewidth',1,'color','red'); 
+                fplot(f1_2,machRange,'linewidth',1,'color','red'); 
                 ylim([0 1.5]);
                 xlabel('Upstream Mach Number ( M_{1} )');
                 ylabel('Downstream Mach Number ( M_{2} )');
@@ -52,7 +53,7 @@ function normal_shock_properties(specHeatRatio,varargin)
                 figure(figNumber)
                 f5 = ((g + 1)*x^2/(2 + (g-1)*x^2))^(g/(g-1))...
                     *((g + 1)/(2*g*x^2 - (g-1)))^(1/(g-1));
-                fplot(f5,[1 10],'linewidth',1,'color','#77AC30');
+                fplot(f5,machRange,'linewidth',1,'color','#77AC30');
                 xlabel('Upstream Mach Number ( M_{1} )');
                 ylabel('p_{o_{2}} / p_{o_{1}}');
                 title('Total Pressure Ratio');
