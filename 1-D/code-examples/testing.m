@@ -1,1 +1,1 @@
-normal_shock_properties(1.4,[1 3],'p');
+normal_shock.plot('a');
