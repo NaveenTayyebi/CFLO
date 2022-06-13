@@ -66,6 +66,7 @@ classdef normal_shock
          end
 
          function argCheck(specHeatRatio,machRange,varargin)
+            return;
             switch nargin
                 case 0
                     error('Specific heat ratio not defined');
@@ -89,16 +90,17 @@ classdef normal_shock
                         return; 
                     end 
                     if (isa(machRange,'double') && ...
-                            (size(machRange) == [1 2]) ...
-                            && ((machRange > 0) == [1 1]))
-                        range = machRange; 
+                            (length(machRange) == 2) && ...
+                            (length(machRange(:,1) == 1))
+                        if ((machRange > 0) == [1 1])
+                            range = machRange; 
+                        end 
                     else 
                         error("Invalid mach range");
                         return; 
                     end
                     property = ['p'];
                  otherwise 
-                    argCheck(specHeatRatio,machRange,property);
                     g = specHeatRatio;
                     range = machRange; 
                     property = varargin(1,:); 
