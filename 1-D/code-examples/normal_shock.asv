@@ -90,12 +90,13 @@ classdef normal_shock
                     end 
                     if (isa(machRange,'double') && ...
                             (size(machRange) == [1 2]) ...
-                            && ((machRange > 0) == [1 1]))
+                            && )
                         range = machRange; 
                     else 
-                        error("Invalid mach range");
+                        error("Mach range must be a 1x2 numeric matrix ");
                         return; 
-                    end
+                    end 
+                    argCheck(specHeatRatio,machRange);
                     property = ['p'];
                  otherwise 
                     argCheck(specHeatRatio,machRange,property);
