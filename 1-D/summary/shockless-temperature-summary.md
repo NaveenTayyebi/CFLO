@@ -1,4 +1,4 @@
-<p align="center"><img src="./images/shockless-temperature-ratios.png" alt="drawing" width="600"/></p>
+<p align="center"><img src="../images/shockless-temperature-ratios.png" alt="drawing" width="600"/></p>
 
 The relations are given by, 
 
