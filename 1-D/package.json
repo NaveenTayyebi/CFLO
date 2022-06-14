@@ -1,7 +1,7 @@
 {
   "name": "compflow",
   "version": "1.0.0",
-  "description": "Compressible-Flow is a package created for students to visualize one, two, and three-dimensional compressible flow phenomena.",
+  "description": "Compressible-Flow is a package created for students to visualize one and two dimensional compressible flow phenomena.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
