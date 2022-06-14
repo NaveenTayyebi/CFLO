@@ -13,9 +13,8 @@ classdef normal_shock
             figNumber = 1;
             [g, range, property] = ...
                 normal_shock.argCheck(specHeatRatio,machRange,varargin);
-            return;
-            for num = 1:length(varargin)
-                switch varargin{num}
+            for num = 1:length(property{1})
+                switch property{1}{num}
                     case 'p'
                         figure(figNumber)
                         f4 = 1 + (2*g)/(g+1)*(x^2-1); 
