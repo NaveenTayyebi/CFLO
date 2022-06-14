@@ -91,7 +91,7 @@ classdef normal_shock
                     end 
                     if (isa(machRange,'double') && ...
                             (length(machRange) == 2) && ...
-                            (length(machRange(:,1) == 1))
+                            (length(machRange(:,1) == 1)))
                         if ((machRange > 0) == [1 1])
                             range = machRange; 
                         end 
