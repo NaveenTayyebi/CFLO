@@ -125,13 +125,12 @@ classdef normal_shock
                         error("Invalid mach range");
                         return; 
                     end
-                    baseProp = {'p','d','T','tp'};
                     property = cell(1,length(varargin));
+                    prop = {}
                     for val = 1:length(varargin)
-                        disp(ismember(varargin{val}(val),baseProp) == 1);
-                        if ((isa(varargin{val}{val},'char') || ...
-                            isa(varargin{val}{val},'string')) && ...
-                            (ismember(varargin{val}(val),baseProp) == 1))
+                        if ((isa(varargin{val},'char') || ...
+                            isa(varargin{val},'string')) && ...
+                            (ismember(varargin{val},prop) == 1))
                             property{val} = varargin{val};
                         else 
                             error('Property abbreviations do not exist');
