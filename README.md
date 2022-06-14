@@ -6,7 +6,7 @@ Compressible-Flow is a package created for students to visualize one and two-dim
 ```Bash 
 npm install compflow
 ```
-## Version 1.0
+## Version 1.0.1
 This version contains
 * Shockless fluid property plot tools 
 * Normal shock fluid property plot tools 
