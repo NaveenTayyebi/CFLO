@@ -1,21 +1,15 @@
 %% Normal Shock Mach Number & Fluid Property Ratios
-% Functions f1_1 and f1_2 make up the piecewise solution to the Mach 
-% number downstream of any point in a steady 1-D flow. 
-% Functions f2, f3, f4, and f5 correspond to the Static Temperature,
-% Static Density, Static Pressure, and Total Pressure Ratio across a 
-% a normal shock. 
-% The constant g is the speicifc heat ratio. 
 classdef normal_shock
     methods(Static)
-
+        % Plots speicified normal shock relations for a given specific 
+        % heat ratio and range of Mach numbers
          function plot(specHeatRatio,machRange,varargin)
             syms x
             figNumber = 1;
-            g = specHeatRatio;
-            range = machRange;
-            normal_shock.argCheck(g,range,varargin);
-            for num = 1:length(varargin)
-                switch varargin{num}
+            [g, range, property] = ...
+                normal_shock.argCheck(specHeatRatio,machRange,varargin);
+            for num = 1:length(property{1})
+                switch property{1}{num}
                     case 'p'
                         figure(figNumber)
                         f4 = 1 + (2*g)/(g+1)*(x^2-1); 
@@ -64,8 +58,10 @@ classdef normal_shock
                 figNumber = figNumber + 1; 
             end 
          end
-
-         function argCheck(specHeatRatio,machRange,varargin)
+         % Checks for valid specific heat ratio, range of mach numbers, 
+         % and 
+         % plots requested 
+         function [g, range, property] = argCheck(specHeatRatio,machRange,varargin)
             switch nargin
                 case 0
                     disp('Case One');
@@ -83,7 +79,7 @@ classdef normal_shock
                         return; 
                     end 
                         range = [1 10]; 
-                        property = ['p'];
+                        property = {'p'};
                  case 2 
                     disp('Case Three');
                     if (isa(specHeatRatio,'double') && ...
@@ -96,7 +92,7 @@ classdef normal_shock
                         return; 
                     end 
                     if (isa(machRange,'double') && ...
-                        all(machRange > 0) && ...
+                        all(machRange >= 1) && ...
                         isreal(machRange) && ... 
                         isequal(size(machRange),[1 1]))
                         range = machRange; 
@@ -104,7 +100,7 @@ classdef normal_shock
                         error("Invalid mach range");
                         return; 
                     end
-                    property = ['p'];
+                    property = {'p'};
                 otherwise 
                     disp('Case Four');
                     if (isa(specHeatRatio,'double') && ...
@@ -117,7 +113,7 @@ classdef normal_shock
                         return; 
                     end 
                     if (isa(machRange,'double') && ...
-                        all(machRange > 0) && ...
+                        all(machRange >= 1) && ...
                         isreal(machRange) && ... 
                         isequal(size(machRange),[1 2]))
                         range = machRange; 
@@ -125,12 +121,12 @@ classdef normal_shock
                         error("Invalid mach range");
                         return; 
                     end
+                    baseProp = {'p','d','T','tp'};
                     property = cell(1,length(varargin));
-                    prop = {}
                     for val = 1:length(varargin)
-                        if ((isa(varargin{val},'char') || ...
-                            isa(varargin{val},'string')) && ...
-                            (ismember(varargin{val},prop) == 1))
+                        if ((isa(varargin{val}{val},'char') || ...
+                            isa(varargin{val}{val},'string')) && ...
+                            (ismember(varargin{val}(val),baseProp) == 1))
                             property{val} = varargin{val};
                         else 
                             error('Property abbreviations do not exist');

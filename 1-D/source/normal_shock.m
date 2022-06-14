@@ -1,13 +1,8 @@
 %% Normal Shock Mach Number & Fluid Property Ratios
-% Functions f1_1 and f1_2 make up the piecewise solution to the Mach 
-% number downstream of any point in a steady 1-D flow. 
-% Functions f2, f3, f4, and f5 correspond to the Static Temperature,
-% Static Density, Static Pressure, and Total Pressure Ratio across a 
-% a normal shock. 
-% The constant g is the speicifc heat ratio. 
 classdef normal_shock
     methods(Static)
-
+        % Plots speicified normal shock relations for a given specific 
+        % heat ratio and range of Mach numbers
          function plot(specHeatRatio,machRange,varargin)
             syms x
             figNumber = 1;
@@ -63,8 +58,12 @@ classdef normal_shock
                 figNumber = figNumber + 1; 
             end 
          end
-
-         function [g, range, property] = argCheck(specHeatRatio,machRange,varargin)
+         % Checks for valid specific heat ratio, range of mach numbers, 
+         % and plots requested to normal_shock.plot(). If values are 
+         % valid, nothing occurs. If values are invalid, an error is 
+         % returned. 
+         function [g, range, property] = ...
+                    argCheck(specHeatRatio,machRange,varargin)
             switch nargin
                 case 0
                     disp('Case One');
