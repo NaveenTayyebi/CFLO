@@ -1,9 +1,9 @@
 <p align="center">
-<span align="left"><img src="./images/normal-shock-mach.png" alt="drawing" width="400"/></span>
-<span align="right"><img src="./images/normal-shock-temperature-ratio.png" alt="drawing" width="400"/></span><br>
-<span align="left"><img src="./images/normal-shock-density-ratio.png" alt="drawing" width="400"/></span>
-<span align="right"><img src="./images/normal-shock-pressure-ratio.png" alt="drawing" width="400"/></span><br>
-<span align="center"><img src="./images/normal-shock-total-pressure-ratio.png" alt="drawing" width="400"/></span>
+<span align="left"><img src="../images/normal-shock-mach.png" alt="drawing" width="400"/></span>
+<span align="right"><img src="../images/normal-shock-temperature-ratio.png" alt="drawing" width="400"/></span><br>
+<span align="left"><img src="../images/normal-shock-density-ratio.png" alt="drawing" width="400"/></span>
+<span align="right"><img src="../images/normal-shock-pressure-ratio.png" alt="drawing" width="400"/></span><br>
+<span align="center"><img src="../images/normal-shock-total-pressure-ratio.png" alt="drawing" width="400"/></span>
   </p>
 The relations are given by,<br>
 <br>Mach Number across a Normal Shock<br><br>
