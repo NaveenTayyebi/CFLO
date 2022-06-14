@@ -11,9 +11,9 @@ classdef normal_shock
          function plot(specHeatRatio,machRange,varargin)
             syms x
             figNumber = 1;
-            g = specHeatRatio;
-            range = machRange;
-            normal_shock.argCheck(g,range,varargin);
+            [g, range, property] = ...
+                normal_shock.argCheck(specHeatRatio,machRange,varargin);
+            return;
             for num = 1:length(varargin)
                 switch varargin{num}
                     case 'p'
@@ -65,7 +65,7 @@ classdef normal_shock
             end 
          end
 
-         function argCheck(specHeatRatio,machRange,varargin)
+         function [g, range, property] = argCheck(specHeatRatio,machRange,varargin)
             switch nargin
                 case 0
                     disp('Case One');
@@ -83,7 +83,7 @@ classdef normal_shock
                         return; 
                     end 
                         range = [1 10]; 
-                        property = ['p'];
+                        property = {'p'};
                  case 2 
                     disp('Case Three');
                     if (isa(specHeatRatio,'double') && ...
@@ -104,7 +104,7 @@ classdef normal_shock
                         error("Invalid mach range");
                         return; 
                     end
-                    property = ['p'];
+                    property = {'p'};
                 otherwise 
                     disp('Case Four');
                     if (isa(specHeatRatio,'double') && ...
@@ -128,7 +128,6 @@ classdef normal_shock
                     baseProp = {'p','d','T','tp'};
                     property = cell(1,length(varargin));
                     for val = 1:length(varargin)
-                        disp(ismember(varargin{val}(val),baseProp) == 1);
                         if ((isa(varargin{val}{val},'char') || ...
                             isa(varargin{val}{val},'string')) && ...
                             (ismember(varargin{val}(val),baseProp) == 1))
