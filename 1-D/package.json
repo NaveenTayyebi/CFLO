@@ -8,19 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NaveenTayyebi/Compressible-Flow.git"
+    "url": "git+https://github.com/NaveenTayyebi/Compressible-Flow.git/tree/main/1-D"
   },
   "author": "Naveen Tayyebi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NaveenTayyebi/Compressible-Flow/issues"
   },
-<<<<<<< HEAD
   "homepage": "https://github.com/NaveenTayyebi/Compressible-Flow#readme",
   "keywords": [
     "Compressible"
   ]
-=======
   "homepage": "https://github.com/NaveenTayyebi/Compressible-Flow#readme"
->>>>>>> bebe252c90d63e1dd77cccd89f40e53489ab5875
 }
