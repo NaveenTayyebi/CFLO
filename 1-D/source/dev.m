@@ -23,4 +23,10 @@
 %shockless.plot(["a" "b"],[1 5],'d');
 %shockless.plot({1.2},[1 5],'d');
 %shockless.plot(@(x) x.^2,[1 5],'d');
-shockless.sonic_ref_calc(1.4,[2 2],'p','is')
+X = 1:0.01:5;
+Y = []; 
+for i = 1:0.01:5
+    Y = [Y shockless.sonic_ref_calc(1.4,i,'p','ad')]; 
+end 
+plot(X,Y,'Linewidth',1,'color','red');
+

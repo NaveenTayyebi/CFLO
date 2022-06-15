@@ -79,24 +79,23 @@ classdef shockless
          function computedValue = sonic_ref_calc(specHeatRatio, mach, property, ...
                  flowType) 
             syms x
-            shockless.arg_check(specHeatRatio);
-            shockless.arg_2check(mach, property);
-            g = specHeatRatio; 
+            [g, mach, quantity] = ...
+               shockless.arg_2check(specHeatRatio,mach, property);
             % Check mach and quantity
-                switch property
+                switch quantity
                     case 'p'
-                        if (flowType == 'is')
+                        if (isequal(flowType,'is'))
                             syms x 
                             f = (2/(g+1)*(1+(g-1)/2*x^2))^(-g/(g-1));
                             computedValue = eval(subs(f,x,mach));
                             return;
                         end
-                        if (flowType == 'ad')
+                        if (isequal(flowType,'ad'))
                             f = 1/x*(2/(g+1)*(1+(g-1)/2*x^2))^(-1/2);
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (flowType == 'rvht')
+                        if (isequal(flowType,'rvht'))
                             f = (1+g)/(1+g*x^2);
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -105,17 +104,17 @@ classdef shockless
                             return; 
                         end   
                      case 'T'
-                        if (flowType == 'is')
+                        if (isequal(flowType,'is'))
                             f = (2/(g+1)*(1+(g-1)/2*x^2))^(-1);
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (flowType == 'ad')
+                        if (isequal(flowType,'ad'))
                             f = (2/(g+1)*(1+(g-1)/2*x^2))^(-1);
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (flowType == 'rvht')
+                        if (isequal(flowType,'rvht'))
                             f = x^2*(1+g)^2/(1+g*x^2)^2;
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -124,17 +123,17 @@ classdef shockless
                             return;
                         end 
                      case 'd' 
-                        if (flowType == 'is')
+                        if (isequal(flowType,'is'))
                             f = (2/(g+1)*(1+(g-1)/2*x^2))^(-1/(g-1));
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (flowType == 'ad')
+                        if (isequal(flowType,'ad'))
                             f = 1/x*(2/(g+1)*(1+(g-1)/2*x^2))^(1/2);
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (flowType == 'rvht')
+                        if (isequal(flowType,'rvht'))
                             f = 1/x^2*(1+g*x^2)/(1+g);
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -143,17 +142,17 @@ classdef shockless
                             return;
                         end 
                      case 'tp'
-                        if (flowType == 'is')
+                        if (isequal(flowType,'is'))
                             f = 1; 
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (flowType == 'ad')
+                        if (isequal(flowType,'ad'))
                             f = 1/x*((2/(g+1))*(1 + (g-1)/2*x^2))^((g+1)/(2*g-2));
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (flowType == 'rhvt')
+                        if (isequal(flowType,'rvht'))
                             f = (1 + g)/(1 + g*x^2)*((2/(g+1))*(1 + (g-1)/2*x^2))^(g/(g-1));
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -241,7 +240,40 @@ classdef shockless
                     end
                 end 
          end
-
+         % Checks for valid specific heat ratio, mach number, 
+         % and fluid property requested to shockless.sonic_ref_calc(). 
+         % If values are valid, nothing occurs. If values are invalid, 
+         % an error is returned.  
+         function [g, mach, property] = ...
+                    arg_2check(specHeatRatio,machNumber,fluidProp)
+            if (isa(specHeatRatio,'double') && ...
+                all(specHeatRatio(:) >= 1) && ...
+                isreal(specHeatRatio) && ... 
+                isequal(size(specHeatRatio),[1 1]))
+                g = specHeatRatio; 
+            else 
+                error("Invalid specific heat ratio");
+                return; 
+            end 
+            if (isa(machNumber,'double') && ...
+                all(machNumber(:) > 0) && ...
+                isreal(machNumber) && ... 
+                isequal(size(machNumber),[1 1]))
+                mach = machNumber;  
+            else 
+                error("Invalid mach number");
+                return; 
+            end 
+            baseProp = {'p','d','T','tp'};
+            if ((isa(fluidProp,'char') || ...
+                isa(fluidProp,'string')) && ...
+                (ismember({fluidProp},baseProp) == 1))
+                property = fluidProp;
+            else 
+                error('Property abbreviation does not exist');
+                return;
+            end 
+         end 
     end
 end 
  
