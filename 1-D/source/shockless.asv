@@ -79,9 +79,7 @@ classdef shockless
          function computedValue = sonic_ref_calc(specHeatRatio, mach, property, ...
                  flowType) 
             syms x
-            shockless.arg_check(specHeatRatio);
-            shockless.arg_2check(mach, property);
-            g = specHeatRatio; 
+            shockless.arg_check(heat)
             % Check mach and quantity
                 switch property
                     case 'p'
