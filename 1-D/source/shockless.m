@@ -67,7 +67,7 @@ classdef shockless
                         title('Sonic Total Pressure Ratios');
                         legend('Isentropic','Adiabatic','Reversible Heat Transfer');
                       otherwise
-                         error('Plot abbreviation does not exist'); 
+                         error('Plot abbreviations do not exist'); 
                          return; 
                 end 
                 figNumber = figNumber + 1; 
@@ -81,11 +81,9 @@ classdef shockless
             syms x
             [g, mach, quantity] = ...
                shockless.arg_2check(specHeatRatio,mach, property);
-            % Check mach and quantity
                 switch quantity
                     case 'p'
                         if (isequal(flowType,'is'))
-                            syms x 
                             f = (2/(g+1)*(1+(g-1)/2*x^2))^(-g/(g-1));
                             computedValue = eval(subs(f,x,mach));
                             return;
@@ -234,7 +232,7 @@ classdef shockless
                             (ismember(varargin{val}(val),baseProp) == 1))
                             property{val} = varargin{val};
                         else 
-                            error('Property abbreviations do not exist');
+                            error('Property abbreviation does not exist');
                             return;
                         end 
                     end
