@@ -5,7 +5,7 @@ classdef normal_shock
         % heat ratio and range of Mach numbers
         function upstream_ref_plot(specHeatRatio,machRange,varargin)
             syms x
-            figNumber = 1;
+            figNumber = length(findobj('type','figure')) + 1;
             [g, range, prop] = ...
                 normal_shock.arg_check(specHeatRatio,machRange,varargin);
             for num = 1:length(prop{1})
