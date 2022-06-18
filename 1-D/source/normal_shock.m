@@ -89,7 +89,7 @@ classdef normal_shock
                 end 
         end 
     end
-    methods(Access = private)
+    methods(Static,Access = private)
         % Checks for valid specific heat ratio, range of mach numbers, 
         % and plots requested to normal_shock.plot(). If values are 
         % valid, nothing occurs. If values are invalid, an error is 
@@ -152,10 +152,10 @@ classdef normal_shock
                         return; 
                     end
                     baseProp = {'p','d','T','tp'};
-                    property = cell(1,length(varargin));
+                    valid_prop = cell(1,length(varargin));
                     for val = 1:length(varargin)
-                        if ((isa(varargin{val},'char') || ...
-                            isa(varargin{val},'string')) && ...
+                        if ((isa(varargin{val}{1},'char') || ...
+                            isa(varargin{val}{1},'string')) && ...
                             (ismember(varargin{val},baseProp) == 1))
                             valid_prop{val} = varargin{val};
                         else 
