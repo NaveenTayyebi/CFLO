@@ -34,11 +34,8 @@ classdef normal_shock
                         title('Density Ratio');
                      case 'M' 
                         figure(figNumber)
-                        f_1 = x; 
-                        f_2 = (1 + (g-1)/2*x^2)^(1/2)/(g*x^2-(g-1)/2)^(1/2); 
-                        fplot(f_1,[0 1],'linewidth',1,'color','red');
-                        hold on 
-                        fplot(f_2,range,'linewidth',1,'color','red'); 
+                        f = (1 + (g-1)/2*x^2)^(1/2)/(g*x^2-(g-1)/2)^(1/2); 
+                        fplot(f,range,'linewidth',1,'color','red');
                         ylim([0 1.5]);
                         xlabel('Upstream Mach Number ( M_{1} )');
                         ylabel('Downstream Mach Number ( M_{2} )');
@@ -131,7 +128,7 @@ classdef normal_shock
                         error("Invalid mach range");
                         return; 
                     end
-                    valid_property = {'p'};
+                    valid_prop = {'p'};
                 otherwise 
                     if (isa(specHeatRatio,'double') && ...
                         all(specHeatRatio(:) >= 1) && ...
@@ -151,7 +148,7 @@ classdef normal_shock
                         error("Invalid mach range");
                         return; 
                     end
-                    baseProp = {'p','d','T','tp'};
+                    baseProp = {'p','d','T','tp','M'};
                     valid_prop = cell(1,length(varargin));
                     for val = 1:length(varargin)
                         if ((isa(varargin{val}{1},'char') || ...
