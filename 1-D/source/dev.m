@@ -57,11 +57,11 @@ disp(" ")
 machRange = {[2 3],[0.00001 ; 0.00001],[0.00001 0.00001...
     ; 0.000001 0.00001],-0.00001,0.00001i,2+i, [2 + 2i 2 + 2i],...
     @(x) x, {0.0001}, 0:0.1:1,'a',"a",'ababab',"abababa",['a' 'a'],...
-    ['b' 1],[Inf 0],-Inf,a.a.a,0.999};
+    ['b' 1],[Inf 0],-Inf,a.a.a,[0.999 0.899]};
 for i = 1:length(machRange) 
-    try shockless.arg_check(1.2,machRange,'p');
+    try shockless.arg_check(1.2,machRange{i},'p');
     catch 
-        disp(i)
+        %disp(i)
     end 
 end 
 
