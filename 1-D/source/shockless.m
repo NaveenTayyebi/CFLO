@@ -6,10 +6,10 @@ classdef shockless
          function plot(specHeatRatio,machRange,varargin)
             syms x
             figNumber = 1;
-            [g, range, property] = ...
+            [g, range, prop] = ...
                 shockless.arg_check(specHeatRatio,machRange,varargin);
-            for num = 1:length(property{1})
-                switch property{1}{num}
+            for num = 1:length(prop{1})
+                switch prop{1}{num}
                     case 'p'
                         figure(figNumber)
                         f1 = (2/(g+1)*(1+(g-1)/2*x^2))^(-g/(g-1));
@@ -76,12 +76,12 @@ classdef shockless
          % Returns sonic propery ratios for a given specific heat ratio,
          % Mach number, and Flow Type (Isentropic, Adiabatic, and 
          % Frictionless Reversible-Heat Transfer)
-         function computedValue = sonic_ref_calc(specHeatRatio, mach, property, ...
-                 flowType) 
+         function computedValue = sonic_ref_calc(specHeatRatio,...
+                 machNumber,property,flowType) 
             syms x
-            [g, mach, quantity] = ...
-               shockless.arg_2check(specHeatRatio,mach, property);
-                switch quantity
+            [g, mach, prop] = ...
+               shockless.arg_2check(specHeatRatio,machNumber, property);
+                switch prop
                     case 'p'
                         if (isequal(flowType,'is'))
                             f = (2/(g+1)*(1+(g-1)/2*x^2))^(-g/(g-1));
@@ -163,11 +163,13 @@ classdef shockless
                          return; 
                 end 
          end 
+    end
+    methods(Access = private)
          % Checks for valid specific heat ratio, range of mach numbers, 
          % and plots requested to shockless.plot(). If values are 
          % valid, nothing occurs. If values are invalid, an error is 
          % returned. 
-         function [g, range, property] = ...
+         function [valid_g, valid_range, valid_prop] = ...
                     arg_check(specHeatRatio,machRange,varargin)
             switch nargin
                 case 0
@@ -178,19 +180,19 @@ classdef shockless
                         all(specHeatRatio(:) >= 1) && ...
                         isreal(specHeatRatio) && ... 
                         isequal(size(specHeatRatio),[1 1]))
-                        g = specHeatRatio; 
+                        valid_g = specHeatRatio; 
                     else 
                         error("Invalid specific heat ratio");
                         return; 
                     end 
-                        range = [1 10]; 
-                        property = {'p'};
+                        valid_range = [1 10]; 
+                        valid_property = {'p'};
                  case 2 
                     if (isa(specHeatRatio,'double') && ...
                         all(specHeatRatio(:) >= 1) && ...
                         isreal(specHeatRatio) && ... 
                         isequal(size(specHeatRatio),[1 1])) 
-                        g = specHeatRatio; 
+                        valid_g = specHeatRatio; 
                     else 
                         error("Invalid specific heat ratio");
                         return; 
@@ -199,7 +201,7 @@ classdef shockless
                         all(machRange(:) > 0) && ...
                         isreal(machRange) && ... 
                         isequal(size(machRange),[1 1]))
-                        range = machRange; 
+                        valid_range = machRange; 
                     else 
                         error("Invalid mach range");
                         return; 
@@ -210,7 +212,7 @@ classdef shockless
                         all(specHeatRatio(:) >= 1) && ...
                         isreal(specHeatRatio) && ... 
                         isequal(size(specHeatRatio),[1 1])) 
-                        g = specHeatRatio; 
+                        valid_g = specHeatRatio; 
                     else 
                         error("Invalid specific heat ratio");
                         return;
@@ -219,18 +221,18 @@ classdef shockless
                         all(machRange(:) > 0) && ...
                         isreal(machRange) && ... 
                         isequal(size(machRange),[1 2]))
-                        range = machRange; 
+                        valid_range = machRange; 
                     else 
                         error("Invalid mach range");
                         return; 
                     end
                     baseProp = {'p','d','T','tp'};
-                    property = cell(1,length(varargin));
+                    valid_prop = cell(1,length(varargin));
                     for val = 1:length(varargin)
                         if ((isa(varargin{val},'char') || ...
                             isa(varargin{val},'string')) && ...
                             (ismember(varargin{val},baseProp) == 1))
-                            property{val} = varargin{val};
+                            valid_prop{val} = varargin{val};
                         else 
                             error('Property abbreviation does not exist');
                             return;
@@ -242,13 +244,13 @@ classdef shockless
          % and fluid property requested to shockless.sonic_ref_calc(). 
          % If values are valid, nothing occurs. If values are invalid, 
          % an error is returned.  
-         function [g, mach, property] = ...
-                    arg_2check(specHeatRatio,machNumber,fluidProp)
+         function [valid_g, valid_mach, valid_prop] = ...
+                    arg_2check(specHeatRatio,machNumber,property)
             if (isa(specHeatRatio,'double') && ...
                 all(specHeatRatio(:) >= 1) && ...
                 isreal(specHeatRatio) && ... 
                 isequal(size(specHeatRatio),[1 1]))
-                g = specHeatRatio; 
+                valid_g = specHeatRatio; 
             else 
                 error("Invalid specific heat ratio");
                 return; 
@@ -257,22 +259,22 @@ classdef shockless
                 all(machNumber(:) > 0) && ...
                 isreal(machNumber) && ... 
                 isequal(size(machNumber),[1 1]))
-                mach = machNumber;  
+                valid_mach = machNumber;  
             else 
                 error("Invalid mach number");
                 return; 
             end 
             baseProp = {'p','d','T','tp'};
-            if ((isa(fluidProp,'char') || ...
-                isa(fluidProp,'string')) && ...
-                (ismember({fluidProp},baseProp) == 1))
-                property = fluidProp;
+            if ((isa(property,'char') || ...
+                isa(property,'string')) && ...
+                (ismember({property},baseProp) == 1))
+                valid_prop = property;
             else 
                 error('Property abbreviation does not exist');
                 return;
             end 
          end 
-    end
+    end 
 end 
  
  

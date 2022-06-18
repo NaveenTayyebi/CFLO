@@ -91,10 +91,10 @@ classdef normal_shock
     end
     methods(Access = private)
         % Checks for valid specific heat ratio, range of mach numbers, 
-        % and plots requested to normal_shock.plot(). If values are 
-        % valid, nothing occurs. If values are invalid, an error is 
-        % returned. 
-        function [valid_g, valid_range, valid_prop] = ...
+         % and plots requested to normal_shock.plot(). If values are 
+         % valid, nothing occurs. If values are invalid, an error is 
+         % returned. 
+         function [valid_g, valid_range, valid_prop] = ...
                     arg_check(specHeatRatio,machRange,varargin)
             switch nargin
                 case 0
@@ -163,33 +163,21 @@ classdef normal_shock
                             return;
                         end 
                     end
-            end 
-        end
-        % Checks for valid specific heat ratio and mach number 
-        % requested to normal_shock.upstream_ref_calc(). If values 
-        % are valid, nothing occurs. If values are invalid, an error 
-        % is returned.
-        function [valid_g, valid_mach] ...
+                end 
+         end
+         % Checks for valid 
+         function [valid_g, valid_mach] ...
                  = arg_2check(specHeatRatio,machNumber) 
             if (isa(specHeatRatio,'double') && ...
                         all(specHeatRatio(:) >= 1) && ...
                         isreal(specHeatRatio) && ... 
                         isequal(size(specHeatRatio),[1 1]))
-                valid_g = specHeatRatio; 
-            else 
-                error("Invalid specific heat ratio");
-                return; 
+                        valid_g = specHeatRatio; 
+                    else 
+                        error("Invalid specific heat ratio");
+                        return; 
             end
-            if (isa(machNumber,'double') && ...
-                all(machNumber(:) >= 1) && ...
-                isreal(machNumber) && ... 
-                isequal(size(machNumber),[1 1]))
-                valid_mach = machNumber;  
-            else 
-                error("Invalid mach number");
-                return; 
-            end 
-        end 
+         end 
     end
 end 
  
