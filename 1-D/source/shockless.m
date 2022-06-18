@@ -3,7 +3,7 @@ classdef shockless
     methods(Static)
         % Plots speicified fluid property relations for a given specific 
         % heat ratio and range of Mach numbers
-         function plot(specHeatRatio,machRange,varargin)
+        function sonic_ref_plot(specHeatRatio,machRange,varargin)
             syms x
             figNumber = 1;
             [g, range, prop] = ...
@@ -186,7 +186,7 @@ classdef shockless
                         return; 
                     end 
                         valid_range = [1 10]; 
-                        valid_property = {'p'};
+                        valid_prop = {'p'};
                  case 2 
                     if (isa(specHeatRatio,'double') && ...
                         all(specHeatRatio(:) >= 1) && ...
@@ -206,7 +206,7 @@ classdef shockless
                         error("Invalid mach range");
                         return; 
                     end
-                    property = {'p'};
+                    valid_prop = {'p'};
                 otherwise 
                     if (isa(specHeatRatio,'double') && ...
                         all(specHeatRatio(:) >= 1) && ...
@@ -231,7 +231,7 @@ classdef shockless
                     for val = 1:length(varargin)
                         if ((isa(varargin{val}{1},'char') || ...
                             isa(varargin{val}{1},'string')) && ...
-                            (ismember(varargin{val},baseProp) == 1))
+                          (all(ismember(varargin{val},baseProp) == 1) > 0))
                             valid_prop{val} = varargin{val};
                         else 
                             error('Property abbreviation does not exist');

@@ -3,7 +3,7 @@ classdef normal_shock
     methods(Static)
         % Plots speicified normal shock relations for a given specific 
         % heat ratio and range of Mach numbers
-         function plot(specHeatRatio,machRange,varargin)
+        function upstream_ref_plot(specHeatRatio,machRange,varargin)
             syms x
             figNumber = 1;
             [g, range, prop] = ...
@@ -153,7 +153,7 @@ classdef normal_shock
                     for val = 1:length(varargin)
                         if ((isa(varargin{val}{1},'char') || ...
                             isa(varargin{val}{1},'string')) && ...
-                            (ismember(varargin{val},baseProp) == 1))
+                          (all(ismember(varargin{val},baseProp) == 1) > 0))
                             valid_prop{val} = varargin{val};
                         else 
                             error('Property abbreviations do not exist');
