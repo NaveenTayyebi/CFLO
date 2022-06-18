@@ -64,6 +64,6 @@ for i = 1:length(machRange)
         %disp(i)
     end 
 end 
-shockless.
+shockless.sonic_ref_calc(1.4,3,'p','is')
 
 
