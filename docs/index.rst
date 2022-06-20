@@ -6,11 +6,7 @@
 Compressible Flow Introduction 
 =============================================
 
-.. toctree::
-   Getting Started
-   Relations 
-   .. contents:: 
-      1-D
+.. toctree:: Information Goes Here 
 
 
 
