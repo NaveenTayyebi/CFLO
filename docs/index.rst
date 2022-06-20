@@ -7,10 +7,10 @@ Compressible Flow Introduction
 =============================================
 
 .. toctree::
-
+   :maxdepth: 2
+   
    1-D
-   2-D
-   Applets
+
    
 
 
