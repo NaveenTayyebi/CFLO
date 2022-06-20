@@ -3,9 +3,9 @@ classdef normal_shock
     methods(Static)
         % Plots speicified normal shock relations for a given specific 
         % heat ratio and range of Mach numbers
-        function upstream_ref_plot(specHeatRatio,machRange,varargin)
+         function plot(specHeatRatio,machRange,varargin)
             syms x
-            figNumber = length(findobj('type','figure')) + 1;
+            figNumber = 1;
             [g, range, prop] = ...
                 normal_shock.arg_check(specHeatRatio,machRange,varargin);
             for num = 1:length(prop{1})
@@ -34,8 +34,11 @@ classdef normal_shock
                         title('Density Ratio');
                      case 'M' 
                         figure(figNumber)
-                        f = (1 + (g-1)/2*x^2)^(1/2)/(g*x^2-(g-1)/2)^(1/2); 
-                        fplot(f,range,'linewidth',1,'color','red');
+                        f_1 = x; 
+                        f_2 = (1 + (g-1)/2*x^2)^(1/2)/(g*x^2-(g-1)/2)^(1/2); 
+                        fplot(f_1,[0 1],'linewidth',1,'color','red');
+                        hold on 
+                        fplot(f_2,range,'linewidth',1,'color','red'); 
                         ylim([0 1.5]);
                         xlabel('Upstream Mach Number ( M_{1} )');
                         ylabel('Downstream Mach Number ( M_{2} )');
@@ -86,12 +89,12 @@ classdef normal_shock
                 end 
         end 
     end
-    methods(Static,Access = private)
+    methods(Access = private)
         % Checks for valid specific heat ratio, range of mach numbers, 
-        % and plots requested to normal_shock.plot(). If values are 
-        % valid, nothing occurs. If values are invalid, an error is 
-        % returned. 
-        function [valid_g, valid_range, valid_prop] = ...
+         % and plots requested to normal_shock.plot(). If values are 
+         % valid, nothing occurs. If values are invalid, an error is 
+         % returned. 
+         function [valid_g, valid_range, valid_prop] = ...
                     arg_check(specHeatRatio,machRange,varargin)
             switch nargin
                 case 0
@@ -128,7 +131,7 @@ classdef normal_shock
                         error("Invalid mach range");
                         return; 
                     end
-                    valid_prop = {'p'};
+                    valid_property = {'p'};
                 otherwise 
                     if (isa(specHeatRatio,'double') && ...
                         all(specHeatRatio(:) >= 1) && ...
@@ -148,45 +151,33 @@ classdef normal_shock
                         error("Invalid mach range");
                         return; 
                     end
-                    baseProp = {'p','d','T','tp','M'};
-                    valid_prop = cell(1,length(varargin));
+                    baseProp = {'p','d','T','tp'};
+                    property = cell(1,length(varargin));
                     for val = 1:length(varargin)
-                        if ((isa(varargin{val}{1},'char') || ...
-                            isa(varargin{val}{1},'string')) && ...
-                          (all(ismember(varargin{val},baseProp) == 1) > 0))
+                        if ((isa(varargin{val},'char') || ...
+                            isa(varargin{val},'string')) && ...
+                            (ismember(varargin{val},baseProp) == 1))
                             valid_prop{val} = varargin{val};
                         else 
                             error('Property abbreviations do not exist');
                             return;
                         end 
                     end
-            end 
-        end
-        % Checks for valid specific heat ratio and mach number 
-        % requested to normal_shock.upstream_ref_calc(). If values 
-        % are valid, nothing occurs. If values are invalid, an error 
-        % is returned.
-        function [valid_g, valid_mach] ...
+                end 
+         end
+         % Checks for valid 
+         function [valid_g, valid_mach] ...
                  = arg_2check(specHeatRatio,machNumber) 
             if (isa(specHeatRatio,'double') && ...
                         all(specHeatRatio(:) >= 1) && ...
                         isreal(specHeatRatio) && ... 
                         isequal(size(specHeatRatio),[1 1]))
-                valid_g = specHeatRatio; 
-            else 
-                error("Invalid specific heat ratio");
-                return; 
+                        valid_g = specHeatRatio; 
+                    else 
+                        error("Invalid specific heat ratio");
+                        return; 
             end
-            if (isa(machNumber,'double') && ...
-                all(machNumber(:) >= 1) && ...
-                isreal(machNumber) && ... 
-                isequal(size(machNumber),[1 1]))
-                valid_mach = machNumber;  
-            else 
-                error("Invalid mach number");
-                return; 
-            end 
-        end 
+         end 
     end
 end 
  

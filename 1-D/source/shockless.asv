@@ -5,7 +5,8 @@ classdef shockless
         % heat ratio and range of Mach numbers
         function sonic_ref_plot(specHeatRatio,machRange,varargin)
             syms x
-            figNumber = length(findobj('type','figure')) + 1;
+            figMax = 1
+            figNumber = 1;
             [g, range, prop] = ...
                 shockless.arg_check(specHeatRatio,machRange,varargin);
             for num = 1:length(prop{1})
