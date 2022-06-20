@@ -43,7 +43,9 @@
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
-<p><em>Some Text Goes Here</em></p>
+
+## Read the docs
+  
 </section>
 
 
