@@ -7,7 +7,10 @@ Compressible Flow Introduction
 =============================================
 
 .. toctree::
-   :ref:`search`
+
+   1-D
+   2-D
+   Applets
    
 
 
