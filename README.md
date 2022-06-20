@@ -11,7 +11,7 @@ This version contains
 * Shockless fluid property plot tools 
 * Normal shock fluid property plot tools 
 
-To get started using Compressible-Flow API visit the [documentation page](https://compressible-flow.readthedocs.io/en/latest/).
+To get started using Compressible-Flow API visit the [documentation page](file:///Users/naveentayyebi/Documents/GitHub/Compressible-Flow/docs/_build/html/index.html).
 
 
 
