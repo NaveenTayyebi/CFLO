@@ -6,7 +6,9 @@
 Compressible Flow Introduction 
 =============================================
 
-.. toctree:: Information Goes Here 
+.. toctree::
+   :ref:`search`
+   
 
 
 
