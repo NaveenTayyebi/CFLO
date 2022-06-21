@@ -9,7 +9,7 @@ Compressible Flow Introduction
 .. toctree::
    :maxdepth: 2
    
-   options/1-D
+   Options/1-D
 
  
 Indices and tables
