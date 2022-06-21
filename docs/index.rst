@@ -8,6 +8,7 @@ Compressible Flow Introduction
 
 .. toctree::
    :maxdepth: 2
+   :caption: Contents:
    
    Options/1-D
 
