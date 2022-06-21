@@ -9,6 +9,7 @@ Compressible Flow Introduction
 .. toctree::
    :maxdepth: 2
    :titlesonly: 
+   :hidden:
    
    1-D
    2-D
