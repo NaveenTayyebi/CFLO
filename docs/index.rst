@@ -11,6 +11,7 @@ Compressible Flow Introduction
    :titlesonly: 
    
    1-D
+   2-D
 
  
 Indices and tables
