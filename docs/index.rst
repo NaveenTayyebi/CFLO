@@ -10,6 +10,7 @@ Compressible Flow Introduction
    :maxdepth: 2
    :titlesonly: 
    
+   1-D
 
  
 Indices and tables
