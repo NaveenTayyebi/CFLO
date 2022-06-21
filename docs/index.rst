@@ -6,16 +6,12 @@
 Compressible Flow Introduction 
 =============================================
 
-.. include:: 1-D.rst
 .. toctree::
    :maxdepth: 2
    
-   1-D
+   options/1-D
 
-   
-
-
-
+ 
 Indices and tables
 ==================
 
