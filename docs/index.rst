@@ -8,10 +8,8 @@ Compressible Flow Introduction
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
    :titlesonly: 
    
-   Options/1-D
 
  
 Indices and tables
