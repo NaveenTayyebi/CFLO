@@ -25,9 +25,11 @@ Plots sonic fluid property ratios for isentropic, adiabatic, and frictionless-re
   
 .. image:: docImage_1.png
   :scale: 30%
+  :align: center
 
 .. image:: docImage_2.png
   :scale: 30%
+  :align: center
  
 .. code:: matlab
 
