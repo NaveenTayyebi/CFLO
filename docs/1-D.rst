@@ -1,5 +1,7 @@
-1-D
+1-D Modules
 ++++++++++
+
+The 1-D modules provide the tools to visualize and compute fluid property ratios for several common flows.
 
 Classes
 ==========
