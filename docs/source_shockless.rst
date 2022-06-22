@@ -314,5 +314,5 @@ Source code for shockless
       end 
   end 
   
-.. highlight_language:: matlab
+.. highlight:: matlab
  
