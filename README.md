@@ -1,6 +1,6 @@
 # CFLO
 
-Compressible-Flow is a package created for students to visualize one and two-dimensional compressible flow phenomena.
+CFLO is a package created for students to visualize one and two-dimensional compressible flow phenomena.
 
 ## Install Latest Release (v1.0.1) 
 ```Bash 
