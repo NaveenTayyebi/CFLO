@@ -1,6 +1,6 @@
 {
   "name": "cflo",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "CFLO is a package created for students to visualize one and two-dimensional compressible flow phenomena.",
   "main": "index.js",
   "scripts": {
