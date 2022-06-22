@@ -7,7 +7,7 @@ To install the latest release use
 
 ``npm install cflo``
 
-For previous and alpha versions see the `change log <https://domain.invalid/>`_. 
+For all versions including those in alpha stage see the `change log <https://domain.invalid/>`_. 
 
 
 
