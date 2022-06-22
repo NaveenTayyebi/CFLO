@@ -9,7 +9,7 @@ shockless
 
 ``shockless.sonic_ref_plot(double specificHeatRatio,[double mach1 double mach2],string property)``
 
-mormal_Shock
+normal_Shock
 ----------
 
 Applets
