@@ -13,16 +13,14 @@ shockless
 Plots sonic fluid property ratios for isentropic, adiabatic, and frictionless-reversible-heat transfer flows 
   
   **Parameters:** 
-    * **spec_heat_ratio** (double) - The specifc heat ratio of the fluid 
-    * **mach_range** (double array, size = [1 2]) - The range of mach numbers to plot over 
-    * **property** (char or string) - The property abbreviation
+    * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
+    * **mach_range** (*double array, size = [1 2]*) - The range of mach numbers to plot over 
+    * **property** (*char or string) - The property abbreviation. These include 'p', 'd', 'T', 'tp', and 'tT' for pressure, density, temperature, total pressure, and total temperature
     
-Here is some regular text, and below is a quote 
-
-  "Here is a quote"
+  **Examples:**
   
-Back to normal text
-  
+  The function call *shockless.sonic_ref_plot(1.4,[1 5],'p','d')* returns 
+ 
 .. code-block:: matlab
 
   shockless.sonic_ref_calc(spec_heat_ratio,mach,property,flow_type)
