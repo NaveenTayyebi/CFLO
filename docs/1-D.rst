@@ -24,7 +24,6 @@ Plots sonic fluid property ratios for isentropic, adiabatic, and frictionless-re
   The call ``shockless.sonic_ref_plot(1.4,[1 5],'p','d')`` returns 
   
 .. image:: docImage_1.png
-  :width: 500 px
   :align: center
 
 .. image:: docImage_2.png
