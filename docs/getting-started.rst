@@ -1,10 +1,12 @@
 Getting Started
 ++++++++++
 
-To install the latest release use ::
+To install the latest release use::
 
 npm install cflo
 
-For previous versions see
+,or see the latest version in the `change log<https://compressible-flow.readthedocs.io/en/latest/change-log.html/>`_. 
 
-For previous versions see `versions <https://compressible-flow.readthedocs.io/en/latest/change-log.html/>`_
+
+
+
