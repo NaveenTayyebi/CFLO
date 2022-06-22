@@ -9,7 +9,7 @@ Classes
 shockless
 ----------
 .. code:: matlab
- :emphasize-lines: 1
+   :emphasize-lines: 1
 
   sonic_ref_plot(spec_heat_ratio,mach_range,property)
   
