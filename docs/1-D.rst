@@ -9,6 +9,14 @@ shockless
 .. code-block:: matlab
 
   shockless.sonic_ref_plot(spec_heat_ratio,mach_range,property)
+  
+  Plots sonic fluid property ratios for isentropic, adiabatic, and frictionless-reversible-heat transfer flows 
+  
+  **Parameters:** 
+  
+  
+  
+.. code-block:: matlab
 
   shockless.sonic_ref_calc(spec_heat_ratio,mach,property,flow_type)
 
@@ -17,6 +25,10 @@ normal_shock
 .. code-block:: matlab
 
   normal_shock.upstream_ref_plot(spec_heat_ratio,mach_range,property)
+  
+  
+  
+.. code-block:: matlab
 
   normal_shock.upstream_ref_calc(spec_heat_ratio,mach,property,flow_type)
 
