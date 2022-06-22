@@ -16,6 +16,12 @@ Plots sonic fluid property ratios for isentropic, adiabatic, and frictionless-re
     * **spec_heat_ratio** (double) - The specifc heat ratio of the fluid 
     * **mach_range** (double array, size = [1 2]) - The range of mach numbers to plot over 
     * **property** (char or string) - The property abbreviation
+    
+Here is some regular text, and below is a quote 
+
+  "Here is a quote"
+  
+Back to normal text
   
 .. code-block:: matlab
 
