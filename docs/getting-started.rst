@@ -9,9 +9,6 @@ To install the latest release use
 
 For all versions including those in alpha stage see the `change log <https://domain.invalid/>`_. 
 
-code:
-    parent: literal
-    fontSize: 20
 
 
 
