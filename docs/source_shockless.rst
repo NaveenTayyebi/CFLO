@@ -1,7 +1,7 @@
 Source code for shockless
 ==========
 
-.. highlight:: matlab
+.. code-block:: matlab
 
 ::
 
