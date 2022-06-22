@@ -1,4 +1,4 @@
-# Compressible-Flow
+# CFLO
 
 Compressible-Flow is a package created for students to visualize one and two-dimensional compressible flow phenomena.
 
