@@ -6,7 +6,7 @@ Classes
 
 shockless
 ----------
-::
+block::
 
 shockless.sonic_ref_plot(spec_heat_ratio,mach_range,property)
 
