@@ -1,4 +1,4 @@
-2-D Modules
+2-D Module
 ++++++++++
 
 Classes 
