@@ -8,9 +8,11 @@ Classes
 
 shockless
 ----------
+.. role::red: 
+:red:`
 .. code-block:: matlab
-.. role:: red 
-  :red: `shockless.sonic_ref_plot(spec_heat_ratio,mach_range,property)`
+
+  shockless.sonic_ref_plot(spec_heat_ratio,mach_range,property)`
   
 Plots sonic fluid property ratios for isentropic, adiabatic, and frictionless-reversible-heat transfer flows 
   
