@@ -1,7 +1,7 @@
 Source code for shockless
 ==========
 
-.. code-block:: my_lang
+.. code-block:: *.m
 
    %% Shockless Fluid Property Ratios
    classdef shockless
