@@ -7,7 +7,7 @@ Classes
 ==========
 
 shockless
-^^^^^^^^^^
+----------
 .. code:: matlab
 
   sonic_ref_plot(spec_heat_ratio,mach_range,property)
@@ -21,15 +21,22 @@ Plots sonic fluid property ratios for isentropic, adiabatic, and frictionless-re
     
   **Examples:**
   
-  The function call ``shockless.sonic_ref_plot(1.4,[1 5],'p','d')`` returns 
+  The call ``shockless.sonic_ref_plot(1.4,[1 5],'p','d')`` returns 
   
- 
+  .. image:: docImage_1.png
+  :scale: 40 %
+  :align: center
+
+.. image:: docImage_2.png
+  :scale: 40 %
+  :align: center
+  
 .. code:: matlab
 
   sonic_ref_calc(spec_heat_ratio,mach,property,flow_type)
 
 normal_shock
-^^^^^^^^^^
+----------
 .. code:: matlab
 
   upstream_ref_plot(spec_heat_ratio,mach_range,property)
