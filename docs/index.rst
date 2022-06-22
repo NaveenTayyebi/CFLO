@@ -10,10 +10,10 @@ Compressible Flow Introduction
    :maxdepth: 2
    :hidden:
    
-   Getting Started
+   getting-started
    1-D
    2-D
-   Change Log
+   change-log
  
 Indices and tables
 ==================
