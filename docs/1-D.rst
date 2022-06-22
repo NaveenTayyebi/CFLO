@@ -12,8 +12,6 @@ shockless
 
   sonic_ref_plot(spec_heat_ratio,mach_range,property)
   
-.. highlight:: red
-  
 Plots sonic fluid property ratios for isentropic, adiabatic, and frictionless-reversible-heat transfer flows 
   
   **Parameters:** 
@@ -23,7 +21,7 @@ Plots sonic fluid property ratios for isentropic, adiabatic, and frictionless-re
     
   **Examples:**
   
-  The function call *shockless.sonic_ref_plot(1.4,[1 5],'p','d')* returns 
+  The function call ``shockless.sonic_ref_plot(1.4,[1 5],'p','d')`` returns 
  
 .. code:: matlab
 
