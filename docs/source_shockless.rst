@@ -1,5 +1,5 @@
 Source code for shockless
 ==========
 
-.. literalinclude:: /1-D/source/shockless.m
+.. literalinclude:: shockless.m
    :language: matlab
