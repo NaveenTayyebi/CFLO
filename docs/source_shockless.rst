@@ -1,7 +1,7 @@
 Source code for shockless
 ==========
 
-.. code-block:: matlab
+```matlab
 
    %% Shockless Fluid Property Ratios
    classdef shockless
@@ -315,4 +315,4 @@ Source code for shockless
        end 
    end 
  
- 
+ ```
