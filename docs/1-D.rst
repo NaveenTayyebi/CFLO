@@ -5,14 +5,14 @@ Classes
 ==========
 
 shockless
-----------
+----------::
 
 **shockless.sonic_ref_plot(spec_heat_ratio,mach_range,property)**
 
 **shockless.sonic_ref_calc(spec_heat_ratio,mach,property,flow_type)**
 
 normal_Shock
-----------
+----------::
 
 **normal_shock.upstream_ref_plot(spec_heat_ratio,mach_range,property)**
 
