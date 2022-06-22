@@ -30,8 +30,6 @@ Plots sonic fluid property ratios for isentropic, adiabatic, and frictionless-re
   :width: 500 px
   :align: center
   
-  
-  
 .. code:: matlab
 
   sonic_ref_calc(spec_heat_ratio,mach,property,flow_type)
