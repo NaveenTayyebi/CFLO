@@ -26,7 +26,6 @@ Plots sonic fluid property ratios for isentropic, adiabatic, and frictionless-re
 .. image:: pressure_1.png
   :width: 500 px
   :align: center
-
 .. image:: density_1.png
   :width: 500 px
   :align: center
