@@ -3,8 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Compressible Flow Introduction 
+COMF Introduction
 =============================================
+
+COMF is an mini open source package designed to provide tools to visualize compressible flow phenomena for students taking a first-course in compressible fluid dynamics. A reference for the fluid dynamics relations can be found in "Modern Compressible Flow" by Anderson (4th Ed, ISBN 978-1-260-57082-3). All of the classes are written in MATLAB. 
 
 .. toctree::
    :maxdepth: 2
@@ -15,12 +17,4 @@ Compressible Flow Introduction
    2-D
    change-log
  
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
-More Information 
-=================
+ 
