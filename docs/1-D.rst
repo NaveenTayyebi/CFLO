@@ -10,11 +10,11 @@ shockless
 
   shockless.sonic_ref_plot(spec_heat_ratio,mach_range,property)
   
-  Plots sonic fluid property ratios for isentropic, adiabatic, and frictionless-reversible-heat transfer flows 
+Plots sonic fluid property ratios for isentropic, adiabatic, and frictionless-reversible-heat transfer flows 
   
-  **Parameters:** 
-  
-  
+  **Parameters:** * spec_heat_ratio(double) - The specifc heat ratio of the fluid 
+                  * mach_range(double array) - The range of mach numbers to plot over 
+                  * property(char/string) - The property abbreviation
   
 .. code-block:: matlab
 
