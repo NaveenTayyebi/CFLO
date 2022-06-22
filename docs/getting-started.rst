@@ -1,7 +1,7 @@
 Getting Started
 ++++++++++
 
-To install the latest release use::
+To install the latest release use
 
 ``npm install cflo``
 
