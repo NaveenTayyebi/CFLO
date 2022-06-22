@@ -13,9 +13,9 @@ shockless
 Plots sonic fluid property ratios for isentropic, adiabatic, and frictionless-reversible-heat transfer flows 
   
   **Parameters:** 
-    * spec_heat_ratio(double) - The specifc heat ratio of the fluid 
-    * mach_range(double array) - The range of mach numbers to plot over 
-    * property(char/string) - The property abbreviation
+    * **spec_heat_ratio** (double) - The specifc heat ratio of the fluid 
+    * **mach_range** (double array, size = [1 2]) - The range of mach numbers to plot over 
+    * **property** (char or string) - The property abbreviation
   
 .. code-block:: matlab
 
