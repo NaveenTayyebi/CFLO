@@ -15,14 +15,5 @@ normal_Shock
 Applets
 ==========
 
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-
-   getting-started
-   1-D
-   2-D
-   change-log
-
 
 
