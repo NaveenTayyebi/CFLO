@@ -3,7 +3,16 @@
 
 A module to visualize and compute fluid property ratios across normal-shocks and several common 1-D flows.
 
-.. class:: shockless
+.. raw:: html
+
+   <dl class="py class">
+   <dt class="sig sig-object py" id="shockless">
+   <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shockless</span>          </span>
+   <a class="reference internal" href="https://cflo.readthedocs.io/en/latest/doc_code/source_shockless.html">
+   <span class="viewcode-link">[source]</span></a>
+   <a class="headerlink" href="#shockless" title="Permalink to this definition">
+    </a></dt>
+   <dd></dd></dl>
 
 This class provides functions to plot and compute sonic fluid property ratios. 
 
@@ -13,8 +22,7 @@ This class provides functions to plot and compute sonic fluid property ratios.
    <dt class="sig sig-object py" id="sonic_ref_plot">
    <span class="sig-name descname"><span class="pre">sonic_ref_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n">     <span class="pre">spec_heat_ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mach_range</span>
    </span></em>, <em class="sig-param"><span class="n"><span class="pre">varargin</span></span></em><span class="sig-paren">)</span>
-   <a class="reference internal" href="../_modules/pynq/pl.html#PL"><span class="viewcode-link">[source]</span></a>
-   <a class="headerlink" href="https://cflo.readthedocs.io/en/latest/doc_code/source_shockless.html" title="Permalink to this definition"></a></dt>
+   <a class="headerlink" href="#py method" title="Permalink to this definition"></a></dt>
       <dd></dd></dl>
   
 Returns sonic fluid property ratio plots for isentropic, adiabatic, and frictionless-reversible-heat transfer flows
