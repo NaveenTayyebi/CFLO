@@ -9,6 +9,7 @@ Shockless
 .. list-table:: Sonic Pressure Ratios 
    :widths: 50 150
    :header-rows: 0
+   :align: center
 
    * - Isentropic
      -  
