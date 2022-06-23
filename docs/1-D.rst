@@ -76,9 +76,9 @@ normal_shock
 Returns normal-shock downstream-upstream fluid property ratio plots `[source] <https://cflo.readthedocs.io/en/latest/source_shockless.html>`_
   
     **Parameters:** 
-    * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
-    * **mach_range** (*double array, size = [1 2]*) - The range of upstream mach numbers to plot over 
-    * **varargin** (*char* or *string*) - The property abbreviations. These include *'p'*, *'d'*, *'T'* and *'tp'* for pressure, density, temperature, and total pressure respectively.  
+      * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
+      * **mach_range** (*double array, size = [1 2]*) - The range of upstream mach numbers to plot over 
+      * **varargin** (*char* or *string*) - The property abbreviations. These include *'p'*, *'d'*, *'T'* and *'tp'* for pressure, density, temperature, and total pressure respectively.  
     
     **Examples:**
 
