@@ -103,7 +103,7 @@ Returns normal-shock downstream-upstream fluid property ratio for a given upstre
     **Parameters:** 
       * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
       * **mach_number** (*double*) - The mach number. 
-      * **property** (*char* or *string*) - The property abbreviation. This includes *'p'*, *'d'*, *'T'* or *'tp'* for pressure, density, temperature, total pressure, and total temperature respectively.  
+      * **property** (*char* or *string*) - The property abbreviation. This includes *'p'*, *'d'*, *'T'* or *'tp'* for pressure, density, temperature, and total pressure respectively.  
     
     **Examples:**
     
