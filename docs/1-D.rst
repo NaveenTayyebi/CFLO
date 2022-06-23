@@ -12,7 +12,7 @@ shockless
 
   sonic_ref_plot(spec_heat_ratio,mach_range,varargin)
   
-Returns sonic fluid property ratio plots for isentropic, adiabatic, and frictionless-reversible-heat transfer flows `[source] <https://cflo.readthedocs.io/en/latest/source_shockless.html>`_
+Returns sonic fluid property ratio plots for isentropic, adiabatic, and frictionless-reversible-heat transfer flows `[source] <https://cflo.readthedocs.io/en/latest/doc_code/source_shockless.html>`_
   
   **Parameters:** 
     * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
@@ -37,7 +37,7 @@ Returns sonic fluid property ratio plots for isentropic, adiabatic, and friction
 
   sonic_ref_calc(spec_heat_ratio,mach,property,flow_type)
   
-Returns sonic fluid property ratio for an isentropic, adiabatic, or frictionless-reversible-heat transfer flow at a specified mach number `[source] <https://cflo.readthedocs.io/en/latest/source_shockless.html>`_
+Returns sonic fluid property ratio for an isentropic, adiabatic, or frictionless-reversible-heat transfer flow at a specified mach number `[source] <https://cflo.readthedocs.io/en/latest/doc_code/source_shockless.html>`_
 
   **Parameters:** 
     * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
@@ -73,7 +73,7 @@ normal_shock
 
   upstream_ref_plot(spec_heat_ratio,mach_range,varargin)
   
-Returns normal-shock downstream-upstream fluid property ratio plots `[source] <https://cflo.readthedocs.io/en/latest/source_normal_shock.html>`_
+Returns normal-shock downstream-upstream fluid property ratio plots `[source] <https://cflo.readthedocs.io/en/latest/doc_code/source_normal_shock.html>`_
   
     **Parameters:** 
       * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
@@ -98,7 +98,7 @@ Returns normal-shock downstream-upstream fluid property ratio plots `[source] <h
 
   upstream_ref_calc(spec_heat_ratio,mach,property)
   
-Returns normal-shock downstream-upstream fluid property ratio for a given upstream mach number `[source] <https://cflo.readthedocs.io/en/latest/source_normal_shock.html>`_
+Returns normal-shock downstream-upstream fluid property ratio for a given upstream mach number `[source] <https://cflo.readthedocs.io/en/latest/doc_code/source_normal_shock.html>`_
 
     **Parameters:** 
       * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
