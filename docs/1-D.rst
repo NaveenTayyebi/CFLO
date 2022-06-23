@@ -106,6 +106,26 @@ Returns normal-shock downstream-upstream fluid property ratio for a given upstre
       * **property** (*char* or *string*) - The property abbreviation. This includes *'p'*, *'d'*, *'T'* or *'tp'* for pressure, density, temperature, total pressure, and total temperature respectively.  
     
     **Examples:**
+    
+.. code:: matlab
+
+  >> normal_shock.upstream_ref_calc(1.4,2,'tp')
+
+  ans =
+
+      0.7209
+
+  >> normal_shock.upstream_ref_calc(1.6,2.2,'T')
+
+  ans =
+
+      2.2315
+
+  >> normal_shock.upstream_ref_calc(1.23,5,'d')
+
+  ans =
+
+      7.1935
 
 Applets
 ==========
