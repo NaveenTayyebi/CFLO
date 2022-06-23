@@ -11,12 +11,9 @@ This class provides functions to plot and compute sonic fluid property ratios.
 
 .. raw:: html
 
-    <dt class="sig sig-object py" id="sonic_ref_plot">
-    <span class="sig-name descname"><span class="pre">sonic_ref_plot</span></span>
-    <span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec_heat_ratio</span></span></em>
-    ,<em class="sig-param"><span class="n">
-    <span class="pre">mach_range</span></span></em>, <em class="sig-param"<span class="n"><span class="pre">varargin</span></span></em>
-    <span class="sig-paren">)</span><a class="headerlink" href="#sonic_ref_plot" title="Permalink to this definition"></a></dt>
+   <dt class="sig sig-object py" id="sonic_ref_plot">
+   <span class="sig-name descname"><span class="pre">sonic_ref_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n">      <span class="pre">spec_heat_ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mach_range</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">varargin</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sonic_ref_plot" title="Permalink to this definition"></a>
+   </dt>
   
 Returns sonic fluid property ratio plots for isentropic, adiabatic, and frictionless-reversible-heat transfer flows `[source] <https://cflo.readthedocs.io/en/latest/doc_code/source_shockless.html>`_
   
