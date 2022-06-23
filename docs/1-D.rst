@@ -9,9 +9,7 @@ Classes
 .. class:: shockless
 ----------
 
-.. class:: highlights
-..
-  sonic_ref_plot(spec_heat_ratio,mach_range,varargin)
+:method: sonic_ref_plot(spec_heat_ratio,mach_range,varargin)
   
 Returns sonic fluid property ratio plots for isentropic, adiabatic, and frictionless-reversible-heat transfer flows `[source] <https://cflo.readthedocs.io/en/latest/doc_code/source_shockless.html>`_
   
