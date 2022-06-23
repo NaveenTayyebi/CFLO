@@ -1,15 +1,11 @@
 1-D Module
 ++++++++++
 
-The 1-D modules provide the tools to visualize and compute fluid property ratios for several common flows.
-
-Classes
-==========
+A module to visualize and compute fluid property ratios across normal-shocks and several common 1-D flows.
 
 .. class:: shockless
-----------
 
-.. property:: sonic_ref_plot(spec_heat_ratio,mach_range,varargin)
+.. method:: sonic_ref_plot(spec_heat_ratio,mach_range,varargin)
   
 Returns sonic fluid property ratio plots for isentropic, adiabatic, and frictionless-reversible-heat transfer flows `[source] <https://cflo.readthedocs.io/en/latest/doc_code/source_shockless.html>`_
   
