@@ -8,8 +8,9 @@ A module to visualize and compute fluid property ratios across normal-shocks and
 This class provides functions to plot and compute sonic fluid property ratios. 
 
 .. method:: sonic_ref_plot(spec_heat_ratio,mach_range,varargin)
+=====================
 
-`a<https://cflo.readthedocs.io/en/latest/doc_code/source_shockless.html>`_
+`[sonic]<https://cflo.readthedocs.io/en/latest/doc_code/source_shockless.html>`_
 ----------------------------------------------------------------
   
 Returns sonic fluid property ratio plots for isentropic, adiabatic, and frictionless-reversible-heat transfer flows `[source] <https://cflo.readthedocs.io/en/latest/doc_code/source_shockless.html>`_
