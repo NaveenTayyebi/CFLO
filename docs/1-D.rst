@@ -52,17 +52,17 @@ Returns sonic fluid property ratio for an isentropic, adiabatic, or frictionless
 
       0.3086
 
-  >> shockless.sonic_ref_calc(1.4,2.2,'tT','rvht')
+  >> shockless.sonic_ref_calc(1.5,2,'tp','ad')
 
   ans =
 
-      0.7561
+      1.6191
 
-  >> shockless.sonic_ref_calc(1.4,0.4,'tp','rvht')
+  >> shockless.sonic_ref_calc(1.7,10,'d','is')
 
   ans =
 
-      1.1566
+      0.0092
 
 normal_shock
 ----------
