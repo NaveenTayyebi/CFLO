@@ -1,9 +1,20 @@
 Compressible-Flow Relations 
 ==========
 
-Shockless 
+Shockless
 ----------
 
+.. list-table:: Sonic Pressure Ratios
+   :widths: 50 150
+   :header-rows: 1
+
+   * - Isentropic
+     - 
+   * - Adiabatic
+     - 
+   * - Frictionless-Reversible Heat Transfer
+     - 
+     
 .. math:: 
 
    \frac{p}{p^{*}} = \left[\left(\frac{2}{\gamma + 1}\right)\left(1 + \frac{\gamma - 1}{2}M^{2}\right)\right]^{\frac{-\gamma}{\gamma - 1}} \\
