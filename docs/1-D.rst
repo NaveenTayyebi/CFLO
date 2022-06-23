@@ -28,9 +28,7 @@ Returns sonic fluid property ratio plots for isentropic, adiabatic, and friction
   :width: 500 px
   :align: center
   
-.. code:: matlab
-
-  sonic_ref_calc(spec_heat_ratio,mach,property,flow_type)
+.. method:: sonic_ref_calc(spec_heat_ratio,mach,property,flow_type)
   
 Returns sonic fluid property ratio for an isentropic, adiabatic, or frictionless-reversible-heat transfer flow at a specified mach number `[source] <https://cflo.readthedocs.io/en/latest/doc_code/source_shockless.html>`_ `[relations] <https://cflo.readthedocs.io/en/latest/doc_code/relations.html>`_
 
@@ -62,11 +60,9 @@ Returns sonic fluid property ratio for an isentropic, adiabatic, or frictionless
 
       0.0092
 
-normal_shock
-----------
-.. code:: matlab
+.. class:: normal_shock
 
-  upstream_ref_plot(spec_heat_ratio,mach_range,varargin)
+.. method:: upstream_ref_plot(spec_heat_ratio,mach_range,varargin)
   
 Returns normal-shock downstream-upstream fluid property ratio plots `[source] <https://cflo.readthedocs.io/en/latest/doc_code/source_normal_shock.html>`_
   
