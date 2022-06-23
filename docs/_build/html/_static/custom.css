@@ -1,12 +1,1 @@
 /* This file intentionally left blank. */
-html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple)>dt { 
-    display: table !important; 
-    margin: 6px 0 !important;
-    font-size: 90% !important;
-    line-height: normal !important;
-    background: #f0f0f0 !important;
-    color: #555 !important;
-    border-left: solid 3px #ccc !important;
-    padding: 6px !important;
-    position: relative !important;
-} 
