@@ -9,7 +9,7 @@ Shockless
    :header-rows: 0
 
    * - Isentropic
-     - :math: a + b
+     - 
    * - Adiabatic
      - 
    * - Frictionless-Reversible Heat Transfer
