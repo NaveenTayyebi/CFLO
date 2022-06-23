@@ -6,18 +6,18 @@ Shockless
 
 *Sonic Pressure Ratios* 
 
-   Isentropic
+*Isentropic
    
 .. math:: 
 
    \frac{p}{p^{*}} = \left[\left(\frac{2}{\gamma + 1}\right)\left(1 + \frac{\gamma - 1}{2}M^{2}\right)\right]^{\frac{-\gamma}{\gamma - 1}} \\
    
-   Adiabatic
+*Adiabatic
    
 .. math:: 
    \frac{p}{p^{*}} = \frac{1}{M}\left[\left(\frac{2}{\gamma + 1}\right)\left(1 + \frac{\gamma - 1}{2}M^{2}\right)\right]^{-\frac{1}{2}} \\
    
-   Frictionless-Reversible Heat Transfer 
+*Frictionless-Reversible Heat Transfer 
 
 .. math:: 
 
