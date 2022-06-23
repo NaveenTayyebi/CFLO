@@ -3,8 +3,6 @@
 
 A module to visualize and compute fluid property ratios across normal-shocks and several common 1-D flows.
 
-.. module:: doc_code/source_shockless.rst
-
 .. class:: shockless
 
 This class provides functions to plot and compute sonic fluid property ratios. 
