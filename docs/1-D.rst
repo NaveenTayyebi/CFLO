@@ -86,7 +86,7 @@ Returns normal-shock downstream-upstream fluid property ratio plots `[source] <h
     
     >> normal_shock.upstream_ref_plot(1.4,[1 10],'d','T')
     
-.. image:: pressure_1.png
+.. image:: density_2.png
   :width: 500 px
   :align: center
   
