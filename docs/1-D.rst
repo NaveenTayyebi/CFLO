@@ -126,3 +126,8 @@ Returns normal-shock downstream-upstream fluid property ratio for a given upstre
   ans =
 
       7.1935
+      
+Applets 
+==========
+
+Coming soon
