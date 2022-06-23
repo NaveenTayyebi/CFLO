@@ -96,7 +96,16 @@ Returns normal-shock downstream-upstream fluid property ratio plots `[source] <h
     
 .. code:: matlab
 
-  upstream_ref_calc(spec_heat_ratio,mach,property,flow_type)
+  upstream_ref_calc(spec_heat_ratio,mach,property)
+  
+Returns normal-shock downstream-upstream fluid property ratio for a given upstream mach number `[source] <https://cflo.readthedocs.io/en/latest/source_shockless.html>`_
+
+    **Parameters:** 
+      * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
+      * **mach_number** (*double*) - The mach number. 
+      * **property** (*char* or *string*) - The property abbreviation. This includes *'p'*, *'d'*, *'T'* or *'tp'* for pressure, density, temperature, total pressure, and total temperature respectively.  
+    
+     **Examples:**
 
 Applets
 ==========
