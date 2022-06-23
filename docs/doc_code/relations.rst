@@ -8,6 +8,7 @@ Shockless
    :widths: 50, 150
 
    Isentropic, .. math:: 
+                  \frac{4}{6}
    Adiabatic, .. math:: 
    Frictionless-Reversible Heat Transfer, .. math:: 
 
