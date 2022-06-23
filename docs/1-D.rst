@@ -44,13 +44,25 @@ Returns sonic fluid property ratio for an isentropic, adiabatic, or frictionless
     
      **Examples:**
 
-The call ``shockless.sonic_ref_calc(1.4,2.2,'p','rvht')`` returns 
-
 .. code:: matlab
 
-  ans = 
-  
+  >> shockless.sonic_ref_calc(1.4,2.2,'p','rvht')
+
+  ans =
+
       0.3086
+
+  >> shockless.sonic_ref_calc(1.4,2.2,'tT','rvht')
+
+  ans =
+
+      0.7561
+
+  >> shockless.sonic_ref_calc(1.4,0.4,'tp','rvht')
+
+  ans =
+
+      1.1566
 
 normal_shock
 ----------
