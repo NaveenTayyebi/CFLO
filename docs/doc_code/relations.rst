@@ -5,6 +5,7 @@ Shockless
 ----------
 
 *Sonic Pressure Ratios* 
+   :align: center 
 
 Isentropic
    
