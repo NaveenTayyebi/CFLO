@@ -86,11 +86,11 @@ Returns normal-shock downstream-upstream fluid property ratio plots `[source] <h
     
     >> normal_shock.upstream_ref_plot(1.4,[1 10],'d','T')
     
-.. image:: ../doc_images/densityy_2.png
+.. image:: doc_images/densityy_2.png
   :width: 500 px
   :align: center
   
-.. image:: ../doc_images/temperature_2.png
+.. image:: doc_images/temperature_2.png
   :width: 500 px
   :align: center
     
