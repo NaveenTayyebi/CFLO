@@ -4,8 +4,9 @@ Compressible-Flow Relations
 Shockless
 ----------
 
-*Sonic Pressure Ratios* 
-   :align: center 
+.. align:: center 
+
+   *Sonic Pressure Ratios* 
 
 Isentropic
    
