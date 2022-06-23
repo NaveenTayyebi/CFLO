@@ -25,11 +25,11 @@ Returns sonic fluid property ratio plots for isentropic, adiabatic, and friction
 
   >> shockless.sonic_ref_plot(1.4,[1 5],'p','d')
   
-.. image:: pressure_1.png
+.. image:: doc_images/pressure_1.png
   :width: 500 px
   :align: center
   
-.. image:: density_1.png
+.. image:: doc_images/density_1.png
   :width: 500 px
   :align: center
   
