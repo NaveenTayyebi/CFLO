@@ -4,13 +4,15 @@ Compressible-Flow Relations
 Shockless
 ----------
 
-+----------+----------+
-| Isentropic | Header 2 |
-+----------+----------+
-| Adiabatic        | one      |
-+----------+----------+
-| Frictionless-Reversible Heat Transfer        | two      |
-+----------+----------+
+.. table:: 
+
+==================
+Isentropic
+==================
+Adiabatic
+==================
+Frictionless-Reversible Heat Transfer
+==================
      
 .. math:: 
 
