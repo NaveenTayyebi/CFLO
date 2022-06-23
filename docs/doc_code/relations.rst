@@ -4,15 +4,17 @@ Compressible-Flow Relations
 Shockless
 ----------
 
-.. table:: 
+.. list-table:: Sonic Pressure Ratios 
+   :widths: 50 150
+   :header-rows: 0
 
-==================
-Isentropic
-==================
-Adiabatic
-==================
-Frictionless-Reversible Heat Transfer
-==================
+   * - Isentropic
+     - 
+   * - Adiabatic
+     - 
+   * - Frictionless-Reversible Heat Transfer
+     - 
+ 
      
 .. math:: 
 
