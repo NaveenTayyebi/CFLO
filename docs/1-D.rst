@@ -73,7 +73,7 @@ normal_shock
 
   upstream_ref_plot(spec_heat_ratio,mach_range,varargin)
   
-  Returns normal-shock downstream-upstream fluid property ratio plots `[source] <https://cflo.readthedocs.io/en/latest/source_shockless.html>`_
+Returns normal-shock downstream-upstream fluid property ratio plots `[source] <https://cflo.readthedocs.io/en/latest/source_shockless.html>`_
   
     **Parameters:** 
     * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
