@@ -5,11 +5,11 @@ Shockless
 ----------
 
 +----------+----------+
-| Header 1 | Header 2 |
-+==========+==========+
-| 1        | one      |
+| Isentropic | Header 2 |
 +----------+----------+
-| 2        | two      |
+| Adiabatic        | one      |
++----------+----------+
+| Frictionless-Reversible Heat Transfer        | two      |
 +----------+----------+
      
 .. math:: 
