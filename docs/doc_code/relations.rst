@@ -144,7 +144,7 @@ Compressible-Flow Relations
          </tr>
          <tr style="border: 1px solid #dedede;  height: 70px; background-color: rgba(0,0,0,0.05);">
             <td style="padding: 24px; width: 100px;">Total-Pressure</td>
-            <td style="padding-top: 10px; padding-left: 40px; text-align: left; width: 450px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p_{o_{2}}}{p_{o_{1}}}%20=%20\left[\frac{(\gamma%20+%201)M_{1}^{2}}{2%20+%20(\gamma%20-%201)M_{1}^{2}}\right]^{\frac{\gamma}{\gamma%20-%201}}\left[\frac{\gamma%20+%201}{2\gamma%20M_{1}^{2}%20-%20(\gamma%20-1)}\right]^{\frac{1}{\gamma%20-%201}}}" style="height: 45px;"></td>
+            <td style="padding-top: 19px; padding-left: 40px; text-align: left; width: 450px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p_{o_{2}}}{p_{o_{1}}}%20=%20\left[\frac{(\gamma%20+%201)M_{1}^{2}}{2%20+%20(\gamma%20-%201)M_{1}^{2}}\right]^{\frac{\gamma}{\gamma%20-%201}}\left[\frac{\gamma%20+%201}{2\gamma%20M_{1}^{2}%20-%20(\gamma%20-1)}\right]^{\frac{1}{\gamma%20-%201}}}" style="height: 48px;"></td>
           </tr>
          <tr style="border: 1px solid #dedede; height: 70px; background-color: rgba(0,0,0,0);">
             <td style="padding: 24px; width: 100px;">Mach Number</td>
