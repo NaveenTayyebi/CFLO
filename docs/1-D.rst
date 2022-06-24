@@ -89,7 +89,7 @@ Returns sonic fluid property ratio for an isentropic, adiabatic, or frictionless
    <a class="reference internal" href="https://cflo.readthedocs.io/en/latest/doc_code/source_normal_shock.html">
    <span class="viewcode-link">[source]</span></a>
    <a class="headerlink" href="#normal_shock" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+   <dd></dd></dl>
 
 This class provides functions to plot and compute fluid property ratios across a normal-shock
 
