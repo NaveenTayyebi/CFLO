@@ -82,7 +82,7 @@ Compressible-Flow Relations
       <table style="border: 1px solid #dedede; text-align: center; margin: auto;">
          <tr style="border: 1px solid #dedede; width: 100px; height: 70px; background-color: #e9e9e9;">
             <td style="padding: 24px;">Isentropic</td>
-            <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p_{o}}{p_{o}^{*}}=1}"></td>
+            <td style="padding: 14px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p_{o}}{p_{o}^{*}}=1}"></td>
          </tr>
          <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0.05);">
             <td style="padding: 24px;">Adiabatic</td>
@@ -92,7 +92,28 @@ Compressible-Flow Relations
             <td style="padding: 24px;">Frictionless-Reversible Heat Transfer</td>
             <td style="padding: 16px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p_{o}}{p_{o}^{*}}=\frac{1%20+%20\gamma}{1%20+%20\gamma%20M^{2}}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{\frac{\gamma}{\gamma%20-%201}}}" style="height: 44px;"></td>
          </tr> 
-      </table><br><br>
+      </table><br>
+      
+===========================================================================================================================================
+
+**Sonic Total-Temperature Ratios**
+
+.. raw:: html 
+
+      <table style="border: 1px solid #dedede; text-align: center; margin: auto;">
+         <tr style="border: 1px solid #dedede; width: 100px; height: 70px; background-color: #e9e9e9;">
+            <td style="padding: 24px;">Isentropic</td>
+            <td style="padding: 14px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T_{o}}{T_{o}^{*}}=1}"></td>
+         </tr>
+         <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0.05);">
+            <td style="padding: 24px;">Adiabatic</td>
+            <td style="padding: 14px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T_{o}}{T_{o}^{*}}=1}" style="height: 48px;"></td>
+         </tr>
+         <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0);">
+            <td style="padding: 24px;">Frictionless-Reversible Heat Transfer</td>
+            <td style="padding: 16px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T_{o}}{T_{o}^{*}}=\left[\frac{M(1%20+%20\gamma)}{1%20+%20\gamma%20M^{2}}\right]^{2}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]}" style="height: 44px;"></td>
+         </tr> 
+      </table><br><br> 
       
 .. raw:: html 
 
