@@ -19,7 +19,7 @@ Shockless
             <td style="padding: 24px;">Frictionless-Reversible Heat Transfer</td>
             <td style="padding: 16px;"><img src="https://latex.codecogs.com/svg.image?\small%20\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1+\gamma}{1%20+%20\gamma%20M^{2}}}" style="width: 160px;"></td>
          </tr> 
-      </table>
+      </table><br><br>
 
 *Sonic Pressure Ratios* 
 
