@@ -111,7 +111,7 @@ Compressible-Flow Relations
          </tr>
          <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0);">
             <td style="padding: 24px;">Frictionless-Reversible Heat Transfer</td>
-            <td style="padding-left: 16px; padding-top: 18px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T_{o}}{T_{o}^{*}}=\left[\frac{M(1%20+%20\gamma)}{1%20+%20\gamma%20M^{2}}\right]^{2}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]}" style="height: 44px;"></td>
+            <td style="padding: 16px; padding-top: 18px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T_{o}}{T_{o}^{*}}=\left[\frac{M(1%20+%20\gamma)}{1%20+%20\gamma%20M^{2}}\right]^{2}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]}" style="height: 44px;"></td>
          </tr> 
       </table><br><br> 
       
