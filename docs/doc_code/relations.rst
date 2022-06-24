@@ -4,6 +4,10 @@ Compressible-Flow Relations
 Shockless
 ----------
 
+.. raw:: html 
+   
+   <div style="width: 100px; height: 100px; background: red;"></div>
+
 *Sonic Pressure Ratios* 
 
 Isentropic
