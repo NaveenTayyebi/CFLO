@@ -17,7 +17,7 @@ Shockless
          </tr>
          <tr style="width: 450px; height: 70px; border: 1px solid black;">
             <td style="padding: 24px;">Frictionless-Reversible Heat Transfer</td>
-            <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1+\gamma}{1%20+%20\gamma%20M^{2}}}" style="width: 160px;"></td>
+            <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\small%20\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1+\gamma}{1%20+%20\gamma%20M^{2}}}" style="width: 160px;"></td>
          </tr> 
       </table>
 
