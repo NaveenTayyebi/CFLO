@@ -7,15 +7,15 @@ Shockless
 .. raw:: html 
 
       <table style="border: 1px solid #dedede; text-align: center; margin: auto;">
-         <tr style="width: 100px; height: 70px; border: 1px solid black; background-color: #e9e9e9;">
+         <tr style="width: 100px; height: 70px; background-color: #e9e9e9;">
             <td style="padding: 24px;">Isentropic</td>
             <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p}{p^{*}}%20=%20\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{\frac{-\gamma}{\gamma%20-%201}}"></td>
          </tr>
-         <tr style="width: 450px; height: 70px; border: 1px solid black; background-color: rgba(0,0,0,0.05);">
+         <tr style="width: 450px; height: 70px; background-color: rgba(0,0,0,0.05);">
             <td style="padding: 24px;">Adiabatic</td>
             <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1}{M}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{-\frac{1}{2}}}" style="width: 400px;"></td>
          </tr>
-         <tr style="width: 450px; height: 70px; border: 1px solid black; background-color: rgba(0,0,0,0);">
+         <tr style="width: 450px; height: 70px; background-color: rgba(0,0,0,0);">
             <td style="padding: 24px;">Frictionless-Reversible Heat Transfer</td>
             <td style="padding: 16px;"><img src="https://latex.codecogs.com/svg.image?\small%20\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1+\gamma}{1%20+%20\gamma%20M^{2}}}" style="width: 160px;"></td>
          </tr> 
