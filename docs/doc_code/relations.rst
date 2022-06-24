@@ -130,25 +130,25 @@ Compressible-Flow Relations
 .. raw:: html 
 
       <table style="border: 1px solid #dedede; text-align: center; margin: auto; ">
-         <tr style="border: 1px solid #dedede; width: 550px; height: 70px; background-color: #e9e9e9;">
+         <tr style="border: 1px solid #dedede;  height: 70px; background-color: #e9e9e9;">
             <td style="padding: 24px; width: 100px;">Pressure</td>
-            <td style="padding: 10px; text-align: left; width: 250px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p_{2}}{p_{1}}%20=%201%20+%20\frac{2\gamma}{\gamma%20+%201}(M_{1}^{2}%20-1)}" style="height: 45px;"></td>
+            <td style="padding: 10px; text-align: left; width: 400px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p_{2}}{p_{1}}%20=%201%20+%20\frac{2\gamma}{\gamma%20+%201}(M_{1}^{2}%20-1)}" style="height: 45px;"></td>
          </tr>
          <tr style="border: 1px solid #dedede; height: 70px; background-color: #e9e9e9;">
             <td style="padding: 24px; width: 100px;">Density</td>
-            <td style="padding: 10px; text-align: left; width: 250px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{\rho_{2}}{\rho_{1}}%20=%20\frac{(\gamma%20+%201)M_{1}^{2}}{2%20+%20(\gamma%20-%201)M_{1}^{2}}}" style="height: 45px;"></td>
+            <td style="padding: 10px; text-align: left; width: 400px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{\rho_{2}}{\rho_{1}}%20=%20\frac{(\gamma%20+%201)M_{1}^{2}}{2%20+%20(\gamma%20-%201)M_{1}^{2}}}" style="height: 45px;"></td>
          </tr>
-         <tr style="border: 1px solid #dedede; width: 550px; height: 70px; background-color: rgba(0,0,0,0.05);">
+         <tr style="border: 1px solid #dedede;  height: 70px; background-color: rgba(0,0,0,0.05);">
             <td style="padding: 24px; width: 100px;">Temperature</td>
-            <td style="padding: 10px; text-align: left; width: 250px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T_{2}}{T_{1}}%20=%20\left[1%20+%20\frac{2\gamma}{\gamma%20+%201}(M_{1}^{2}%20-1)\right]\left[\frac{2%20+%20(\gamma%20-%201)M_{1}^{2}}{(\gamma%20+%201)M_{1}^{2}}\right]}" style="height: 45px;"></td>
+            <td style="padding: 10px; text-align: left; width: 400px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T_{2}}{T_{1}}%20=%20\left[1%20+%20\frac{2\gamma}{\gamma%20+%201}(M_{1}^{2}%20-1)\right]\left[\frac{2%20+%20(\gamma%20-%201)M_{1}^{2}}{(\gamma%20+%201)M_{1}^{2}}\right]}" style="height: 45px;"></td>
          </tr>
-         <tr style="border: 1px solid #dedede; width: 550px; height: 70px; background-color: rgba(0,0,0,0.05);">
+         <tr style="border: 1px solid #dedede;  height: 70px; background-color: rgba(0,0,0,0.05);">
             <td style="padding: 24px; width: 100px;">Total-Pressure</td>
-            <td style="padding: 10px; text-align: left; width: 250px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1}{M}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{-\frac{1}{2}}}" style="height: 45px;"></td>
+            <td style="padding: 10px; text-align: left; width: 400px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1}{M}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{-\frac{1}{2}}}" style="height: 45px;"></td>
           </tr>
-         <tr style="border: 1px solid #dedede; width: 550px; height: 70px; background-color: rgba(0,0,0,0);">
+         <tr style="border: 1px solid #dedede; height: 70px; background-color: rgba(0,0,0,0);">
             <td style="padding: 24px; width: 100px;">Mach Number</td>
-            <td style="padding: 10px; text-align: left; width: 250px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{M_{2}%20=%20\sqrt{\frac{1%20+%20\frac{\gamma-1}{2}M_{1}^{2}}{\gamma%20M_{1}^{2}-\frac{\gamma%20-1}{2}}}}" style="height: 45px;"></td>
+            <td style="padding: 10px; text-align: left; width: 400px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{M_{2}%20=%20\sqrt{\frac{1%20+%20\frac{\gamma-1}{2}M_{1}^{2}}{\gamma%20M_{1}^{2}-\frac{\gamma%20-1}{2}}}}" style="height: 45px;"></td>
          </tr>
       </table><br>
       
