@@ -145,7 +145,6 @@ Compressible-Flow Relations
          <tr style="border: 1px solid #dedede; width: 500px; height: 70px; background-color: rgba(0,0,0,0.05);">
             <td style="padding: 24px;">Total-Pressure</td>
             <td style="padding: 10px; text-align: left;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1}{M}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{-\frac{1}{2}}}" style="height: 45px;"></td>
-         </tr>
           </tr>
          <tr style="border: 1px solid #dedede; width: 500px; height: 70px; background-color: rgba(0,0,0,0);">
             <td style="padding: 24px;">Mach Number</td>
