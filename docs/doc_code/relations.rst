@@ -125,4 +125,40 @@ Compressible-Flow Relations
    <a class="headerlink" href="#normal_shock" title="Permalink to this definition"></a></dt>
    <dd></dd></dl>
    
+**Downstream-Upstream Property Ratios**
+
+.. raw:: html 
+
+      <table style="border: 1px solid #dedede; text-align: center; margin: auto;">
+         <tr style="border: 1px solid #dedede; width: 100px; height: 70px; background-color: #e9e9e9;">
+            <td style="padding: 24px;">Pressure</td>
+            <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p}{p^{*}}%20=%20\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{\frac{-\gamma}{\gamma%20-%201}}"></td>
+         </tr>
+         <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0.05);">
+            <td style="padding: 24px;">Density</td>
+            <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1}{M}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{-\frac{1}{2}}}" style="height: 48px;"></td>
+         </tr>
+          </tr>
+         <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0.05);">
+            <td style="padding: 24px;">Temperature</td>
+            <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1}{M}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{-\frac{1}{2}}}" style="height: 48px;"></td>
+         </tr>
+          </tr>
+         <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0.05);">
+            <td style="padding: 24px;">Total-Pressure</td>
+            <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1}{M}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{-\frac{1}{2}}}" style="height: 48px;"></td>
+         </tr>
+          </tr>
+         <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0.05);">
+            <td style="padding: 24px;">Mach Number</td>
+            <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1}{M}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{-\frac{1}{2}}}" style="height: 48px;"></td>
+         </tr>
+         <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0);">
+            <td style="padding: 24px;">Frictionless-Reversible Heat Transfer</td>
+            <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\small%20\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1+\gamma}{1%20+%20\gamma%20M^{2}}}" style="height: 44px;"></td>
+         </tr> 
+      </table><br>
+      
+===========================================================================================================================================
+   
 
