@@ -92,7 +92,7 @@ Compressible-Flow Relations
             <td style="padding: 24px;">Frictionless-Reversible Heat Transfer</td>
             <td style="padding: 16px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T}{T^{*}}%20=%20\left[\frac{M(1+\gamma)}{1%20+%20\gamma%20M^{2}}\right]^{2}}" style="height: 44px;"></td>
          </tr> 
-      </table><br>
+      </table><br><br>
       
 .. raw:: html 
 
