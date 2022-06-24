@@ -6,16 +6,16 @@ Shockless
 
 .. raw:: html 
    
-   <table>
-      <tr>
+   <table style="border: 1px solid black; text-align: center">
+      <tr style="width: 100px; height: 50px;">
          <td>Isentropic</td>
          <td></td>
       </tr>
-      <tr>
+      <tr style="width: 250px; height: 50px; ">
          <td>Adiabatic</td>
          <td></td>
       </tr>
-      <tr>
+      <tr style="width: 250px; height: 50px; ">
          <td>Frictionless-Reversible Heat Transfer</td>
          <td></td>
       </tr> 
