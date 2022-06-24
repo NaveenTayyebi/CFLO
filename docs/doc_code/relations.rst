@@ -107,7 +107,7 @@ Compressible-Flow Relations
          </tr>
          <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0.05);">
             <td style="padding: 24px;">Adiabatic</td>
-            <td style="padding: 14px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T_{o}}{T_{o}^{*}}=1}" style="height: 48px;"></td>
+            <td style="padding: 14px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T_{o}}{T_{o}^{*}}=1}" style="height: 46px;"></td>
          </tr>
          <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0);">
             <td style="padding: 24px;">Frictionless-Reversible Heat Transfer</td>
