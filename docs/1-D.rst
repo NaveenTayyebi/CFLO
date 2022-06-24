@@ -94,8 +94,6 @@ Returns sonic fluid property ratio for an isentropic, adiabatic, or frictionless
 
 This class provides functions to plot and compute fluid property ratios across a normal-shock
 
-.. method:: upstream_ref_plot(spec_heat_ratio,mach_range,varargin)
-
 .. raw:: html
 
    <dl class="py method">
@@ -125,6 +123,13 @@ Returns normal-shock downstream-upstream fluid property ratio plots `[source] <h
   :align: center
    
 .. method:: upstream_ref_calc(spec_heat_ratio,mach,property)
+
+.. raw:: html
+
+   <dl class="py method">
+   <dt class="sig sig-object py" id="upstream_ref_calc" style="background:#f0f0f0 !important; border-top: none !important; border-left: 3px solid #ccc !important; color: #555 !important; ">
+   <span class="sig-name descname"><span class="pre">upstream_ref_calc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n">  <span class="pre">spec_heat_ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mach</span></span></em>, <em class="sig-   param"><span class="n"><span class="pre">property</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#upstream_ref_calc"   title="Permalink to this definition"></a></dt>
+   <dd></dd></dl>
   
 Returns normal-shock downstream-upstream fluid property ratio for a given upstream mach number `[source] <https://cflo.readthedocs.io/en/latest/doc_code/source_normal_shock.html>`_
 
