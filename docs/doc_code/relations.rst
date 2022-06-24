@@ -6,7 +6,7 @@ Shockless
 
 .. raw:: html 
    
-   <div style="width: 100px; height: 100px; background: red;"></div>
+   <div style="width: 100px; height: 100px; background: hsla(209, 38%, 46%, 0.3); z-index: 1; "></div>
 
 *Sonic Pressure Ratios* 
 
