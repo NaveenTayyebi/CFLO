@@ -9,7 +9,7 @@ Shockless
    <table style="border: 1px solid black; text-align: center">
       <tr style="width: 100px; height: 50px; border: 1px solid black;">
          <td>Isentropic</td>
-         <td><img src="https://latex.codecogs.com/svg.image?\large%20\color{white}\frac{p}{p^{*}}%20=%20\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{\frac{-\gamma}{\gamma%20-%201}}"></td>
+         <td><img src="https://latex.codecogs.com/svg.image?\small%20\frac{p}{p^{*}}%20=%20\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{\frac{-\gamma}{\gamma%20-%201}}"></td>
       </tr>
       <tr style="width: 450px; height: 50px; border: 1px solid black;">
          <td>Adiabatic</td>
