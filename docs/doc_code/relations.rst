@@ -13,11 +13,11 @@ Shockless
       </tr>
       <tr style="width: 250px; height: 50px; border: 1px solid black;">
          <td>Adiabatic</td>
-         <td><img src="../../1-D/images/equations/sonic_ad_pressure.png"></td>
+         <td><img src="../../1-D/images/equations/sonic_ad_pressure.png" style="width: 250px;"></td>
       </tr>
       <tr style="width: 250px; height: 50px; border: 1px solid black;">
          <td>Frictionless-Reversible Heat Transfer</td>
-         <td><img src="../../1-D/images/equations/sonic_rvht_pressure.png"></td>
+         <td><img src="../../1-D/images/equations/sonic_rvht_pressure.png" style="width: 250px;></td>
       </tr> 
    </table>
 
