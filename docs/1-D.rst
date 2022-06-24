@@ -47,6 +47,12 @@ Returns sonic fluid property ratio plots for isentropic, adiabatic, and friction
   :align: center
   
 .. method:: sonic_ref_calc(spec_heat_ratio,mach,property,flow_type)
+
+.. raw:: html 
+
+    <dl class="py method">
+   <dt class="sig sig-object py" id="sonic_ref_calc" style="background:#f0f0f0 !important; border-top: none !important; border-left: 3px solid #ccc !important; color: #555 !important; ">
+   <span class="sig-name descname"><span class="pre">sonic_ref_calc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n">  <span class="pre">spec_heat_ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mach</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">property</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_type</span></span></em>  <span class="sig-paren">)</span><a class="headerlink" href="#sonic_ref_calc" title="Permalink to this definition"></a></dt></dl>
   
 Returns sonic fluid property ratio for an isentropic, adiabatic, or frictionless-reversible-heat transfer flow at a specified mach number `[source] <https://cflo.readthedocs.io/en/latest/doc_code/source_shockless.html>`_ `[relations] <https://cflo.readthedocs.io/en/latest/doc_code/relations.html>`_
 
