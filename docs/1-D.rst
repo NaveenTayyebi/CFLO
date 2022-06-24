@@ -45,8 +45,6 @@ Returns sonic fluid property ratio plots for isentropic, adiabatic, and friction
 .. image:: doc_images/density_1.png
   :width: 500 px
   :align: center
-  
-.. method:: sonic_ref_calc(spec_heat_ratio,mach,property,flow_type)
 
 .. raw:: html 
 
@@ -83,8 +81,15 @@ Returns sonic fluid property ratio for an isentropic, adiabatic, or frictionless
   ans =
 
       0.0092
+.. raw:: html 
 
-.. class:: normal_shock
+   <dl class="py class">
+   <dt class="sig sig-object py" id="normal_shock">
+   <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">normal_shock</span> </span>
+   <a class="reference internal" href="https://cflo.readthedocs.io/en/latest/doc_code/source_normal_shock.html">
+   <span class="viewcode-link">[source]</span></a>
+   <a class="headerlink" href="#normal_shock" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 This class provides functions to plot and compute fluid property ratios across a normal-shock
 
