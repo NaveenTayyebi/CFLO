@@ -121,8 +121,6 @@ Returns normal-shock downstream-upstream fluid property ratio plots `[source] <h
 .. image:: doc_images/temperature_2.png
   :width: 500 px
   :align: center
-   
-.. method:: upstream_ref_calc(spec_heat_ratio,mach,property)
 
 .. raw:: html
 
