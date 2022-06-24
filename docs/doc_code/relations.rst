@@ -27,13 +27,13 @@ Compressible-Flow Relations
          </tr>
          <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0);">
             <td style="padding: 24px;">Frictionless-Reversible Heat Transfer</td>
-            <td style="padding: 16px;"><img src="https://latex.codecogs.com/svg.image?\small%20\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1+\gamma}{1%20+%20\gamma%20M^{2}}}" style="height: 48px;"></td>
+            <td style="padding: 16px;"><img src="https://latex.codecogs.com/svg.image?\small%20\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1+\gamma}{1%20+%20\gamma%20M^{2}}}" style="height: 45px;"></td>
          </tr> 
-      </table><br><br>
+      </table><br>
       
 ===========================================================================================================================================
 
-*Sonic Density Ratios* 
+**Sonic Density Ratios**
 
 Isentropic 
    
