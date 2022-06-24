@@ -148,7 +148,7 @@ Compressible-Flow Relations
           </tr>
          <tr style="border: 1px solid #dedede; height: 70px; background-color: rgba(0,0,0,0);">
             <td style="padding: 24px; width: 100px;">Mach Number</td>
-            <td style="padding-top: 10px; padding-left: 40px; text-align: left; width: 450px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{M_{2}%20=%20\sqrt{\frac{1%20+%20\frac{\gamma-1}{2}M_{1}^{2}}{\gamma%20M_{1}^{2}-\frac{\gamma%20-1}{2}}}}" style="height: 45px;"></td>
+            <td style="padding-top: 14px; padding-left: 40px; text-align: left; width: 450px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{M_{2}%20=%20\sqrt{\frac{1%20+%20\frac{\gamma-1}{2}M_{1}^{2}}{\gamma%20M_{1}^{2}-\frac{\gamma%20-1}{2}}}}" style="height: 46px;"></td>
          </tr>
       </table><br>
       
