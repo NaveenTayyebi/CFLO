@@ -9,15 +9,15 @@ Shockless
    <table style="border: 1px solid black; text-align: center">
       <tr style="width: 100px; height: 50px; border: 1px solid black;">
          <td>Isentropic</td>
-         <td><img src="../../1-D/images/equations/sonic_is_pressure"></td>
+         <td><img src="../../1-D/images/equations/sonic_is_pressure.png" style="width: 400px;"></td>
       </tr>
-      <tr style="width: 250px; height: 50px; border: 1px solid black;">
+      <tr style="width: 450px; height: 50px; border: 1px solid black;">
          <td>Adiabatic</td>
-         <td><img src="../../1-D/images/equations/sonic_ad_pressure"></td>
+         <td><img src="../../1-D/images/equations/sonic_ad_pressure.png" style="width: 400px;"></td>
       </tr>
-      <tr style="width: 250px; height: 50px; border: 1px solid black;">
+      <tr style="width: 450px; height: 50px; border: 1px solid black;">
          <td>Frictionless-Reversible Heat Transfer</td>
-         <td><img src="../../1-D/images/equations/sonic_rvht_pressure"></td>
+         <td><img src="../../1-D/images/equations/sonic_rvht_pressure.png" style="width: 160px;"></td>
       </tr> 
    </table>
 
