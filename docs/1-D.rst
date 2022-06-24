@@ -52,7 +52,7 @@ Returns sonic fluid property ratio plots for isentropic, adiabatic, and friction
    <dt class="sig sig-object py" id="sonic_ref_calc" style="background:#f0f0f0 !important; border-top: none !important; border-left: 3px solid #ccc !important; color: #555 !important; ">
    <span class="sig-name descname"><span class="pre">sonic_ref_calc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n">  <span class="pre">spec_heat_ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mach</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">property</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_type</span></span></em>  <span class="sig-paren">)</span><a class="headerlink" href="#sonic_ref_calc" title="Permalink to this definition"></a></dt></dl>
   
-Returns sonic fluid property ratio for an isentropic, adiabatic, or frictionless-reversible-heat transfer flow at a specified mach number `[source] <https://cflo.readthedocs.io/en/latest/doc_code/source_shockless.html>`_ `[relations] <https://cflo.readthedocs.io/en/latest/doc_code/relations.html>`_
+Returns sonic fluid property ratio for an isentropic, adiabatic, or frictionless-reversible-heat transfer flow at a specified mach number `[relations] <https://cflo.readthedocs.io/en/latest/doc_code/relations.html>`_
 
   **Parameters:** 
     * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
@@ -101,8 +101,8 @@ This class provides functions to plot and compute fluid property ratios across a
    <span class="sig-name descname"><span class="pre">upstream_ref_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n">     <span class="pre">spec_heat_ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mach_range</span></span></em>, <em   class="sig-param"><span class="n"><span class="pre">varargin</span></span></em><span class="sig-paren">)</span><a class="headerlink"   href="#upstream_ref_plot" title="Permalink to this definition"></a></dt>
    <dd></dd></dl>
   
-Returns normal-shock downstream-upstream fluid property ratio plots `[source] <https://cflo.readthedocs.io/en/latest/doc_code/source_normal_shock.html>`_
-  
+Returns normal-shock downstream-upstream fluid property ratio plots `[relations] <https://cflo.readthedocs.io/en/latest/doc_code/relations.html>`_
+
     **Parameters:** 
       * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
       * **mach_range** (*double array, size = [1 2]*) - The range of upstream mach numbers to plot over 
@@ -129,7 +129,7 @@ Returns normal-shock downstream-upstream fluid property ratio plots `[source] <h
    <span class="sig-name descname"><span class="pre">upstream_ref_calc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n">  <span class="pre">spec_heat_ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mach</span></span></em>, <em class="sig-   param"><span class="n"><span class="pre">property</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#upstream_ref_calc"   title="Permalink to this definition"></a></dt>
    <dd></dd></dl>
   
-Returns normal-shock downstream-upstream fluid property ratio for a given upstream mach number `[source] <https://cflo.readthedocs.io/en/latest/doc_code/source_normal_shock.html>`_
+Returns normal-shock downstream-upstream fluid property ratio for a given upstream mach number `[relations] <https://cflo.readthedocs.io/en/latest/doc_code/relations.html>`_
 
     **Parameters:** 
       * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
