@@ -6,7 +6,20 @@ Shockless
 
 .. raw:: html 
    
-   <div style="width: 100px; height: 100px; background: hsla(209, 38%, 46%, 0.3); z-index: 1; "></div>
+   <table>
+      <tr>
+         <td>Isentropic</td>
+         <td></td>
+      </tr>
+      <tr>
+         <td>Adiabatic</td>
+         <td></td>
+      </tr>
+      <tr>
+         <td>Frictionless-Reversible Heat Transfer</td>
+         <td></td>
+      </tr> 
+   </table>
 
 *Sonic Pressure Ratios* 
 
