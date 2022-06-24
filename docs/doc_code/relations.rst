@@ -5,6 +5,7 @@ Shockless
 ----------
 
 .. raw:: html 
+
    <div style="margin: auto;"> 
       <table style="border: 1px solid black; text-align: center;">
          <tr style="width: 100px; height: 70px; border: 1px solid black;">
