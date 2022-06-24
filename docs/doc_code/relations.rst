@@ -4,6 +4,8 @@ Compressible-Flow Relations
 Shockless
 ----------
 
+*Sonic Pressure Ratios* 
+
 .. raw:: html 
 
       <table style="border: 1px solid #dedede; text-align: center; margin: auto;">
@@ -20,26 +22,6 @@ Shockless
             <td style="padding: 16px;"><img src="https://latex.codecogs.com/svg.image?\small%20\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1+\gamma}{1%20+%20\gamma%20M^{2}}}" style="width: 160px;"></td>
          </tr> 
       </table><br><br>
-
-*Sonic Pressure Ratios* 
-
-Isentropic
-
-.. math:: 
-
-   \frac{p}{p^{*}} = \left[\left(\frac{2}{\gamma + 1}\right)\left(1 + \frac{\gamma - 1}{2}M^{2}\right)\right]^{\frac{-\gamma}{\gamma - 1}} \\
-      
-Adiabatic
-
-.. math:: 
-      
-   \frac{p}{p^{*}} = \frac{1}{M}\left[\left(\frac{2}{\gamma + 1}\right)\left(1 + \frac{\gamma - 1}{2}M^{2}\right)\right]^{-\frac{1}{2}} \\
-
-Frictionless-Reversible Heat Transfer 
-
-.. math:: 
-
-   \frac{p}{p^{*}} = \frac{1+\gamma}{1 + \gamma M^{2}} \\
       
 ===========================================================================================================================================
 
