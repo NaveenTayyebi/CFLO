@@ -1,6 +1,11 @@
 %% Shockless Fluid Property Ratios
 classdef shockless
     methods(Static)
+
+        function total_ref_plot(specHeatRatio,machRange,varargin)
+            disp("hello");
+
+        end 
         % Plots speicified fluid property relations for a given specific 
         % heat ratio and range of Mach numbers
         function sonic_ref_plot(specHeatRatio,machRange,varargin)
