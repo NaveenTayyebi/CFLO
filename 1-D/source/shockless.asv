@@ -1,16 +1,83 @@
 %% Shockless Fluid Property Ratios
 classdef shockless
     methods(Static)
+        % Plots speicified fluid property relation for a given specific 
+        % heat ratio and range of Mach numbers
+        function total_ref_plot(specHeatRatio,machRange,varargin)
+            syms x
+            figNumber = length(findobj('type','figure')) + 1;
+            [g, range, prop] = ...
+                shockless.arg_check(specHeatRatio,machRange,varargin);
+            baseProp = {'p','d','T'};
+            for num = 1:length(prop)
+                if (~ismember(prop{num},baseProp) == 1)
+                    error('Plot abbreviations do not exist'); 
+                    return;
+                end 
+            end 
+            for num = 1:length(prop)
+                temp = prop{num};
+                switch temp{1}
+                    case 'p'
+                        figure(figNumber)
+                        f = (1+(g-1)/2*x^2)^(-g/(g-1));
+                        fplot(f,range,'linewidth',1,'color','#D95319');
+                        xlabel('Mach Number');
+                        ylabel('p/p_{o}');
+                        title('Total Pressure Ratio');
+                        legend('Isentropic');
+                     case 'T'
+                        figure(figNumber)
+                        f = (1+(g-1)/2*x^2)^(-1);
+                        fplot(f,range,'linewidth',1,'color','#D95319');
+                        xlabel('Mach Number');
+                        ylabel('T/T_{o}');
+                        title('Total Temperature Ratio');
+                        legend('Isentropic');
+                     case 'd' 
+                        figure(figNumber)
+                        f = (1+(g-1)/2*x^2)^(-1/(g-1));
+                        fplot(f,range,'linewidth',1,'color','#D95319');
+                        xlabel('Mach Number');
+                        ylabel('\rho/\rho_{o}');
+                        title('Total Density Ratio');
+                        legend('Isentropic');
+                    otherwise
+                         error('Plot abbreviations do not exist'); 
+                         return; 
+                end 
+                figNumber = figNumber + 1; 
+            end 
+        end 
+        %
+        function computedValue = total_ref_calc(specHeatRatio,...
+                 machNumber,property)
+            syms x
+            [g, mach, prop] = ...
+               shockless.arg_2check(specHeatRatio,machNumber, property);
+            switch prop 
+                case 'p' 
+                case 'd'
+
+                case 'T'
+                otherwise
+                    
+
+            end 
+                
+       
+
+        end 
         % Plots speicified fluid property relations for a given specific 
         % heat ratio and range of Mach numbers
         function sonic_ref_plot(specHeatRatio,machRange,varargin)
             syms x
-            figMax = 1
-            figNumber = 1;
+            figNumber = length(findobj('type','figure')) + 1;
             [g, range, prop] = ...
                 shockless.arg_check(specHeatRatio,machRange,varargin);
-            for num = 1:length(prop{1})
-                switch prop{1}{num}
+            for num = 1:length(prop)
+                temp = prop{num}; 
+                switch temp{1}
                     case 'p'
                         figure(figNumber)
                         f1 = (2/(g+1)*(1+(g-1)/2*x^2))^(-g/(g-1));
@@ -262,17 +329,18 @@ classdef shockless
                     end
                     baseProp = {'p','d','T','tp','tT'};
                     valid_prop = cell(1,length(varargin));
-                    for val = 1:length(varargin)
-                        if ((isa(varargin{val}{1},'char') || ...
-                            isa(varargin{val}{1},'string')) && ...
-                          (all(ismember(varargin{val},baseProp) == 1) > 0))
-                            valid_prop{val} = varargin{val};
+                    for val = 1:length(varargin{1})
+                        temp = varargin{1}(val); 
+                        if ((isa(temp{1},'char') || ...
+                            isa(temp{1},'string')) && ...
+                          (all(ismember(temp,baseProp) == 1) > 0))
+                            valid_prop{val} = temp;
                         else 
-                            error('Property abbreviation does not exist');
+                            error('Property abbreviations do not exist');
                             return;
                         end 
                     end
-                end 
+            end 
          end
          % Checks for valid specific heat ratio, mach number, 
          % and fluid property requested to shockless.sonic_ref_calc(). 
