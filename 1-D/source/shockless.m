@@ -90,13 +90,19 @@ classdef shockless
                 temp = prop{num}; 
                 switch temp{1}
                     case 'p'
+                        if (range(1) == 0)
+                            ad_range = [0.0001 range(2)];
+                            warning(['Adiabatic sonic pressure ratio',...
+                                    + ' is undefined at 0. Substituting',...
+                                    + ' in mach number of 1e-4']);
+                        end
                         figure(figNumber)
                         f1 = (2/(g+1)*(1+(g-1)/2*x^2))^(-g/(g-1));
                         f2 = 1/x*(2/(g+1)*(1+(g-1)/2*x^2))^(-1/2);
                         f3 = (1+g)/(1+g*x^2);
                         fplot(f1,range,'linewidth',1,'color','#D95319');
                         hold on 
-                        fplot(f2,range,'linewidth',1,'color','red');
+                        fplot(f2,ad_range,'linewidth',1,'color','red');
                         hold on 
                         fplot(f3,range,'linewidth',1,'color','magenta');
                         xlabel('Mach Number');
@@ -117,14 +123,20 @@ classdef shockless
                         ylabel('T/T*');
                         title('Sonic Temperature Ratios');
                         legend('Isentropic','Adiabatic','Reversible Heat Transfer');
-                     case 'd' 
+                     case 'd'
+                        if (range(1) == 0)
+                            ad_range = [0.0001 range(2)];
+                            warning(['Adiabatic sonic density ratio',...
+                                    + ' is undefined at 0. Substituting',...
+                                    + ' in mach number of 1e-4']);
+                        end
                         figure(figNumber)
                         f1 = (2/(g+1)*(1+(g-1)/2*x^2))^(-1/(g-1));
                         f2 = 1/x*(2/(g+1)*(1+(g-1)/2*x^2))^(1/2);
                         f3 = 1/x^2*(1+g*x^2)/(1+g);
                         fplot(f1,range,'linewidth',1,'color','#D95319');
                         hold on 
-                        fplot(f2,range,'linewidth',1,'color','red');
+                        fplot(f2,ad_range,'linewidth',1,'color','red');
                         hold on 
                         fplot(f3,range,'linewidth',1,'color','magenta');
                         xlabel('Mach Number');
@@ -132,13 +144,19 @@ classdef shockless
                         title('Sonic Density Ratios');
                         legend('Isentropic','Adiabatic','Reversible Heat Transfer');
                      case 'tp'
+                        if (range(1) == 0)
+                            ad_range = [0.0001 range(2)];
+                            warning(['Adiabatic sonic total pressure ratio',...
+                                    + ' is undefined at 0. Substituting',...
+                                    + ' in mach number of 1e-4']);
+                        end
                         figure(figNumber)
                         f1 = 1; 
                         f2 = 1/x*((2/(g+1))*(1 + (g-1)/2*x^2))^((g+1)/(2*g-2));
                         f3 = (1 + g)/(1 + g*x^2)*((2/(g+1))*(1 + (g-1)/2*x^2))^(g/(g-1));
                         fplot(f1,range,'Linewidth',1,'color','#D95319');
                         hold on 
-                        fplot(f2,range,'Linewidth',1,'color','red');
+                        fplot(f2,ad_range,'Linewidth',1,'color','red');
                         hold on 
                         fplot(f3,range,'Linewidth',1,'color','magenta');
                         xlabel('Mach Number');
@@ -182,6 +200,12 @@ classdef shockless
                             return;
                         end
                         if (isequal(flowType,'ad'))
+                            if (mach == 0)
+                                mach = 0.0001; 
+                                warning(['Adiabatic sonic pressure ratio',...
+                                          + ' is undefined at 0. Substituting',...
+                                          + ' in mach number of 1e-4']);
+                            end
                             f = 1/x*(2/(g+1)*(1+(g-1)/2*x^2))^(-1/2);
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -220,6 +244,12 @@ classdef shockless
                             return;
                         end 
                         if (isequal(flowType,'ad'))
+                            if (mach == 0)
+                                mach = 0.0001; 
+                                warning(['Adiabatic sonic density ratio',...
+                                          + ' is undefined at 0. Substituting',...
+                                          + ' in mach number of 1e-4']);
+                            end
                             f = 1/x*(2/(g+1)*(1+(g-1)/2*x^2))^(1/2);
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -239,6 +269,12 @@ classdef shockless
                             return;
                         end 
                         if (isequal(flowType,'ad'))
+                            if (mach == 0)
+                                mach = 0.0001; 
+                                warning(['Adiabatic sonic total pressure ratio',...
+                                          + ' is undefined at 0. Substituting',...
+                                          + ' in mach number of 1e-4']);
+                            end 
                             f = 1/x*((2/(g+1))*(1 + (g-1)/2*x^2))^((g+1)/(2*g-2));
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -310,7 +346,7 @@ classdef shockless
                         return; 
                     end 
                     if (isa(machRange,'double') && ...
-                        all(machRange(:) > 0) && ...
+                        all(machRange(:) >= 0) && ...
                         isreal(machRange) && ... 
                         isequal(size(machRange),[1 1]))
                         valid_range = machRange; 
@@ -330,7 +366,7 @@ classdef shockless
                         return;
                     end 
                     if (isa(machRange,'double') && ...
-                        all(machRange(:) > 0) && ...
+                        all(machRange(:) >= 0) && ...
                         isreal(machRange) && ... 
                         isequal(size(machRange),[1 2]))
                         valid_range = machRange; 
@@ -369,7 +405,7 @@ classdef shockless
                 return; 
             end 
             if (isa(machNumber,'double') && ...
-                all(machNumber(:) > 0) && ...
+                all(machNumber(:) >= 0) && ...
                 isreal(machNumber) && ... 
                 isequal(size(machNumber),[1 1]))
                 valid_mach = machNumber;  

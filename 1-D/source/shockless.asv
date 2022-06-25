@@ -49,24 +49,35 @@ classdef shockless
                 figNumber = figNumber + 1; 
             end 
         end 
-        %
+        % Returns total propery ratio for a given specific heat ratio and 
+        % Mach number
         function computedValue = total_ref_calc(specHeatRatio,...
                  machNumber,property)
             syms x
             [g, mach, prop] = ...
                shockless.arg_2check(specHeatRatio,machNumber, property);
+            baseProp = {'p','d','T'};
+            if (~ismember({prop},baseProp) == 1)
+                error('Plot abbreviations do not exist'); 
+                return;
+            end 
             switch prop 
                 case 'p' 
+                    f = (1+(g-1)/2*x^2)^(-g/(g-1));
+                    computedValue = eval(subs(f,x,mach));
+                    return;
                 case 'd'
-
+                    f = (1+(g-1)/2*x^2)^(-1/(g-1));
+                    computedValue =  eval(subs(f,x,mach));
+                    return;
                 case 'T'
+                    f = (1+(g-1)/2*x^2)^(-1);
+                    computedValue =  eval(subs(f,x,mach));
+                    return;
                 otherwise
-                    
-
+                    error('Plot abbreviation does not exist'); 
+                    return;
             end 
-                
-       
-
         end 
         % Plots speicified fluid property relations for a given specific 
         % heat ratio and range of Mach numbers
@@ -79,6 +90,12 @@ classdef shockless
                 temp = prop{num}; 
                 switch temp{1}
                     case 'p'
+                        if (mach == 0)
+                                mach = 0.0001; 
+                                warning(['Adiabatic sonic pressure ratio',...
+                                          + ' is undefined at 0. Substituting',...
+                                          + ' in mach number of 1e-4']);
+                        end
                         figure(figNumber)
                         f1 = (2/(g+1)*(1+(g-1)/2*x^2))^(-g/(g-1));
                         f2 = 1/x*(2/(g+1)*(1+(g-1)/2*x^2))^(-1/2);
@@ -171,6 +188,12 @@ classdef shockless
                             return;
                         end
                         if (isequal(flowType,'ad'))
+                            if (mach == 0)
+                                mach = 0.0001; 
+                                warning(['Adiabatic sonic pressure ratio',...
+                                          + ' is undefined at 0. Substituting',...
+                                          + ' in mach number of 1e-4']);
+                            end
                             f = 1/x*(2/(g+1)*(1+(g-1)/2*x^2))^(-1/2);
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -209,6 +232,12 @@ classdef shockless
                             return;
                         end 
                         if (isequal(flowType,'ad'))
+                            if (mach == 0)
+                                mach = 0.0001; 
+                                warning(['Adiabatic sonic density ratio',...
+                                          + ' is undefined at 0. Substituting',...
+                                          + ' in mach number of 1e-4']);
+                            end
                             f = 1/x*(2/(g+1)*(1+(g-1)/2*x^2))^(1/2);
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -228,6 +257,12 @@ classdef shockless
                             return;
                         end 
                         if (isequal(flowType,'ad'))
+                            if (mach == 0)
+                                mach = 0.0001; 
+                                warning(['Adiabatic sonic total pressure ratio',...
+                                          + ' is undefined at 0. Substituting',...
+                                          + ' in mach number of 1e-4']);
+                            end 
                             f = 1/x*((2/(g+1))*(1 + (g-1)/2*x^2))^((g+1)/(2*g-2));
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -299,7 +334,7 @@ classdef shockless
                         return; 
                     end 
                     if (isa(machRange,'double') && ...
-                        all(machRange(:) > 0) && ...
+                        all(machRange(:) >= 0) && ...
                         isreal(machRange) && ... 
                         isequal(size(machRange),[1 1]))
                         valid_range = machRange; 
@@ -319,7 +354,7 @@ classdef shockless
                         return;
                     end 
                     if (isa(machRange,'double') && ...
-                        all(machRange(:) > 0) && ...
+                        all(machRange(:) >= 0) && ...
                         isreal(machRange) && ... 
                         isequal(size(machRange),[1 2]))
                         valid_range = machRange; 
@@ -358,7 +393,7 @@ classdef shockless
                 return; 
             end 
             if (isa(machNumber,'double') && ...
-                all(machNumber(:) > 0) && ...
+                all(machNumber(:) >= 0) && ...
                 isreal(machNumber) && ... 
                 isequal(size(machNumber),[1 1]))
                 valid_mach = machNumber;  
