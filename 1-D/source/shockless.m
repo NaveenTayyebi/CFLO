@@ -49,7 +49,8 @@ classdef shockless
                 figNumber = figNumber + 1; 
             end 
         end 
-        %
+        % Returns total propery ratio for a given specific heat ratio and 
+        % Mach number
         function computedValue = total_ref_calc(specHeatRatio,...
                  machNumber,property)
             syms x
