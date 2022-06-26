@@ -52,10 +52,10 @@ classdef shockless
         % Returns total propery ratio for a given specific heat ratio and 
         % Mach number
         function computedValue = total_ref_calc(spec_heat_ratio,...
-                 machNumber,property)
+                 mach_number,property)
             syms x
             [g, mach, prop] = ...
-               shockless.arg_2check(spec_heat_ratio,machNumber, property);
+               shockless.arg_2check(spec_heat_ratio,mach_number, property);
             baseProp = {'p','d','T'};
             if (~ismember({prop},baseProp) == 1)
                 error('Plot abbreviations do not exist'); 
@@ -210,10 +210,10 @@ classdef shockless
          % Mach number, and Flow Type (Isentropic, Fanno, and 
          % Rayleigh)
          function computedValue = sonic_ref_calc(spec_heat_ratio,...
-                 machNumber,property,flow_type) 
+                 mach_number,property,flow_type) 
             syms x
             [g, mach, prop] = ...
-               shockless.arg_2check(spec_heat_ratio,machNumber, property);
+               shockless.arg_2check(spec_heat_ratio,mach_number, property);
                 switch prop
                     case 'p'
                         if (isequal(flow_type,'is'))
@@ -448,7 +448,7 @@ classdef shockless
          % If values are valid, nothing occurs. If values are invalid, 
          % an error is returned.  
          function [valid_g, valid_mach, valid_prop] = ...
-                    arg_2check(spec_heat_ratio,machNumber,property)
+                    arg_2check(spec_heat_ratio,mach_number,property)
             if (isa(spec_heat_ratio,'double') && ...
                 all(spec_heat_ratio(:) >= 1) && ...
                 isreal(spec_heat_ratio) && ... 
@@ -458,11 +458,11 @@ classdef shockless
                 error("Invalid specific heat ratio");
                 return; 
             end 
-            if (isa(machNumber,'double') && ...
-                all(machNumber(:) >= 0) && ...
-                isreal(machNumber) && ... 
-                isequal(size(machNumber),[1 1]))
-                valid_mach = machNumber;  
+            if (isa(mach_number,'double') && ...
+                all(mach_number(:) >= 0) && ...
+                isreal(mach_number) && ... 
+                isequal(size(mach_number),[1 1]))
+                valid_mach = mach_number;  
             else 
                 error("Invalid mach number");
                 return; 
@@ -521,10 +521,14 @@ classdef shockless
                 return;
             end 
             if (option == 'plot')
-                baseSelections = {}; 
+                baseSelections = {'sl'}; 
+                % TODO: Add ismember function 
+                valid_selection = {}; 
             end 
             if (option == 'calc')
-                baseSelections = {}; 
+                baseSelections = {'gl','sl'}; 
+                % TODO: Add ismember function
+                valid_selection = {};
             end 
 
          end 
