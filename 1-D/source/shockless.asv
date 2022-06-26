@@ -91,12 +91,12 @@ classdef shockless
                 switch temp{1}
                     case 'p'
                         if (range(1) == 0)
-                            ad_range = [0.0001 range(2)];
-                            warning(['Adiabatic sonic pressure ratio',...
+                            fan_range = [0.0001 range(2)];
+                            warning(['Fanno sonic pressure ratio',...
                                     + ' is undefined at 0. Substituting',...
                                     + ' in mach number of 1e-4']);
                         else 
-                            ad_range = range; 
+                            fan_range = range; 
                         end
                         figure(figNumber)
                         f1 = (2/(g+1)*(1+(g-1)/2*x^2))^(-g/(g-1));
@@ -104,13 +104,13 @@ classdef shockless
                         f3 = (1+g)/(1+g*x^2);
                         fplot(f1,range,'linewidth',1,'color','#D95319');
                         hold on 
-                        fplot(f2,ad_range,'linewidth',1,'color','red');
+                        fplot(f2,fan_range,'linewidth',1,'color','red');
                         hold on 
                         fplot(f3,range,'linewidth',1,'color','magenta');
                         xlabel('Mach Number');
                         ylabel('p/p*');
                         title('Sonic Pressure Ratios');
-                        legend('Isentropic','Adiabatic','Reversible Heat Transfer');
+                        legend('Isentropic','Fanno','Rayleigh');
                      case 'T'
                         figure(figNumber)
                         f1 = (2/(g+1)*(1+(g-1)/2*x^2))^(-1);
@@ -124,15 +124,15 @@ classdef shockless
                         xlabel('Mach Number');
                         ylabel('T/T*');
                         title('Sonic Temperature Ratios');
-                        legend('Isentropic','Adiabatic','Reversible Heat Transfer');
+                        legend('Isentropic','Fanno','Rayleigh');
                      case 'd'
                         if (range(1) == 0)
-                            ad_range = [0.0001 range(2)];
-                            warning(['Adiabatic sonic density ratio',...
+                            fan_range = [0.0001 range(2)];
+                            warning(['Fanno sonic density ratio',...
                                     + ' is undefined at 0. Substituting',...
                                     + ' in mach number of 1e-4']);
                         else 
-                            ad_range = range;
+                            fan_range = range;
                         end
                         figure(figNumber)
                         f1 = (2/(g+1)*(1+(g-1)/2*x^2))^(-1/(g-1));
@@ -140,21 +140,21 @@ classdef shockless
                         f3 = 1/x^2*(1+g*x^2)/(1+g);
                         fplot(f1,range,'linewidth',1,'color','#D95319');
                         hold on 
-                        fplot(f2,ad_range,'linewidth',1,'color','red');
+                        fplot(f2,fan_range,'linewidth',1,'color','red');
                         hold on 
                         fplot(f3,range,'linewidth',1,'color','magenta');
                         xlabel('Mach Number');
                         ylabel('\rho/\rho*');
                         title('Sonic Density Ratios');
-                        legend('Isentropic','Adiabatic','Reversible Heat Transfer');
+                        legend('Isentropic','Fanno','Rayleigh');
                      case 'tp'
                         if (range(1) == 0)
-                            ad_range = [0.0001 range(2)];
-                            warning(['Adiabatic sonic total pressure ratio',...
+                            fan_range = [0.0001 range(2)];
+                            warning(['Fanno sonic total pressure ratio',...
                                     + ' is undefined at 0. Substituting',...
                                     + ' in mach number of 1e-4']);
                         else 
-                            ad_range = range;
+                            fan_range = range;
                         end
                         figure(figNumber)
                         f1 = 1; 
@@ -162,13 +162,13 @@ classdef shockless
                         f3 = (1 + g)/(1 + g*x^2)*((2/(g+1))*(1 + (g-1)/2*x^2))^(g/(g-1));
                         fplot(f1,range,'Linewidth',1,'color','#D95319');
                         hold on 
-                        fplot(f2,ad_range,'Linewidth',1,'color','red');
+                        fplot(f2,fan_range,'Linewidth',1,'color','red');
                         hold on 
                         fplot(f3,range,'Linewidth',1,'color','magenta');
                         xlabel('Mach Number');
                         ylabel('p_{o} / p_{o}*');
                         title('Sonic Total Pressure Ratios');
-                        legend('Isentropic','Adiabatic','Reversible Heat Transfer');
+                        legend('Isentropic','Fanno','Rayleigh');
                     case 'tT'
                         figure(figNumber)
                         f1 = 1; 
@@ -182,7 +182,7 @@ classdef shockless
                         xlabel('Mach Number');
                         ylabel('T_{o} / T_{o}*');
                         title('Sonic Total Temperature Ratios');
-                        legend('Isentropic','Adiabatic','Reversible Heat Transfer');
+                        legend('Isentropic','Fanno','Rayleigh');
                     case 'A'
                         if (range(1) == 0)
                             is_range = [0.0001 range(2)];
@@ -207,8 +207,8 @@ classdef shockless
             end 
          end
          % Returns sonic propery ratios for a given specific heat ratio,
-         % Mach number, and Flow Type (Isentropic, Adiabatic, and 
-         % Frictionless Reversible-Heat Transfer)
+         % Mach number, and Flow Type (Isentropic, Fanno, and 
+         % Rayleigh)
          function computedValue = sonic_ref_calc(specHeatRatio,...
                  machNumber,property,flowType) 
             syms x
@@ -221,10 +221,10 @@ classdef shockless
                             computedValue = eval(subs(f,x,mach));
                             return;
                         end
-                        if (isequal(flowType,'ad'))
+                        if (isequal(flowType,'fan'))
                             if (mach == 0)
                                 mach = 0.0001; 
-                                warning(['Adiabatic sonic pressure ratio',...
+                                warning(['Fanno sonic pressure ratio',...
                                           + ' is undefined at 0. Substituting',...
                                           + ' in mach number of 1e-4']);
                             end
@@ -232,7 +232,7 @@ classdef shockless
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'rvht'))
+                        if (isequal(flowType,'ray'))
                             f = (1+g)/(1+g*x^2);
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -246,12 +246,12 @@ classdef shockless
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'ad'))
+                        if (isequal(flowType,'fan'))
                             f = (2/(g+1)*(1+(g-1)/2*x^2))^(-1);
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'rvht'))
+                        if (isequal(flowType,'ray'))
                             f = x^2*(1+g)^2/(1+g*x^2)^2;
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -265,10 +265,10 @@ classdef shockless
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'ad'))
+                        if (isequal(flowType,'fan'))
                             if (mach == 0)
                                 mach = 0.0001; 
-                                warning(['Adiabatic sonic density ratio',...
+                                warning(['Fanno sonic density ratio',...
                                           + ' is undefined at 0. Substituting',...
                                           + ' in mach number of 1e-4']);
                             end
@@ -276,7 +276,7 @@ classdef shockless
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'rvht'))
+                        if (isequal(flowType,'ray'))
                             f = 1/x^2*(1+g*x^2)/(1+g);
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -290,10 +290,10 @@ classdef shockless
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'ad'))
+                        if (isequal(flowType,'fan'))
                             if (mach == 0)
                                 mach = 0.0001; 
-                                warning(['Adiabatic sonic total pressure ratio',...
+                                warning(['Fanno sonic total pressure ratio',...
                                           + ' is undefined at 0. Substituting',...
                                           + ' in mach number of 1e-4']);
                             end 
@@ -301,7 +301,7 @@ classdef shockless
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'rvht'))
+                        if (isequal(flowType,'ray'))
                             f = (1 + g)/(1 + g*x^2)*((2/(g+1))*(1 + (g-1)/2*x^2))^(g/(g-1));
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -315,12 +315,12 @@ classdef shockless
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'ad'))
+                        if (isequal(flowType,'fan'))
                             f = 1;
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'rvht'))
+                        if (isequal(flowType,'ray'))
                             f = (g + 1)*x^2/(1 + g*x^2)^2*(2 + (g - 1)*x^2); 
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -329,34 +329,30 @@ classdef shockless
                             return;
                         end 
                     case 'A'
-                    if (isequal(flowType,'is'))
-                            f = 1; 
-                            computedValue =  eval(subs(f,x,mach));
-                            return;
-                        end 
-                        if (isequal(flowType,'ad'))
+                        if (isequal(flowType,'is'))
                             if (mach == 0)
                                 mach = 0.0001; 
-                                warning(['Adiabatic sonic total pressure ratio',...
+                                warning(['Isentropic sonic area ratio',...
                                           + ' is undefined at 0. Substituting',...
                                           + ' in mach number of 1e-4']);
-                            end 
-                            f = 1/x*((2/(g+1))*(1 + (g-1)/2*x^2))^((g+1)/(2*g-2));
+                            end
+                            f = 1/x*(2/(g+1)*(1+(g-1)/2*x^2))^((g+1)/(2*g-2)); 
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'rvht'))
-                            f = (1 + g)/(1 + g*x^2)*((2/(g+1))*(1 + (g-1)/2*x^2))^(g/(g-1));
-                            computedValue =  eval(subs(f,x,mach));
-                            return;
-                        else 
-                            error("Flow-type abbreviation does not exist");
-                            return;
+                        if (isequal(flowType,'fan') || isequal(flowType,'ray'))
+                            warning('Only isentropic sonic area ratio available');
+                            return; 
                         end 
                     otherwise
                          error('Plot abbreviation does not exist'); 
                          return; 
                 end 
+         end 
+
+         function computedValue = fanno_mach(specHeatRatio,duct_diameter, ...
+                 friction_factor,)
+
          end 
     end
     methods(Static,Access = private)
@@ -460,7 +456,7 @@ classdef shockless
                 error("Invalid mach number");
                 return; 
             end 
-            baseProp = {'p','d','T','tp','tT'};
+            baseProp = {'p','d','T','tp','tT','A'};
             if ((isa(property,'char') || ...
                 isa(property,'string')) && ...
                 (ismember({property},baseProp) == 1))

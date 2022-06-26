@@ -349,6 +349,16 @@ classdef shockless
                          return; 
                 end 
          end 
+
+         function computedValue = fanno_mach(specHeatRatio,duct_diameter, ...
+                 friction_factor,quantity,varargin)
+            return; 
+         end 
+
+         function computedValue = rayleigh_mach(specHeatRatio,duct_diameter, ...
+                 friction_factor,quantity,varargin)
+            return; 
+         end
     end
     methods(Static,Access = private)
          % Checks for valid specific heat ratio, range of mach numbers, 
