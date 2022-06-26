@@ -95,6 +95,8 @@ classdef shockless
                             warning(['Adiabatic sonic pressure ratio',...
                                     + ' is undefined at 0. Substituting',...
                                     + ' in mach number of 1e-4']);
+                        else 
+                            ad_range = range; 
                         end
                         figure(figNumber)
                         f1 = (2/(g+1)*(1+(g-1)/2*x^2))^(-g/(g-1));
@@ -129,6 +131,8 @@ classdef shockless
                             warning(['Adiabatic sonic density ratio',...
                                     + ' is undefined at 0. Substituting',...
                                     + ' in mach number of 1e-4']);
+                        else 
+                            ad_range = range;
                         end
                         figure(figNumber)
                         f1 = (2/(g+1)*(1+(g-1)/2*x^2))^(-1/(g-1));
@@ -149,6 +153,8 @@ classdef shockless
                             warning(['Adiabatic sonic total pressure ratio',...
                                     + ' is undefined at 0. Substituting',...
                                     + ' in mach number of 1e-4']);
+                        else 
+                            ad_range = range;
                         end
                         figure(figNumber)
                         f1 = 1; 
@@ -177,6 +183,22 @@ classdef shockless
                         ylabel('T_{o} / T_{o}*');
                         title('Sonic Total Temperature Ratios');
                         legend('Isentropic','Adiabatic','Reversible Heat Transfer');
+                    case 'A'
+                        if (range(1) == 0)
+                            is_range = [0.0001 range(2)];
+                            warning(['Isentropic sonic area ratio',...
+                                    + ' is undefined at 0. Substituting',...
+                                    + ' in mach number of 1e-4']);
+                        else 
+                            is_range = range; 
+                        end 
+                        figure(figNumber)
+                        f1 = 1/x*(2/(g+1)*(1+(g-1)/2*x^2))^((g+1)/(2*g-2));
+                        fplot(f1,is_range,'Linewidth',1,'color','#D95319');
+                        xlabel('Mach Number');
+                        ylabel('A / A*');
+                        title('Sonic Area Ratios');
+                        legend('Isentropic'); 
                     otherwise
                          error('Plot abbreviations do not exist'); 
                          return; 
@@ -306,6 +328,22 @@ classdef shockless
                             error("Flow-type abbreviation does not exist");
                             return;
                         end 
+                    case 'A'
+                        if (isequal(flowType,'is'))
+                            if (mach == 0)
+                                mach = 0.0001; 
+                                warning(['Isentropic sonic area ratio',...
+                                          + ' is undefined at 0. Substituting',...
+                                          + ' in mach number of 1e-4']);
+                            end
+                            f = 1/x*(2/(g+1)*(1+(g-1)/2*x^2))^((g+1)/(2*g-2)); 
+                            computedValue =  eval(subs(f,x,mach));
+                            return;
+                        end 
+                        if (isequal(flowType,'ad') || isequal(flowType,'rvht'))
+                            warning('Only isentropic sonic area ratio available');
+                            return; 
+                        end 
                     otherwise
                          error('Plot abbreviation does not exist'); 
                          return; 
@@ -374,7 +412,7 @@ classdef shockless
                         error("Invalid mach range");
                         return; 
                     end
-                    baseProp = {'p','d','T','tp','tT'};
+                    baseProp = {'p','d','T','tp','tT','A'};
                     valid_prop = cell(1,length(varargin));
                     for val = 1:length(varargin{1})
                         temp = varargin{1}(val); 
@@ -413,7 +451,7 @@ classdef shockless
                 error("Invalid mach number");
                 return; 
             end 
-            baseProp = {'p','d','T','tp','tT'};
+            baseProp = {'p','d','T','tp','tT','A'};
             if ((isa(property,'char') || ...
                 isa(property,'string')) && ...
                 (ismember({property},baseProp) == 1))
