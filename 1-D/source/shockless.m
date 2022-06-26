@@ -352,11 +352,17 @@ classdef shockless
 
          function computedValue = fanno_mach(spec_heat_ratio,duct_diameter, ...
                  friction_factor,quantity,varargin)
+            [g, D, fr, option,selection] = ...
+                                shockless.arg_3check(spec_heat_ratio,...
+                                 duct_diameter,friction_factor,quantity,...
+                                  varargin);
+            
             return; 
          end 
 
          function computedValue = rayleigh_mach(spec_heat_ratio,duct_diameter, ...
                  friction_factor,quantity,varargin)
+            computedValue = 0; 
             return; 
          end
     end
@@ -470,6 +476,57 @@ classdef shockless
                 error('Property abbreviation does not exist');
                 return;
             end 
+         end
+         % Checks for valid specific heat ratio, duct diameter, 
+         % friction factor, and option requested to 
+         % shockless.fanno_mach(). If inputs are valid, nothing 
+         % occurs, if invalid, an error is returned. 
+         function [valid_g, valid_D, valid_fr,valid_option,valid_selection]...
+                    = arg_3check(spec_heat_ratio,duct_diameter,...
+                                friction_factor,option,varargin)
+            if (isa(spec_heat_ratio,'double') && ...
+                all(spec_heat_ratio(:) >= 1) && ...
+                isreal(spec_heat_ratio) && ... 
+                isequal(size(spec_heat_ratio),[1 1]))
+                valid_g = spec_heat_ratio; 
+            else 
+                error("Invalid specific heat ratio");
+                return; 
+            end
+            if (isa(duct_diameter,'double') && ...
+                all(duct_diameter(:) > 0) && ...
+                isreal(duct_diameter) && ... 
+                isequal(size(duct_diameter),[1 1]))
+                valid_D = duct_diameter; 
+            else 
+                error("Invalid duct diameter");
+                return; 
+            end
+            if (isa(friction_factor,'double') && ...
+                all(friction_factor(:) > 0) && ...
+                isreal(friction_factor) && ... 
+                isequal(size(friction_factor),[1 1]))
+                valid_fr = friction_factor; 
+            else 
+                error("Invalid friction factor");
+                return; 
+            end
+            baseOptions = {'plot','calc'};
+            if ((isa(option,'char') || ...
+                isa(option,'string')) && ...
+                (ismember({option},baseOptions) == 1))
+                valid_option = option;
+            else 
+                error('Option does not exist');
+                return;
+            end 
+            if (option == 'plot')
+                baseSelections = {}; 
+            end 
+            if (option == 'calc')
+                baseSelections = {}; 
+            end 
+
          end 
     end 
 end 

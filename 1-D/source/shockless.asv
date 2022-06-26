@@ -3,11 +3,11 @@ classdef shockless
     methods(Static)
         % Plots speicified fluid property relation for a given specific 
         % heat ratio and range of Mach numbers
-        function total_ref_plot(specHeatRatio,machRange,varargin)
+        function total_ref_plot(spec_heat_ratio,mach_range,varargin)
             syms x
             figNumber = length(findobj('type','figure')) + 1;
             [g, range, prop] = ...
-                shockless.arg_check(specHeatRatio,machRange,varargin);
+                shockless.arg_check(spec_heat_ratio,mach_range,varargin);
             baseProp = {'p','d','T'};
             for num = 1:length(prop)
                 if (~ismember(prop{num},baseProp) == 1)
@@ -51,11 +51,11 @@ classdef shockless
         end 
         % Returns total propery ratio for a given specific heat ratio and 
         % Mach number
-        function computedValue = total_ref_calc(specHeatRatio,...
+        function computedValue = total_ref_calc(spec_heat_ratio,...
                  machNumber,property)
             syms x
             [g, mach, prop] = ...
-               shockless.arg_2check(specHeatRatio,machNumber, property);
+               shockless.arg_2check(spec_heat_ratio,machNumber, property);
             baseProp = {'p','d','T'};
             if (~ismember({prop},baseProp) == 1)
                 error('Plot abbreviations do not exist'); 
@@ -81,11 +81,11 @@ classdef shockless
         end 
         % Plots speicified fluid property relations for a given specific 
         % heat ratio and range of Mach numbers
-        function sonic_ref_plot(specHeatRatio,machRange,varargin)
+        function sonic_ref_plot(spec_heat_ratio,mach_range,varargin)
             syms x
             figNumber = length(findobj('type','figure')) + 1;
             [g, range, prop] = ...
-                shockless.arg_check(specHeatRatio,machRange,varargin);
+                shockless.arg_check(spec_heat_ratio,mach_range,varargin);
             for num = 1:length(prop)
                 temp = prop{num}; 
                 switch temp{1}
@@ -209,19 +209,19 @@ classdef shockless
          % Returns sonic propery ratios for a given specific heat ratio,
          % Mach number, and Flow Type (Isentropic, Fanno, and 
          % Rayleigh)
-         function computedValue = sonic_ref_calc(specHeatRatio,...
-                 machNumber,property,flowType) 
+         function computedValue = sonic_ref_calc(spec_heat_ratio,...
+                 machNumber,property,flow_type) 
             syms x
             [g, mach, prop] = ...
-               shockless.arg_2check(specHeatRatio,machNumber, property);
+               shockless.arg_2check(spec_heat_ratio,machNumber, property);
                 switch prop
                     case 'p'
-                        if (isequal(flowType,'is'))
+                        if (isequal(flow_type,'is'))
                             f = (2/(g+1)*(1+(g-1)/2*x^2))^(-g/(g-1));
                             computedValue = eval(subs(f,x,mach));
                             return;
                         end
-                        if (isequal(flowType,'fan'))
+                        if (isequal(flow_type,'fan'))
                             if (mach == 0)
                                 mach = 0.0001; 
                                 warning(['Fanno sonic pressure ratio',...
@@ -232,7 +232,7 @@ classdef shockless
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'ray'))
+                        if (isequal(flow_type,'ray'))
                             f = (1+g)/(1+g*x^2);
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -241,17 +241,17 @@ classdef shockless
                             return; 
                         end   
                     case 'T'
-                        if (isequal(flowType,'is'))
+                        if (isequal(flow_type,'is'))
                             f = (2/(g+1)*(1+(g-1)/2*x^2))^(-1);
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'fan'))
+                        if (isequal(flow_type,'fan'))
                             f = (2/(g+1)*(1+(g-1)/2*x^2))^(-1);
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'ray'))
+                        if (isequal(flow_type,'ray'))
                             f = x^2*(1+g)^2/(1+g*x^2)^2;
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -260,12 +260,12 @@ classdef shockless
                             return;
                         end 
                     case 'd' 
-                        if (isequal(flowType,'is'))
+                        if (isequal(flow_type,'is'))
                             f = (2/(g+1)*(1+(g-1)/2*x^2))^(-1/(g-1));
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'fan'))
+                        if (isequal(flow_type,'fan'))
                             if (mach == 0)
                                 mach = 0.0001; 
                                 warning(['Fanno sonic density ratio',...
@@ -276,7 +276,7 @@ classdef shockless
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'ray'))
+                        if (isequal(flow_type,'ray'))
                             f = 1/x^2*(1+g*x^2)/(1+g);
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -285,12 +285,12 @@ classdef shockless
                             return;
                         end 
                     case 'tp'
-                        if (isequal(flowType,'is'))
+                        if (isequal(flow_type,'is'))
                             f = 1; 
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'fan'))
+                        if (isequal(flow_type,'fan'))
                             if (mach == 0)
                                 mach = 0.0001; 
                                 warning(['Fanno sonic total pressure ratio',...
@@ -301,7 +301,7 @@ classdef shockless
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'ray'))
+                        if (isequal(flow_type,'ray'))
                             f = (1 + g)/(1 + g*x^2)*((2/(g+1))*(1 + (g-1)/2*x^2))^(g/(g-1));
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -310,17 +310,17 @@ classdef shockless
                             return;
                         end 
                     case 'tT'
-                        if (isequal(flowType,'is'))
+                        if (isequal(flow_type,'is'))
                             f = 1; 
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'fan'))
+                        if (isequal(flow_type,'fan'))
                             f = 1;
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'ray'))
+                        if (isequal(flow_type,'ray'))
                             f = (g + 1)*x^2/(1 + g*x^2)^2*(2 + (g - 1)*x^2); 
                             computedValue =  eval(subs(f,x,mach));
                             return;
@@ -329,7 +329,7 @@ classdef shockless
                             return;
                         end 
                     case 'A'
-                        if (isequal(flowType,'is'))
+                        if (isequal(flow_type,'is'))
                             if (mach == 0)
                                 mach = 0.0001; 
                                 warning(['Isentropic sonic area ratio',...
@@ -340,7 +340,7 @@ classdef shockless
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         end 
-                        if (isequal(flowType,'fan') || isequal(flowType,'ray'))
+                        if (isequal(flow_type,'fan') || isequal(flow_type,'ray'))
                             warning('Only isentropic sonic area ratio available');
                             return; 
                         end 
@@ -350,10 +350,21 @@ classdef shockless
                 end 
          end 
 
-         function computedValue = fanno_mach(specHeatRatio,duct_diameter, ...
-                 friction_factor,)
-
+         function computedValue = fanno_mach(spec_heat_ratio,duct_diameter, ...
+                 friction_factor,quantity,varargin)
+            [g, D, fr, option,selection] = ...
+                                shockless.arg_3check(spec_heat_ratio,...
+                                 duct_diameter,friction_factor,quantity,...
+                                  varargin);
+            
+            return; 
          end 
+
+         function computedValue = rayleigh_mach(spec_heat_ratio,duct_diameter, ...
+                 friction_factor,quantity,varargin)
+            computedValue = 0; 
+            return; 
+         end
     end
     methods(Static,Access = private)
          % Checks for valid specific heat ratio, range of mach numbers, 
@@ -361,17 +372,17 @@ classdef shockless
          % valid, nothing occurs. If values are invalid, an error is 
          % returned. 
          function [valid_g, valid_range, valid_prop] = ...
-                    arg_check(specHeatRatio,machRange,varargin)
+                    arg_check(spec_heat_ratio,mach_range,varargin)
             switch nargin
                 case 0
                     error('Specific heat ratio not defined');
                     return;
                 case 1
-                    if (isa(specHeatRatio,'double') && ...
-                        all(specHeatRatio(:) >= 1) && ...
-                        isreal(specHeatRatio) && ... 
-                        isequal(size(specHeatRatio),[1 1]))
-                        valid_g = specHeatRatio; 
+                    if (isa(spec_heat_ratio,'double') && ...
+                        all(spec_heat_ratio(:) >= 1) && ...
+                        isreal(spec_heat_ratio) && ... 
+                        isequal(size(spec_heat_ratio),[1 1]))
+                        valid_g = spec_heat_ratio; 
                     else 
                         error("Invalid specific heat ratio");
                         return; 
@@ -379,40 +390,40 @@ classdef shockless
                         valid_range = [1 10]; 
                         valid_prop = {'p'};
                  case 2 
-                    if (isa(specHeatRatio,'double') && ...
-                        all(specHeatRatio(:) >= 1) && ...
-                        isreal(specHeatRatio) && ... 
-                        isequal(size(specHeatRatio),[1 1])) 
-                        valid_g = specHeatRatio; 
+                    if (isa(spec_heat_ratio,'double') && ...
+                        all(spec_heat_ratio(:) >= 1) && ...
+                        isreal(spec_heat_ratio) && ... 
+                        isequal(size(spec_heat_ratio),[1 1])) 
+                        valid_g = spec_heat_ratio; 
                     else 
                         error("Invalid specific heat ratio");
                         return; 
                     end 
-                    if (isa(machRange,'double') && ...
-                        all(machRange(:) >= 0) && ...
-                        isreal(machRange) && ... 
-                        isequal(size(machRange),[1 1]))
-                        valid_range = machRange; 
+                    if (isa(mach_range,'double') && ...
+                        all(mach_range(:) >= 0) && ...
+                        isreal(mach_range) && ... 
+                        isequal(size(mach_range),[1 1]))
+                        valid_range = mach_range; 
                     else 
                         error("Invalid mach range");
                         return; 
                     end
                     valid_prop = {'p'};
                 otherwise 
-                    if (isa(specHeatRatio,'double') && ...
-                        all(specHeatRatio(:) >= 1) && ...
-                        isreal(specHeatRatio) && ... 
-                        isequal(size(specHeatRatio),[1 1])) 
-                        valid_g = specHeatRatio; 
+                    if (isa(spec_heat_ratio,'double') && ...
+                        all(spec_heat_ratio(:) >= 1) && ...
+                        isreal(spec_heat_ratio) && ... 
+                        isequal(size(spec_heat_ratio),[1 1])) 
+                        valid_g = spec_heat_ratio; 
                     else 
                         error("Invalid specific heat ratio");
                         return;
                     end 
-                    if (isa(machRange,'double') && ...
-                        all(machRange(:) >= 0) && ...
-                        isreal(machRange) && ... 
-                        isequal(size(machRange),[1 2]))
-                        valid_range = machRange; 
+                    if (isa(mach_range,'double') && ...
+                        all(mach_range(:) >= 0) && ...
+                        isreal(mach_range) && ... 
+                        isequal(size(mach_range),[1 2]))
+                        valid_range = mach_range; 
                     else 
                         error("Invalid mach range");
                         return; 
@@ -437,12 +448,12 @@ classdef shockless
          % If values are valid, nothing occurs. If values are invalid, 
          % an error is returned.  
          function [valid_g, valid_mach, valid_prop] = ...
-                    arg_2check(specHeatRatio,machNumber,property)
-            if (isa(specHeatRatio,'double') && ...
-                all(specHeatRatio(:) >= 1) && ...
-                isreal(specHeatRatio) && ... 
-                isequal(size(specHeatRatio),[1 1]))
-                valid_g = specHeatRatio; 
+                    arg_2check(spec_heat_ratio,machNumber,property)
+            if (isa(spec_heat_ratio,'double') && ...
+                all(spec_heat_ratio(:) >= 1) && ...
+                isreal(spec_heat_ratio) && ... 
+                isequal(size(spec_heat_ratio),[1 1]))
+                valid_g = spec_heat_ratio; 
             else 
                 error("Invalid specific heat ratio");
                 return; 
@@ -465,6 +476,57 @@ classdef shockless
                 error('Property abbreviation does not exist');
                 return;
             end 
+         end
+         % Checks for valid specific heat ratio, duct diameter, 
+         % friction factor, and option requested to 
+         % shockless.fanno_mach(). If inputs are valid, nothing 
+         % occurs, if invalid, an error is returned. 
+         function [valid_g, valid_D, valid_fr,valid_option,valid_selection]...
+                    = arg_3check(spec_heat_ratio,duct_diameter,...
+                                friction_factor,option,varargin)
+            if (isa(spec_heat_ratio,'double') && ...
+                all(spec_heat_ratio(:) >= 1) && ...
+                isreal(spec_heat_ratio) && ... 
+                isequal(size(spec_heat_ratio),[1 1]))
+                valid_g = spec_heat_ratio; 
+            else 
+                error("Invalid specific heat ratio");
+                return; 
+            end
+            if (isa(duct_diameter,'double') && ...
+                all(duct_diameter(:) > 0) && ...
+                isreal(duct_diameter) && ... 
+                isequal(size(duct_diameter),[1 1]))
+                valid_D = duct_diameter; 
+            else 
+                error("Invalid duct diameter");
+                return; 
+            end
+            if (isa(friction_factor,'double') && ...
+                all(friction_factor(:) > 0) && ...
+                isreal(friction_factor) && ... 
+                isequal(size(friction_factor),[1 1]))
+                valid_fr = friction_factor; 
+            else 
+                error("Invalid friction factor");
+                return; 
+            end
+            baseOptions = {'plot','calc'};
+            if ((isa(option,'char') || ...
+                isa(option,'string')) && ...
+                (ismember({option},baseOptions) == 1))
+                valid_option = option;
+            else 
+                error('Option does not exist');
+                return;
+            end 
+            if (option == 'plot')
+            
+            end 
+            if (option == 'calc')
+
+            end 
+
          end 
     end 
 end 
