@@ -58,7 +58,7 @@ Returns sonic fluid property ratio for an isentropic, adiabatic, or frictionless
     * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
     * **mach_number** (*double*) - The mach number. 
     * **property** (*char* or *string*) - The property abbreviation. This includes *'p'*, *'d'*, *'T'*, *'tp'*, or *'tT'* for pressure, density, temperature, total pressure, and total temperature respectively. 
-    * **flow_type** (*char* or *string*) - The flow-type abbreviation. These include *'is'*, *'ad'*, and *'rvht'* for isentropic, adiabatic, and frictionless-reversible heat transfer respectively. 
+    * **flow_type** (*char* or *string*) - The flow-type abbreviation. These include *'is'*, *'fan'*, and *'ray'* for isentropic, fanno, and rayleigh flow respectively. 
     
      **Examples:**
 
