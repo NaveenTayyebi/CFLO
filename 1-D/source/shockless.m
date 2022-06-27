@@ -349,7 +349,7 @@ classdef shockless
             if (option == 'plot')
                 f1 = -1/(g*x^2) - (g+1)/(2*g)*log(x^2*(1+(g-1)/2*x^2)^(-1));
                 f2 = eval(subs(f1,x,1)) - f1; 
-                fplot(f2,mach_range,'Linewidth',1,'color','blue');
+                fplot(f2,range,'Linewidth',1,'color','blue');
                 xlabel('Upstream Mach Number ( M_{1} )');
                 ylabel('4fL*/D');
             end 
