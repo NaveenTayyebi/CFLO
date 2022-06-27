@@ -341,16 +341,17 @@ classdef shockless
 
          function computedValue = fanno_mach(spec_heat_ratio,duct_diameter, ...
                  friction_factor,quantity,varargin)
+            syms x
             [g, D, fr, option,selection] = ...
                                 shockless.arg_3check(spec_heat_ratio,...
                                  duct_diameter,friction_factor,quantity,...
                                   varargin);
-            disp(g);
-            disp(D);
-            disp(fr);
-            disp(option);
-            disp(selection);
-            
+            if (option == 'plot')
+                
+            end 
+            if (option = 'calc')
+
+            end 
             return; 
          end 
 
@@ -423,7 +424,7 @@ classdef shockless
                         temp = varargin{1}(val); 
                         if ((isa(temp{1},'char') || ...
                             isa(temp{1},'string')) && ...
-                          (all(ismember(temp,baseProp) == 1) > 0))
+                          (all(ismember({num2str(temp{1})},baseProp) == 1) > 0))
                             valid_prop{val} = temp;
                         else 
                             error('Property abbreviations do not exist');
@@ -456,7 +457,7 @@ classdef shockless
             baseProp = {'p','d','T','tp','tT','A'};
             if ((isa(property,'char') || ...
                 isa(property,'string')) && ...
-                (ismember({property},baseProp) == 1))
+                (ismember({num2str(property)},baseProp) == 1))
                 valid_prop = property;
             else 
                 error('Property abbreviation does not exist');
@@ -496,7 +497,7 @@ classdef shockless
             baseOptions = {'plot','calc'};
             if ((isa(option,'char') || ...
                 isa(option,'string')) && ...
-                (ismember({option},baseOptions) == 1))
+                (ismember({num2str(option)},baseOptions) == 1))
                 valid_option = option;
             else 
                 error('Option does not exist');
