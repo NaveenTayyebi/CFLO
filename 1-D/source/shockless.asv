@@ -57,7 +57,6 @@ classdef shockless
             baseProp = {'p','d','T'};
             if (~ismember({prop},baseProp) == 1)
                 error('Plot abbreviations do not exist'); 
-                return;
             end 
             switch prop 
                 case 'p' 
@@ -74,7 +73,6 @@ classdef shockless
                     return;
                 otherwise
                     error('Plot abbreviation does not exist'); 
-                    return;
             end 
         end 
         % Plots speicified fluid property relations for a given specific 
@@ -199,7 +197,6 @@ classdef shockless
                         legend('Isentropic'); 
                     otherwise
                          error('Plot abbreviations do not exist'); 
-                         return; 
                 end 
                 figNumber = figNumber + 1; 
             end 
@@ -235,8 +232,7 @@ classdef shockless
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         else 
-                            error("Flow-type abbreviation does not exist");
-                            return; 
+                            error("Flow-type abbreviation does not exist"); 
                         end   
                     case 'T'
                         if (isequal(flow_type,'is'))
@@ -255,7 +251,6 @@ classdef shockless
                             return;
                         else 
                             error("Flow-type abbreviation does not exist");
-                            return;
                         end 
                     case 'd' 
                         if (isequal(flow_type,'is'))
@@ -280,7 +275,6 @@ classdef shockless
                             return;
                         else 
                             error("Flow-type abbreviation does not exist");
-                            return;
                         end 
                     case 'tp'
                         if (isequal(flow_type,'is'))
@@ -305,7 +299,6 @@ classdef shockless
                             return;
                         else 
                             error("Flow-type abbreviation does not exist");
-                            return;
                         end 
                     case 'tT'
                         if (isequal(flow_type,'is'))
@@ -324,7 +317,6 @@ classdef shockless
                             return;
                         else 
                             error("Flow-type abbreviation does not exist");
-                            return;
                         end 
                     case 'A'
                         if (isequal(flow_type,'is'))
@@ -343,18 +335,25 @@ classdef shockless
                             return; 
                         end 
                     otherwise
-                         error('Plot abbreviation does not exist'); 
-                         return; 
+                         error('Plot abbreviation does not exist');  
                 end 
          end 
 
-         function computedValue = fanno_mach(spec_heat_ratio,duct_diameter, ...
+         function computedValue = fanno_mach(spec_heat_ratio,mach_range,duct_diameter, ...
                  friction_factor,quantity,varargin)
-            [g, D, fr, option,selection] = ...
+            syms x
+            [g, range, D, fr, option,selection] = ...
                                 shockless.arg_3check(spec_heat_ratio,...
-                                 duct_diameter,friction_factor,quantity,...
-                                  varargin);
-            
+                                 mach_range,duct_diameter,friction_factor, ...
+                                 quantity,varargin);
+            if (option == 'plot')
+                f1 = -1/(g*x^2) - (g+1)/(2*g)*log(x^2*(1+(g-1)/2*x^2)^(-1));
+                f2 = f - eval(subs(f,x,1)); 
+                fplot(f2,mach_range,'Linewidth',1,'color,')
+            end 
+            if (option == 'calc')
+                disp("TODO");
+            end 
             return; 
          end 
 
@@ -374,7 +373,6 @@ classdef shockless
             switch nargin
                 case 0
                     error('Specific heat ratio not defined');
-                    return;
                 case 1
                     if (isa(spec_heat_ratio,'double') && ...
                         all(spec_heat_ratio(:) >= 1) && ...
@@ -383,7 +381,6 @@ classdef shockless
                         valid_g = spec_heat_ratio; 
                     else 
                         error("Invalid specific heat ratio");
-                        return; 
                     end 
                         valid_range = [1 10]; 
                         valid_prop = {'p'};
@@ -395,7 +392,6 @@ classdef shockless
                         valid_g = spec_heat_ratio; 
                     else 
                         error("Invalid specific heat ratio");
-                        return; 
                     end 
                     if (isa(mach_range,'double') && ...
                         all(mach_range(:) >= 0) && ...
@@ -415,7 +411,6 @@ classdef shockless
                         valid_g = spec_heat_ratio; 
                     else 
                         error("Invalid specific heat ratio");
-                        return;
                     end 
                     if (isa(mach_range,'double') && ...
                         all(mach_range(:) >= 0) && ...
@@ -424,7 +419,6 @@ classdef shockless
                         valid_range = mach_range; 
                     else 
                         error("Invalid mach range");
-                        return; 
                     end
                     baseProp = {'p','d','T','tp','tT','A'};
                     valid_prop = cell(1,length(varargin));
@@ -432,11 +426,10 @@ classdef shockless
                         temp = varargin{1}(val); 
                         if ((isa(temp{1},'char') || ...
                             isa(temp{1},'string')) && ...
-                          (all(ismember(temp,baseProp) == 1) > 0))
+                          (all(ismember({num2str(temp{1})},baseProp) == 1) > 0))
                             valid_prop{val} = temp;
                         else 
                             error('Property abbreviations do not exist');
-                            return;
                         end 
                     end
             end 
@@ -454,7 +447,6 @@ classdef shockless
                 valid_g = spec_heat_ratio; 
             else 
                 error("Invalid specific heat ratio");
-                return; 
             end 
             if (isa(mach_number,'double') && ...
                 all(mach_number(:) >= 0) && ...
@@ -463,24 +455,22 @@ classdef shockless
                 valid_mach = mach_number;  
             else 
                 error("Invalid mach number");
-                return; 
             end 
             baseProp = {'p','d','T','tp','tT','A'};
             if ((isa(property,'char') || ...
                 isa(property,'string')) && ...
-                (ismember({property},baseProp) == 1))
+                (ismember({num2str(property)},baseProp) == 1))
                 valid_prop = property;
             else 
                 error('Property abbreviation does not exist');
-                return;
             end 
          end
          % Checks for valid specific heat ratio, duct diameter, 
          % friction factor, and option requested to 
          % shockless.fanno_mach(). If inputs are valid, nothing 
          % occurs, if invalid, an error is returned. 
-         function [valid_g, valid_D, valid_fr,valid_option,valid_selection]...
-                    = arg_3check(spec_heat_ratio,duct_diameter,...
+         function [valid_g, valid_range, valid_D, valid_fr,valid_option,valid_selection]...
+                    = arg_3check(spec_heat_ratio,mach_range,duct_diameter,...
                                 friction_factor,option,varargin)
             if (isa(spec_heat_ratio,'double') && ...
                 all(spec_heat_ratio(:) >= 1) && ...
@@ -509,7 +499,7 @@ classdef shockless
             baseOptions = {'plot','calc'};
             if ((isa(option,'char') || ...
                 isa(option,'string')) && ...
-                (ismember({option},baseOptions) == 1))
+                (ismember({num2str(option)},baseOptions) == 1))
                 valid_option = option;
             else 
                 error('Option does not exist');
@@ -517,10 +507,9 @@ classdef shockless
             valid_selection = cell(1,length(varargin{1}));
             for op = 1:length(varargin{1})
                 temp = varargin{1}(op); 
-                disp(temp{1})
                 if (valid_option == 'plot')
                     baseSelections = {'sl'}; 
-                    if (all(ismember(temp{1},cell2mat(baseSelections))) == 1)
+                    if (all(ismember({num2str(temp{1})},baseSelections)) == 1)
                         valid_selection{op} = temp{1}; 
                     else 
                         error('Selections do not exist');
@@ -528,7 +517,7 @@ classdef shockless
                 end 
                 if (valid_option == 'calc')
                     baseSelections = {'gl','sl'}; 
-                    if (all(ismember(temp{1},cell2mat(baseSelections))) == 1) 
+                    if (all(ismember({num2str(temp{1})},baseSelections)) == 1) 
                         valid_selection{op} = temp{1};
                     else 
                         error('Selections do not exist');
