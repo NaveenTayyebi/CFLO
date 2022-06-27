@@ -57,6 +57,7 @@ classdef shockless
             baseProp = {'p','d','T'};
             if (~ismember({prop},baseProp) == 1)
                 error('Plot abbreviations do not exist'); 
+                return;
             end 
             switch prop 
                 case 'p' 
@@ -73,6 +74,7 @@ classdef shockless
                     return;
                 otherwise
                     error('Plot abbreviation does not exist'); 
+                    return;
             end 
         end 
         % Plots speicified fluid property relations for a given specific 
@@ -197,6 +199,7 @@ classdef shockless
                         legend('Isentropic'); 
                     otherwise
                          error('Plot abbreviations do not exist'); 
+                         return; 
                 end 
                 figNumber = figNumber + 1; 
             end 
@@ -232,7 +235,8 @@ classdef shockless
                             computedValue =  eval(subs(f,x,mach));
                             return;
                         else 
-                            error("Flow-type abbreviation does not exist"); 
+                            error("Flow-type abbreviation does not exist");
+                            return; 
                         end   
                     case 'T'
                         if (isequal(flow_type,'is'))
@@ -251,6 +255,7 @@ classdef shockless
                             return;
                         else 
                             error("Flow-type abbreviation does not exist");
+                            return;
                         end 
                     case 'd' 
                         if (isequal(flow_type,'is'))
@@ -275,6 +280,7 @@ classdef shockless
                             return;
                         else 
                             error("Flow-type abbreviation does not exist");
+                            return;
                         end 
                     case 'tp'
                         if (isequal(flow_type,'is'))
@@ -299,6 +305,7 @@ classdef shockless
                             return;
                         else 
                             error("Flow-type abbreviation does not exist");
+                            return;
                         end 
                     case 'tT'
                         if (isequal(flow_type,'is'))
@@ -317,6 +324,7 @@ classdef shockless
                             return;
                         else 
                             error("Flow-type abbreviation does not exist");
+                            return;
                         end 
                     case 'A'
                         if (isequal(flow_type,'is'))
@@ -335,7 +343,8 @@ classdef shockless
                             return; 
                         end 
                     otherwise
-                         error('Plot abbreviation does not exist');  
+                         error('Plot abbreviation does not exist'); 
+                         return; 
                 end 
          end 
 
@@ -345,11 +354,6 @@ classdef shockless
                                 shockless.arg_3check(spec_heat_ratio,...
                                  duct_diameter,friction_factor,quantity,...
                                   varargin);
-            disp(g);
-            disp(D);
-            disp(fr);
-            disp(option);
-            disp(selection);
             
             return; 
          end 
@@ -370,6 +374,7 @@ classdef shockless
             switch nargin
                 case 0
                     error('Specific heat ratio not defined');
+                    return;
                 case 1
                     if (isa(spec_heat_ratio,'double') && ...
                         all(spec_heat_ratio(:) >= 1) && ...
@@ -378,6 +383,7 @@ classdef shockless
                         valid_g = spec_heat_ratio; 
                     else 
                         error("Invalid specific heat ratio");
+                        return; 
                     end 
                         valid_range = [1 10]; 
                         valid_prop = {'p'};
@@ -389,6 +395,7 @@ classdef shockless
                         valid_g = spec_heat_ratio; 
                     else 
                         error("Invalid specific heat ratio");
+                        return; 
                     end 
                     if (isa(mach_range,'double') && ...
                         all(mach_range(:) >= 0) && ...
@@ -408,6 +415,7 @@ classdef shockless
                         valid_g = spec_heat_ratio; 
                     else 
                         error("Invalid specific heat ratio");
+                        return;
                     end 
                     if (isa(mach_range,'double') && ...
                         all(mach_range(:) >= 0) && ...
@@ -416,6 +424,7 @@ classdef shockless
                         valid_range = mach_range; 
                     else 
                         error("Invalid mach range");
+                        return; 
                     end
                     baseProp = {'p','d','T','tp','tT','A'};
                     valid_prop = cell(1,length(varargin));
@@ -427,6 +436,7 @@ classdef shockless
                             valid_prop{val} = temp;
                         else 
                             error('Property abbreviations do not exist');
+                            return;
                         end 
                     end
             end 
@@ -444,6 +454,7 @@ classdef shockless
                 valid_g = spec_heat_ratio; 
             else 
                 error("Invalid specific heat ratio");
+                return; 
             end 
             if (isa(mach_number,'double') && ...
                 all(mach_number(:) >= 0) && ...
@@ -452,6 +463,7 @@ classdef shockless
                 valid_mach = mach_number;  
             else 
                 error("Invalid mach number");
+                return; 
             end 
             baseProp = {'p','d','T','tp','tT','A'};
             if ((isa(property,'char') || ...
@@ -460,6 +472,7 @@ classdef shockless
                 valid_prop = property;
             else 
                 error('Property abbreviation does not exist');
+                return;
             end 
          end
          % Checks for valid specific heat ratio, duct diameter, 
@@ -504,9 +517,10 @@ classdef shockless
             valid_selection = cell(1,length(varargin{1}));
             for op = 1:length(varargin{1})
                 temp = varargin{1}(op); 
+                disp(temp{1})
                 if (valid_option == 'plot')
                     baseSelections = {'sl'}; 
-                    if (all(ismember({num2str(temp{1})},baseSelections)) == 1)
+                    if (all(ismember(temp{1},cell2mat(baseSelections))) == 1)
                         valid_selection{op} = temp{1}; 
                     else 
                         error('Selections do not exist');
@@ -514,7 +528,7 @@ classdef shockless
                 end 
                 if (valid_option == 'calc')
                     baseSelections = {'gl','sl'}; 
-                    if (all(ismember({num2str(temp{1})},baseSelections)) == 1) 
+                    if (all(ismember(temp{1},cell2mat(baseSelections))) == 1) 
                         valid_selection{op} = temp{1};
                     else 
                         error('Selections do not exist');
