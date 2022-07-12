@@ -518,7 +518,7 @@ classdef shockless
             else 
                 error('Option does not exist');
             end 
-             baseSelections = {'dim','sl'};
+            baseSelections = {'dim','sl'};
             if ((isa(quantity,'char') || ...
                 isa(quantity,'string')) && ...
                 (ismember({num2str(quantity)},baseSelections) == 1))
