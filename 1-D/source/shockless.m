@@ -208,7 +208,7 @@ classdef shockless
                  mach_number,property,flow_type) 
             syms x
             [g, mach, prop] = ...
-               shockless.arg_2check(spec_heat_ratio,mach_number, property);
+               shockless.arg_2check(spec_heat_ratio,mach_number,property);
                 switch prop
                     case 'p'
                         if (isequal(flow_type,'is'))
@@ -338,27 +338,60 @@ classdef shockless
                          error('Plot abbreviation does not exist');  
                 end 
          end 
-
-         function computedValue = fanno_mach(spec_heat_ratio,mach_range,duct_diameter, ...
-                 friction_factor,quantity,varargin)
+         % 
+         function computedValue = fanno_mach(spec_heat_ratio,output,quantity,...
+                 varargin)
             syms x
-            [g, range, D, fr, option,selection] = ...
+            figNumber = length(findobj('type','figure')) + 1;
+            [g, option, selection, variables] = ...
                                 shockless.arg_3check(spec_heat_ratio,...
-                                 mach_range,duct_diameter,friction_factor, ...
-                                 quantity,varargin);
-            if (option == 'plot')
-                f1 = -1/(g*x^2) - (g+1)/(2*g)*log(x^2*(1+(g-1)/2*x^2)^(-1));
-                f2 = eval(subs(f1,x,1)) - f1; 
-                fplot(f2,range,'Linewidth',1,'color','blue');
-                xlabel('Upstream Mach Number ( M_{1} )');
-                ylabel('4fL*/D');
+                                output,quantity,varargin);
+            if (option == 'plot') 
+                if (isequal(selection,'dim'))
+                    range = variables{1};
+                    figure(figNumber);
+                    f1 = -1/(g*x^2) - (g+1)/(2*g)*log(x^2*(1+(g-1)/2*x^2)^(-1));
+                    f2 = eval(subs(f1,x,1)) - f1; 
+                    fplot(f2,range,'Linewidth',1,'color','blue');
+                    xlabel('Upstream Mach Number ( M_{1} )');
+                    ylabel('4fL*/D');
+                    title('Dimenionless Sonic Length');
+                    return; 
+                end 
+                if (isequal(selection,'sl'))
+                    range = variables{1}; 
+                    D = variables{2}; 
+                    fr = variables{3}; 
+                    figure(figNumber);
+                    f1 = (D/(4*fr))*(-1/(g*x^2) - (g+1)/(2*g)*log(x^2*(1+(g-1)/2*x^2)^(-1)));
+                    f2 = eval(subs(f1,x,1)) - f1; 
+                    fplot(f2,range,'Linewidth',1,'color','red');
+                    xlabel('Upstream Mach Number ( M_{1} )');
+                    ylabel('L*');
+                    title('Sonic Length');
+                    return; 
+                end 
             end 
             if (option == 'calc')
-                disp("TODO");
+                if (isequal(selection,'dim'))
+                    mach = variables{1}; 
+                    f1 = -1/(g*x^2) - (g+1)/(2*g)*log(x^2*(1+(g-1)/2*x^2)^(-1));
+                    f2 = eval(subs(f1,x,1)) - f1; 
+                    computedValue = eval(subs(f2,x,mach)); 
+                    return; 
+                end 
+                if (isequal(selection,'sl'))
+                    mach = variables{1}; 
+                    D = variables{2}; 
+                    fr = variables{3}; 
+                    f1 = (D/(4*fr))*(-1/(g*x^2) - (g+1)/(2*g)*log(x^2*(1+(g-1)/2*x^2)^(-1)));
+                    f2 = eval(subs(f1,x,1)) - f1; 
+                    computedValue = eval(subs(f2,x,mach)); 
+                    return; 
+                end  
             end 
-            return; 
          end 
-
+         % 
          function computedValue = rayleigh_mach(spec_heat_ratio,duct_diameter, ...
                  friction_factor,quantity,varargin)
             computedValue = 0; 
@@ -471,9 +504,9 @@ classdef shockless
          % friction factor, and option requested to 
          % shockless.fanno_mach(). If inputs are valid, nothing 
          % occurs, if invalid, an error is returned. 
-         function [valid_g, valid_range, valid_D, valid_fr,valid_option,valid_selection]...
-                    = arg_3check(spec_heat_ratio,mach_range,duct_diameter,...
-                                friction_factor,option,varargin)
+         function [valid_g, valid_option, valid_selection, valid_variables]...
+                    = arg_3check(spec_heat_ratio,output,quantity,...
+                        varargin)
             if (isa(spec_heat_ratio,'double') && ...
                 all(spec_heat_ratio(:) >= 1) && ...
                 isreal(spec_heat_ratio) && ... 
@@ -482,59 +515,79 @@ classdef shockless
             else 
                 error("Invalid specific heat ratio");
             end
-            if (isa(mach_range,'double') && ...
-                all(mach_range(:) >= 0) && ...
-                isreal(mach_range) && ... 
-                isequal(size(mach_range),[1 2]))
-                valid_range = mach_range; 
-            else 
-                error("Invalid mach range");
-            end
-            if (isa(duct_diameter,'double') && ...
-                all(duct_diameter(:) > 0) && ...
-                isreal(duct_diameter) && ... 
-                isequal(size(duct_diameter),[1 1]))
-                valid_D = duct_diameter; 
-            else 
-                error("Invalid duct diameter");
-            end
-            if (isa(friction_factor,'double') && ...
-                all(friction_factor(:) > 0) && ...
-                isreal(friction_factor) && ... 
-                isequal(size(friction_factor),[1 1]))
-                valid_fr = friction_factor; 
-            else 
-                error("Invalid friction factor");
-            end
             baseOptions = {'plot','calc'};
-            if ((isa(option,'char') || ...
-                isa(option,'string')) && ...
-                (ismember({num2str(option)},baseOptions) == 1))
-                valid_option = option;
+            if ((isa(output,'char') || ...
+                isa(output,'string')) && ...
+                (ismember({num2str(output)},baseOptions) == 1))
+                valid_option = output;
             else 
                 error('Option does not exist');
             end 
-            valid_selection = cell(1,length(varargin{1}));
-            for op = 1:length(varargin{1})
-                temp = varargin{1}(op); 
-                if (valid_option == 'plot')
-                    baseSelections = {'sl'}; 
-                    if (all(ismember({num2str(temp{1})},baseSelections)) == 1)
-                        valid_selection{op} = temp{1}; 
-                    else 
-                        error('Selections do not exist');
-                    end 
-                end 
-                if (valid_option == 'calc')
-                    baseSelections = {'gl','sl'}; 
-                    if (all(ismember({num2str(temp{1})},baseSelections)) == 1) 
-                        valid_selection{op} = temp{1};
-                    else 
-                        error('Selections do not exist');
-                    end 
-                end 
+             baseSelections = {'dim','sl'};
+            if ((isa(quantity,'char') || ...
+                isa(quantity,'string')) && ...
+                (ismember({num2str(quantity)},baseSelections) == 1))
+                valid_selection = quantity;
+            else 
+                error('Option does not exist');
             end
-            return;
+            valid_variables = cell(1,length(varargin{1}));
+            % Verify mach range 
+            if (isequal(output,'plot'))
+                temp = varargin{1}(1);
+                if (isa(temp{1},'double') && ...
+                    all(temp{1}(:) >= 0) && ...
+                    isreal(temp{1}) && ... 
+                    isequal(size(temp{1}),[1 2]))
+                    valid_variables{1} = temp{1}; 
+                else 
+                    error("Invalid mach range");
+                end
+            end   
+            if (isequal(output,'calc'))
+                % Verfiy mach number
+                temp = varargin{1}(1);
+                if (isa(temp{1},'double') && ...
+                    all(temp{1} > 0) && ...
+                    isreal(temp{1}) && ... 
+                    isequal(size(temp{1}),[1 1]))
+                    valid_variables{1} = temp{1}; 
+                 else
+                    error("Invalid mach number"); 
+                end  
+            end
+            if (isequal(quantity,'dim'))
+                if (length(varargin{1}) ~= 1)
+                    warning("Duct diameter and friction factor ignored");
+                end
+            end 
+            if (isequal(quantity,'sl')) 
+                if (length(varargin{1}) ~= 3)
+                    error(["Mach number(s), duct diameter, and "] + ...
+                            ["friction factor must be specified"]);
+                end 
+                % Verify duct diameter
+                temp = varargin{1}(2);
+                if (isa(temp{1},'double') && ...
+                    all(temp{1}(:) > 0) && ...
+                    isreal(temp{1}) && ... 
+                    isequal(size(temp{1}),[1 1]))
+                    valid_variables{2} = temp{1}; 
+                else 
+                    error("Invalid duct diameter");
+                end
+                % Verify friction factor
+                temp = varargin{1}(3);
+                if (isa(temp{1},'double') && ...
+                    all(temp{1}(:) > 0) && ...
+                    isreal(temp{1}) && ... 
+                    isequal(size(temp{1}),[1 1]))
+                    valid_variables{3} = temp{1}; 
+                else 
+                    error("Invalid fricton factor");
+                end
+            end 
+            return; 
          end 
     end 
 end 
