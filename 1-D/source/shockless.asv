@@ -338,7 +338,7 @@ classdef shockless
                          error('Plot abbreviation does not exist');  
                 end 
          end 
-         % 
+        % Plots or calculates mach numbers r
          function computedValue = fanno_mach(spec_heat_ratio,output,quantity,...
                  varargin)
             syms x
@@ -347,8 +347,8 @@ classdef shockless
                                 shockless.arg_3check(spec_heat_ratio,...
                                 output,quantity,varargin);
             if (option == 'plot') 
-                range = variables{1};
                 if (isequal(selection,'dim'))
+                    range = variables{1};
                     figure(figNumber);
                     f1 = -1/(g*x^2) - (g+1)/(2*g)*log(x^2*(1+(g-1)/2*x^2)^(-1));
                     f2 = eval(subs(f1,x,1)) - f1; 
@@ -375,20 +375,18 @@ classdef shockless
             if (option == 'calc')
                 if (isequal(selection,'dim'))
                     mach = variables{1}; 
-                    figure(figNumber);
                     f1 = -1/(g*x^2) - (g+1)/(2*g)*log(x^2*(1+(g-1)/2*x^2)^(-1));
                     f2 = eval(subs(f1,x,1)) - f1; 
-                    computedValue = eval(f2,x,mach); 
+                    computedValue = eval(subs(f2,x,mach)); 
                     return; 
                 end 
                 if (isequal(selection,'sl'))
                     mach = variables{1}; 
                     D = variables{2}; 
                     fr = variables{3}; 
-                    figure(figNumber);
                     f1 = (D/(4*fr))*(-1/(g*x^2) - (g+1)/(2*g)*log(x^2*(1+(g-1)/2*x^2)^(-1)));
                     f2 = eval(subs(f1,x,1)) - f1; 
-                    computedValue = eval(f2,x,mach); 
+                    computedValue = eval(subs(f2,x,mach)); 
                     return; 
                 end  
             end 
@@ -565,8 +563,8 @@ classdef shockless
             end 
             if (isequal(quantity,'sl')) 
                 if (length(varargin{1}) ~= 3)
-                    error(["Mach number/range, duct diameter, and "] + 
-                    friction factor");
+                    error(["Mach number(s), duct diameter, and "] + ...
+                            ["friction factor must be specified"]);
                 end 
                 % Verify duct diameter
                 temp = varargin{1}(2);

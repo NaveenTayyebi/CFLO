@@ -338,7 +338,8 @@ classdef shockless
                          error('Plot abbreviation does not exist');  
                 end 
          end 
-         % 
+        % Plots or calculates sonic length for a fanno flow given a 
+        % specified mach number/range, duct diameter, and friction factor
          function computedValue = fanno_mach(spec_heat_ratio,output,quantity,...
                  varargin)
             syms x
