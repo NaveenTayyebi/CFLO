@@ -38,11 +38,11 @@ Returns sonic fluid property ratio plots for isentropic, fanno, and rayleigh flo
 
   >> shockless.sonic_ref_plot(1.4,[1 5],'p','d')
   
-.. image:: doc_images/shockless_sonic_pressure.png
+.. image:: doc_images/shockless_sonic_image1.png
   :width: 500 px
   :align: center
   
-.. image:: doc_images/shockless_sonic_density.png
+.. image:: doc_images/shockless_sonic_image2.png
   :width: 500 px
   :align: center
 
@@ -114,11 +114,11 @@ Returns normal-shock downstream-upstream fluid property ratio plots `[relations]
     
     >> normal_shock.upstream_ref_plot(1.4,[1 10],'d','T')
     
-.. image:: doc_images/normal_shock_density.png
+.. image:: doc_images/normal_shock_upstream_image1.png
   :width: 500 px
   :align: center
   
-.. image:: doc_images/normal_shock_temperature.png
+.. image:: doc_images/normal_shock_upstream_image2.png
   :width: 500 px
   :align: center
 
