@@ -1,4 +1,4 @@
-# Summary of 1-D Flow Relations 
+# 1-D Flow Relations 
 
 ### Total Pressure Ratio 
 
