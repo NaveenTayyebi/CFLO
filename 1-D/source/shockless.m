@@ -460,6 +460,8 @@ classdef shockless
             end 
             return;
          end 
+         % Plots or computes the ratio of the pitot pressure to upstream 
+         % static pressure ahead of shocks 
          function computedValue = pitot_pressure(spec_heat_ratio,output,mach_range)
             syms x 
             [g, option, selection, mach_info] = shockless.arg_3check(spec_heat_ratio,output,'dim',{mach_range});
