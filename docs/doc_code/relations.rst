@@ -22,11 +22,11 @@ Compressible-Flow Relations
             <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p}{p^{*}}%20=%20\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{\frac{-\gamma}{\gamma%20-%201}}"></td>
          </tr>
          <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0.05);">
-            <td style="padding: 24px;">Adiabatic</td>
+            <td style="padding: 24px;">Fanno</td>
             <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1}{M}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{-\frac{1}{2}}}" style="height: 48px;"></td>
          </tr>
          <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0);">
-            <td style="padding: 24px;">Frictionless-Reversible Heat Transfer</td>
+            <td style="padding: 24px;">Rayleigh</td>
             <td style="padding: 16px;"><img src="https://latex.codecogs.com/svg.image?\small%20\boldsymbol{\frac{p}{p^{*}}%20=%20\frac{1+\gamma}{1%20+%20\gamma%20M^{2}}}" style="height: 44px;"></td>
          </tr> 
       </table><br>
@@ -43,11 +43,11 @@ Compressible-Flow Relations
             <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{\rho}{\rho^{*}}%20=%20\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-1}{2}M^{2}\right)\right]^{\frac{-1}{\gamma%20-%201}}}"></td>
          </tr>
          <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0.05);">
-            <td style="padding: 24px;">Adiabatic</td>
+            <td style="padding: 24px;">Fanno</td>
             <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{\rho}{\rho^{*}}%20=%20\frac{1}{M}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{1/2}}" style="height: 48px;"></td>
          </tr>
          <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0);">
-            <td style="padding: 24px;">Frictionless-Reversible Heat Transfer</td>
+            <td style="padding: 24px;">Rayleigh</td>
             <td style="padding: 16px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{\rho}{\rho^{*}}%20=%20\frac{1}{M^{2}}\left(\frac{1%20+%20\gamma%20M^{2}}{1%20+%20\gamma}\right)}" style="height: 44px;"></td>
          </tr> 
       </table><br>
@@ -64,11 +64,11 @@ Compressible-Flow Relations
             <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T}{T^{*}}%20=%20\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{-1}}"></td>
          </tr>
          <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0.05);">
-            <td style="padding: 24px;">Adiabatic</td>
+            <td style="padding: 24px;">Fanno</td>
             <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T}{T^{*}}%20=%20\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{-1}}" style="height: 48px;"></td>
          </tr>
          <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0);">
-            <td style="padding: 24px;">Frictionless-Reversible Heat Transfer</td>
+            <td style="padding: 24px;">Rayleigh</td>
             <td style="padding: 16px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T}{T^{*}}%20=%20\left[\frac{M(1+\gamma)}{1%20+%20\gamma%20M^{2}}\right]^{2}}" style="height: 44px;"></td>
          </tr> 
       </table><br>
@@ -85,11 +85,11 @@ Compressible-Flow Relations
             <td style="padding: 14px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p_{o}}{p_{o}^{*}}=1}"></td>
          </tr>
          <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0.05);">
-            <td style="padding: 24px;">Adiabatic</td>
+            <td style="padding: 24px;">Fanno</td>
             <td style="padding: 10px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p_{o}}{p_{o}^{*}}=\frac{1}{M}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{\frac{\gamma%20+%201}{2(\gamma%20-%201)}}}" style="height: 48px;"></td>
          </tr>
          <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0);">
-            <td style="padding: 24px;">Frictionless-Reversible Heat Transfer</td>
+            <td style="padding: 24px;">Rayleigh</td>
             <td style="padding: 16px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{p_{o}}{p_{o}^{*}}=\frac{1%20+%20\gamma}{1%20+%20\gamma%20M^{2}}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]^{\frac{\gamma}{\gamma%20-%201}}}" style="height: 44px;"></td>
          </tr> 
       </table><br>
@@ -106,11 +106,11 @@ Compressible-Flow Relations
             <td style="padding: 14px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T_{o}}{T_{o}^{*}}=1}"></td>
          </tr>
          <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0.05);">
-            <td style="padding: 24px;">Adiabatic</td>
+            <td style="padding: 24px;">Fanno</td>
             <td style="padding: 14px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T_{o}}{T_{o}^{*}}=1}" style="height: 46px;"></td>
          </tr>
          <tr style="border: 1px solid #dedede; width: 450px; height: 70px; background-color: rgba(0,0,0,0);">
-            <td style="padding: 24px;">Frictionless-Reversible Heat Transfer</td>
+            <td style="padding: 24px;">Rayleigh</td>
             <td style="padding: 16px; padding-top: 18px;"><img src="https://latex.codecogs.com/svg.image?\boldsymbol{\frac{T_{o}}{T_{o}^{*}}=\left[\frac{M(1%20+%20\gamma)}{1%20+%20\gamma%20M^{2}}\right]^{2}\left[\left(\frac{2}{\gamma%20+%201}\right)\left(1%20+%20\frac{\gamma%20-%201}{2}M^{2}\right)\right]}" style="height: 46px;"></td>
          </tr> 
       </table><br><br> 
