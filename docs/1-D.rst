@@ -38,11 +38,11 @@ Returns total fluid property ratio plots for isentropic, fanno, and rayleigh flo
 
   >> shockless.total_ref_plot(1.4,[0.3 5],'p','T')
   
-.. image:: doc_images/shockless_sonic_image1.png
+.. image:: doc_images/shockless_total_image1.png
    :width: 500 px
    :align: center
   
-.. image:: doc_images/shockless_sonic_image2.png
+.. image:: doc_images/shockless_total_image2.png
    :width: 500 px
    :align: center
 
