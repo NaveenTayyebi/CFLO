@@ -460,6 +460,26 @@ classdef shockless
             end 
             return;
          end 
+         function computedValue = pitot_pressure(spec_heat_ratio,output,mach_range)
+            syms x 
+            [g, option, selection, mach_info] = shockless.arg_3check(spec_heat_ratio,output,'dim',{mach_range});
+            f = ((g+1)/2*x^2)^(g/(g-1))*((g+1)/(2*g*x^2-(g-1)))^(1/(g-1));
+            if (isequal(option,'plot'))
+                if (mach_info{1}(1) > 1)
+                    disp(mach_info{1}(1))
+                    fplot(f,mach_info{1},'Linewidth',1,'color','blue'); 
+                    xlim(mach_info{1});
+                    xlabel("Upstream Mach Number ( M_{1} )");
+                    ylabel("P_{pitot} / P_{1}")
+                    title('Pitot Pressure');    
+                return; 
+                end 
+            end 
+            if (isequal(option,'calc'))
+                computedValue = eval(subs(f,x,mach_info{1})); 
+                return;
+            end 
+         end 
     end
     methods(Static,Access = private)
          % Checks for valid specific heat ratio, range of mach numbers, 

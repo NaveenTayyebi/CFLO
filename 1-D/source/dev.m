@@ -1,1 +1,2 @@
-shockless.entropy_plot(1.5,'ray');
+shockless.pitot_pressure(1.4,'plot',[2 3])
+
