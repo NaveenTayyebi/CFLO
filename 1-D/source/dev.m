@@ -1,4 +1,4 @@
-shockless.pitot_pressure(1.4,'plot',[0 5]);
+normal_shock.pitot_pressure(1.4,'plot',[1.1 5]);
 
 
 

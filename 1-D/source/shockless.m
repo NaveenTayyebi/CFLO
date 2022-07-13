@@ -459,41 +459,7 @@ classdef shockless
                     error('Flow type abbreviation does not exist')
             end 
             return;
-         end 
-         % Plots or computes the ratio of the pitot pressure to upstream 
-         % static pressure ahead of shocks 
-         function computedValue = pitot_pressure(spec_heat_ratio,output,mach_range)
-            syms x 
-            [g, option, selection, mach_info] = shockless.arg_3check(spec_heat_ratio,output,'dim',{mach_range});
-            f = ((g+1)/2*x^2)^(g/(g-1))*((g+1)/(2*g*x^2-(g-1)))^(1/(g-1));
-            if (isequal(option,'plot'))
-                if (mach_info{1}(1) > 1)
-                    fplot(f,mach_info{1},'Linewidth',1,'color','blue'); 
-                    xlim(mach_info{1});
-                    xlabel("Upstream Mach Number ( M_{1} )");
-                    ylabel("p_{pitot} / p_{1}")
-                    title('Pitot Pressure');    
-                    return; 
-                else
-                    f1 = (1+(g-1)/2*x^2)^(g/(g-1));
-                    fplot(f1,[mach_info{1}(1) 1],'Linewidth',1,'color','blue');
-                    hold on 
-                    fplot(f,[1 mach_info{1}(2)],'Linewidth',1,'color','blue'); 
-                    xlim(mach_info{1});
-                    xlabel("Upstream Mach Number ( M_{1} )");
-                    ylabel("p_{pitot} / p_{1}")
-                    title('Pitot Pressure');
-                    return; 
-                end
-            end 
-            if (isequal(option,'calc'))
-                if (mach_info{1} <= 1)
-                    f = (1+(g-1)/2*x^2)^(g/(g-1));
-                end 
-                computedValue = eval(subs(f,x,mach_info{1})); 
-                return;
-            end 
-         end 
+         end  
     end
     methods(Static,Access = private)
          % Checks for valid specific heat ratio, range of mach numbers, 
