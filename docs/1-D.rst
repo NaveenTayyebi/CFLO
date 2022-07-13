@@ -19,6 +19,36 @@ This class provides functions to plot and compute sonic fluid property ratios.
 .. raw:: html
 
    <dl class="py method">
+   <dt class="sig sig-object py" id="total_ref_plot" style="background:#f0f0f0 !important; border-top: none !important; border-left: 3px solid #ccc !important; color: #555 !important; ">
+   <span class="sig-name descname"><span class="pre">total_ref_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n">     <span class="pre">spec_heat_ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mach_range</span>
+   </span></em>, <em class="sig-param"><span class="n"><span class="pre">varargin</span></span></em><span class="sig-paren">)</span>
+   <a class="headerlink" href="#total_ref_plot" title="Permalink to this definition"></a></dt>
+      <dd></dd></dl>
+  
+Returns total fluid property ratio plots for isentropic, fanno, and rayleigh flows `[relations] <https://cflo.readthedocs.io/en/latest/doc_code/relations.html>`_
+  
+  **Parameters:** 
+    * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
+    * **mach_range** (*double array, size = [1 2]*) - The range of mach numbers to plot over 
+    * **varargin** (*char* or *string*) - The property abbreviations. These include *'p'*, *'d'*, and *'T'* for pressure, density, and temperature respectively. 
+    
+  **Examples:**
+  
+.. code:: matlab
+
+  >> shockless.total_ref_plot(1.4,[0.3 5],'p','T')
+  
+.. image:: doc_images/shockless_sonic_image1.png
+   :width: 500 px
+   :align: center
+  
+.. image:: doc_images/shockless_sonic_image2.png
+   :width: 500 px
+   :align: center
+
+.. raw:: html
+
+   <dl class="py method">
    <dt class="sig sig-object py" id="sonic_ref_plot" style="background:#f0f0f0 !important; border-top: none !important; border-left: 3px solid #ccc !important; color: #555 !important; ">
    <span class="sig-name descname"><span class="pre">sonic_ref_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n">     <span class="pre">spec_heat_ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mach_range</span>
    </span></em>, <em class="sig-param"><span class="n"><span class="pre">varargin</span></span></em><span class="sig-paren">)</span>
