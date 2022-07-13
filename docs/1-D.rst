@@ -64,13 +64,13 @@ Returns sonic fluid property ratio for an isentropic, fanno, or rayleigh flow at
 
 .. code:: matlab
 
-  >> shockless.sonic_ref_calc(1.4,2.2,'p','rvht')
+  >> shockless.sonic_ref_calc(1.4,2.2,'p','ray')
 
   ans =
 
       0.3086
 
-  >> shockless.sonic_ref_calc(1.5,2,'tp','ad')
+  >> shockless.sonic_ref_calc(1.5,2,'tp','fan')
 
   ans =
 
