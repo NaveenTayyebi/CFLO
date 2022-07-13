@@ -391,6 +391,74 @@ classdef shockless
                     return; 
                 end  
             end 
+         end
+         % Plots Fanno and/or Rayleigh lines 
+         function entropy_plot(spec_heat_ratio,flow_type)
+            syms x y 
+            figNumber = length(findobj('type','figure')) + 1;
+            [g] = shockless.arg_check(spec_heat_ratio);
+            points = 1700;
+            if (g <= 1.05)
+                warning("Small specific heat ratios may cause partial rendering");
+            end 
+            switch flow_type
+                case 'fan'
+                    figure(figNumber); 
+                    M = ((2/(g-1))*((g+1)/2.*1/y-1)).^(1/2);
+                    f1 = -x + (g-1)/g*log(M.*y.^((g+1)/(2*g-2))); 
+                    fimplicit(f1,[-2 1.5 0 1.5],'Linewidth',1,'color','blue');
+                    xlim([-1.5 0.2]);
+                    ylim([0 1.5]);
+                    xlabel("\Delta{s}/c_{p}");
+                    ylabel("T / T*");
+                    title("Fanno Line");
+                case 'ray'
+                    figure(figNumber);
+                    A = y.^(-1/2); 
+                    M1 = A*(g+1)/(2*g) - (A.^2*(g+1)^2-4*g).^(1/2)/(2*g);
+                    Tt1 = 1./y.*((2/(g+1))*(1+(g-1)/2.*M1.^2)).^(-1);
+                    Pt1 = M1.*A*((2/(g+1))*(1+(g-1)/2.*M1.^2)).^(-g/(g-1));
+                    f1 = x + log(Tt1) - (g-1)/g*log(Pt1); 
+                    M2 = A*(g+1)/(2*g) + (A.^2*(g+1)^2-4*g).^(1/2)/(2*g);
+                    Tt2 = 1./y.*((2/(g+1))*(1+(g-1)/2.*M2.^2)).^(-1);
+                    Pt2 = M2.*A*((2/(g+1))*(1+(g-1)/2.*M2.^2)).^(-g/(g-1)); 
+                    f2 = x + log(Tt2) - (g-1)/g*log(Pt2);
+                    fimplicit(f1,[-2 1.5 0 1.5],'Linewidth',1,'color','red','MeshDensity',points);
+                    hold on 
+                    fimplicit(f2,[-2 1.5 0 1.5],'Linewidth',1,'color','red','MeshDensity',points);
+                    xlim([-1.5 0.2]);
+                    ylim([0 1.5]);
+                    xlabel("\Delta{s}/c_{p}");
+                    ylabel("T / T*");
+                    title("Rayleigh Line");
+                case 'all'
+                    figure(figNumber); 
+                    M = ((2/(g-1))*((g+1)/2.*1/y-1)).^(1/2);
+                    f1 = -x + (g-1)/g*log(M.*y.^((g+1)/(2*g-2))); 
+                    fimplicit(f1,[-2 1.5 0 1.5],'Linewidth',1,'color','blue');
+                    hold on 
+                    A = y.^(-1/2); 
+                    M1 = A*(g+1)/(2*g) - (A.^2*(g+1)^2-4*g).^(1/2)/(2*g);
+                    Tt1 = 1./y.*((2/(g+1))*(1+(g-1)/2.*M1.^2)).^(-1);
+                    Pt1 = M1.*A*((2/(g+1))*(1+(g-1)/2.*M1.^2)).^(-g/(g-1));
+                    f1 = x + log(Tt1) - (g-1)/g*log(Pt1); 
+                    M2 = A*(g+1)/(2*g) + (A.^2*(g+1)^2-4*g).^(1/2)/(2*g);
+                    Tt2 = 1./y.*((2/(g+1))*(1+(g-1)/2.*M2.^2)).^(-1);
+                    Pt2 = M2.*A*((2/(g+1))*(1+(g-1)/2.*M2.^2)).^(-g/(g-1)); 
+                    f2 = x + log(Tt2) - (g-1)/g*log(Pt2);
+                    fimplicit(f1,[-2 1.5 0 1.5],'Linewidth',1,'color','red','MeshDensity',points);
+                    hold on 
+                    fimplicit(f2,[-2 1.5 0 1.5],'Linewidth',1,'color','red','MeshDensity',points);
+                    xlim([-1.5 0.2]);
+                    ylim([0 1.5]);
+                    xlabel("\Delta{s}/c_{p}");
+                    ylabel("T / T*");
+                    title("Fanno and Rayleigh Lines");
+                    legend("Fanno","Rayleigh","");
+                otherwise
+                    error('Flow type abbreviation does not exist')
+            end 
+            return;
          end 
     end
     methods(Static,Access = private)
@@ -524,7 +592,7 @@ classdef shockless
                 (ismember({num2str(quantity)},baseSelections) == 1))
                 valid_selection = quantity;
             else 
-                error('Option does not exist');
+                error('Selection does not exist');
             end
             valid_variables = cell(1,length(varargin{1}));
             % Verify mach range 
@@ -561,7 +629,6 @@ classdef shockless
                     error(["Mach number(s), duct diameter, and "] + ...
                             ["friction factor must be specified"]);
                 end 
-                % Verify duct diameter
                 temp = varargin{1}(2);
                 if (isa(temp{1},'double') && ...
                     all(temp{1}(:) > 0) && ...
@@ -571,7 +638,6 @@ classdef shockless
                 else 
                     error("Invalid duct diameter");
                 end
-                % Verify friction factor
                 temp = varargin{1}(3);
                 if (isa(temp{1},'double') && ...
                     all(temp{1}(:) > 0) && ...
