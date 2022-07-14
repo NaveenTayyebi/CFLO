@@ -166,7 +166,8 @@ Returns total fluid property ratio plots for isentropic, fanno, and rayleigh flo
     * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
     * **output** (*char* or *string*) - The output abbreviation. This includes *'plot'* and *'calc'* to plot or compute a value respectively.  
     * **quantity** (*char* or *string*) - The quantity abbreviation. This includes *'dim'*, or *'sl'* to plot or compute the dimensionles value 4fL/D, or L, where f, L, and D are the friction factor, sonic length, and duct diameter respectively. 
-    * **varargin** [*mach_info*, *duct_diameter*, *friction_factor*] 
+    * **varargin** [*mach_info*, *duct_diameter*, *friction_factor*]
+    
       * **mach_info** (*double* for 'calc', and *double array, size = [1 2]* for 'plot')
       * **duct_diameter** (*double*, only required for 'sl')
       * **friction_factor** (*double*, only required for 'sl')
