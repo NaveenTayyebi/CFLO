@@ -45,6 +45,44 @@ Returns total fluid property ratio plots for isentropic, fanno, and rayleigh flo
 .. image:: doc_images/shockless_total_image2.png
    :width: 500 px
    :align: center
+   
+.. raw:: html
+
+   <dl class="py method">
+   <dt class="sig sig-object py" id="total_ref_calc" style="background:#f0f0f0 !important; border-top: none !important; border-left: 3px solid #ccc !important; color: #555 !important; ">
+   <span class="sig-name descname"><span class="pre">total_ref_calc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n">     <span class="pre">spec_heat_ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mach_number</span>
+   </span></em>, <em class="sig-param"><span class="n"><span class="pre">property</span></span></em><span class="sig-paren">)</span>
+   <a class="headerlink" href="#total_ref_plot" title="Permalink to this definition"></a></dt>
+      <dd></dd></dl>
+  
+Returns total fluid property ratio for an isentropic, fanno, or rayleigh flow at a specified mach number `[relations] <https://cflo.readthedocs.io/en/latest/doc_code/relations.html>`_
+  
+  **Parameters:** 
+    * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
+    * **mach_number** (*double*) - The range of mach numbers to plot over 
+    * **property** (*char* or *string*) - The property abbreviation. These include *'p'*, *'d'*, and *'T'* for pressure, density, and temperature respectively. 
+    
+  **Examples:**
+  
+.. code:: matlab
+
+  >> shockless.total_ref_calc(1.2,2.1,'d')
+
+  ans =
+
+    0.1609
+
+  >> shockless.total_ref_calc(1.6,1.1,'T')
+
+  ans =
+
+    0.7337
+
+  >> shockless.total_ref_calc(1.4,1.66,'p')
+
+  ans =
+
+    0.2151
 
 .. raw:: html
 
