@@ -155,8 +155,7 @@ Returns sonic fluid property ratio for an isentropic, fanno, or rayleigh flow at
    <dl class="py method">
    <dt class="sig sig-object py" id="fanno_mach" style="background:#f0f0f0 !important; border-top: none !important; border-left: 3px solid #ccc !important; color: #555 !important; ">
    <span class="sig-name descname"><span class="pre">fanno_mach</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n">     <span class="pre">spec_heat_ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span>
-   </span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span>
-   </span></em>, <em class="sig-param"><span class="n"><span class="pre">varargin</span>
+   </span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">varargin</span>
    </span></em><span class="sig-paren">)</span>
    <a class="headerlink" href="#fanno_mach" title="Permalink to this definition"></a></dt>
       <dd></dd></dl>
@@ -165,9 +164,13 @@ Returns total fluid property ratio plots for isentropic, fanno, and rayleigh flo
   
   **Parameters:** 
     * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
-    * **output** (*double array, size = [1 2]*) - The range of mach numbers to plot over 
-    * **quantity** (*char* or *string*) - The property abbreviations. These include *'p'*, *'d'*, and *'T'* for pressure, density, and temperature respectively.
-    * **varargin** (*char* or *string*) - The property abbreviations. These include *'p'*, *'d'*, and *'T'* for pressure, density, and temperature respectively.
+    * **output** (*char* or *string*) - The output abbreviation. This includes *'plot'* and *'calc'* to plot or compute a value respectively.  
+    * **quantity** (*char* or *string*) - The quantity abbreviation. This includes *'dim'*, or *'sl'* to plot or compute the dimensionles value 4fL/D, or L, where f, L, and D are the friction factor, sonic length, and duct diameter respectively. 
+    * **varargin** [*mach_info*, *duct_diameter*, *friction_factor*] 
+      * **mach_info** (*double* for 'calc', and *double array, size = [1 2]* for 'plot')
+      * **duct_diameter** (*double*, only required for 'sl')
+      * **friction_factor** (*double*, only required for 'sl')
+
     
   **Examples:**
   
