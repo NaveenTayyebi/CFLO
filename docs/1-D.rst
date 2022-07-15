@@ -204,6 +204,39 @@ Returns total fluid property ratio plots for isentropic, fanno, and rayleigh flo
    ans =
 
     0.5984
+    
+.. raw:: html
+
+   <dl class="py method">
+   <dt class="sig sig-object py" id="entropy_plot" style="background:#f0f0f0 !important; border-top: none !important; border-left: 3px solid #ccc !important; color: #555 !important; ">
+   <span class="sig-name descname"><span class="pre">entropy_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n">     <span class="pre">spec_heat_ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_type</span>
+   </span></em><span class="sig-paren">)</span>
+   <a class="headerlink" href="#entropy_plot" title="Permalink to this definition"></a></dt>
+      <dd></dd></dl>
+  
+Returns total fluid property ratio plots for isentropic, fanno, and rayleigh flows `[relations] <https://cflo.readthedocs.io/en/latest/doc_code/relations.html>`_
+  
+  **Parameters:** 
+    * **spec_heat_ratio** (*double*) - The specifc heat ratio of the fluid 
+    * **flow_type** (*char* or *string*) - The flow type abbreviation. This can be *'fan'*, *'ray'*, and *'all'* to plot the fanno line, rayleigh line, or both respectively
+ 
+  **Examples:**
+  
+.. code:: matlab
+
+  >> shockless.fanno_mach(1.4,'plot','dim',[0.2 3])
+  
+.. image:: doc_images/shockless_fanno_image1.png
+   :width: 500 px
+   :align: center
+   
+.. code:: matlab
+
+  >> shockless.fanno_mach(1.4,'plot','sl',[0.5 2.4],2,0.02)
+  
+.. image:: doc_images/shockless_fanno_image2.png
+   :width: 500 px
+   :align: center
  
 .. raw:: html 
 
